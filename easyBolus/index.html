@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>EasyBolus</title>
+    <script src="app.js"></script>
+    <script src="app_onlineDB.js" type="module"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="menuButtonHome" onclick="nav_bolusSettings()">
+            <img id="menu-button-image" src="img/menu.svg">
+        </div>
+        <div id="searchBarContainer">
+            <img class="searchBarImage" src="img/search.svg">
+            <input type="text" placeholder="Suche" id="searchInput">
+            <button id="searchBarClose"><img src="img/close.svg"></button>
+        </div>
+    </div>  
+
+    <div id="contentContainer">
+        
+    </div>
+    
+    <div class="footer">
+        <button id="searchButton" class="footer-buttons"><img class="footer-buttons-image" src="img/search.svg"></button>
+        <button id="add_button" class="footer-buttons"><img class="footer-buttons-image" src="img/add.svg"></button>
+    </div>
+
+    <button id="calcbutton">
+        <img id="calcbutton_image" src="img/calculate.svg">
+    </button>
+
+    <div id="popup_placeholder">
+        <div id="popup_background">
+            <div id="popup_add">
+                <div class="popup-add-content">
+                    <table class="popup-add-table">
+                        <h1>Neues Produkt hinzufügen</h1>
+                        <tbody>
+                            <tr>
+                                <td class="popup-add-td1">
+                                    <input class="popup-add-inputbox" type="text" placeholder="Name" id="name-add-input">
+                                </td>
+                                <td class="popup-add-td2"></td>
+                            </tr>
+                            <tr>
+                                <td class="popup-add-td1">
+                                    <input class="popup-add-inputbox" type="number" placeholder="KH pro 100" id="kh-add-input">
+                                </td>
+                                <td class="popup-add-td2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="popup-add-td1">
+                                    <input class="popup-add-inputbox" type="number" placeholder="Portionsgröße" id="amount-add-input">
+                                </td>
+                                <td class="popup-add-td2">
+                                    <select class="popup-add-select" name="unit" id="unit-add-select"><option value="g">g</option><option value="ml">ml</option></select>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="popup-buttons">
+                    <button id="abort-add-button"">Abbrechen</button>
+                    <button id="confirm-add-button">Hinzufügen</button>
+                </div>
+            </div>
+
+            <div id="popup_item">
+                <div class="popup-item-header">
+                    <div class="popup-item-title-container">
+                        <h1 id="popup-item-title">Überschrift</h1>
+                    </div>
+                    <button id="delete-item-button">
+                        <img id="delete-item-button-img" src="img/delete.svg">
+                    </button>
+                </div>
+                <div ID="popup-item-content">
+                    
+                </div>
+                <div class="popup-buttons">
+                    <button id="abort-item-button">Abbrechen</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
