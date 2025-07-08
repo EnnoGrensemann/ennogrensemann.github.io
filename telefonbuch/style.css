@@ -1,0 +1,158 @@
+/* --- Dark Mode Variables --- */
+:root {
+    /* Light Mode */
+    --background-color: #f8f9fa;
+    --text-color-primary: #202124;
+    --text-color-secondary: #5f6368;
+    --input-border-color: #dadce0;
+    --input-focus-border-color: #1a73e8;
+    --input-shadow-hover: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --input-shadow-focus: 0 1px 6px rgba(0, 0, 0, 0.2);
+    --item-background-color: #ffffff;
+    --item-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --item-hover-background-color: #f5f5f5;
+    --item-hover-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    --icon-color: #1a73e8; /* Google-Blau */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark Mode */
+        --background-color: #202124; /* Dunkelgrau */
+        --text-color-primary: #e8eaed; /* Helles Grau für Überschrift */
+        --text-color-secondary: #bdc1c6; /* Mittleres Grau für andere Texte */
+        --input-border-color: #5f6368;
+        --input-focus-border-color: #8ab4f8; /* Helles Blau für Fokus */
+        --input-shadow-hover: 0 1px 3px rgba(255, 255, 255, 0.1);
+        --input-shadow-focus: 0 1px 6px rgba(255, 255, 255, 0.2);
+        --item-background-color: #303134; /* Dunklerer Hintergrund für Elemente */
+        --item-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        --item-hover-background-color: #3c4043; /* Noch dunkler beim Hover */
+        --item-hover-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+        --icon-color: #8ab4f8; /* Helles Blau für das Icon */
+    }
+}
+
+/* Initial apply dark mode if system prefers it to prevent flickering */
+html.dark-mode {
+    background-color: var(--background-color);
+    color: var(--text-color-secondary);
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-color); /* Verwende Variable */
+    padding-top: 50px;
+    color: var(--text-color-secondary); /* Standardtextfarbe */
+    transition: background-color 0.3s ease; /* Übergang für Hintergrundfarbe */
+}
+
+h1 {
+    color: var(--text-color-primary); /* Verwende Variable */
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.3s ease; /* Übergang für Textfarbe */
+}
+
+h1 .icon {
+    color: var(--icon-color); /* Verwende Variable */
+    font-size: 0.9em;
+    transition: color 0.3s ease; /* Übergang für Icon-Farbe */
+}
+
+#searchBar {
+    padding: 12px 18px;
+    width: 60%;
+    max-width: 464px;
+    border: 1px solid var(--input-border-color); /* Verwende Variable */
+    border-radius: 8px;
+    box-shadow: none;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s; /* Übergänge hinzufügen */
+    outline: none;
+    background-color: var(--item-background-color); /* Einheitlicher Hintergrund */
+    color: var(--text-color-primary); /* Textfarbe in der Suchleiste */
+}
+
+#searchBar::placeholder {
+    color: var(--text-color-secondary); /* Placeholder-Farbe anpassen */
+    opacity: 0.7;
+}
+
+#searchBar:hover {
+    border-color: var(--input-border-color); /* Behält die gleiche Randfarbe */
+    box-shadow: var(--input-shadow-hover); /* Verwende Variable */
+}
+
+#searchBar:focus {
+    border-color: var(--input-focus-border-color); /* Verwende Variable */
+    box-shadow: var(--input-shadow-focus); /* Verwende Variable */
+}
+
+#resultCount {
+    margin-top: 15px;
+    color: var(--text-color-secondary); /* Verwende Variable */
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+    transition: color 0.3s ease;
+}
+
+#dataContainer {
+    width: 70%;
+    max-width: 500px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.data-item {
+    background-color: var(--item-background-color); /* Verwende Variable */
+    border-radius: 8px;
+    box-shadow: var(--item-shadow); /* Verwende Variable */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.data-item:hover {
+    background-color: var(--item-hover-background-color); /* Verwende Variable */
+    box-shadow: var(--item-hover-shadow); /* Verwende Variable */
+}
+
+.data-item .name {
+    font-weight: 500;
+    color: var(--text-color-primary); /* Verwende Variable */
+    transition: color 0.3s ease;
+}
+
+.data-item .number {
+    color: var(--text-color-secondary); /* Verwende Variable */
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.no-data {
+    text-align: center;
+    color: var(--text-color-secondary); /* Verwende Variable */
+    padding: 20px;
+    background-color: var(--item-background-color); /* Verwende Variable */
+    border-radius: 8px;
+    box-shadow: var(--item-shadow); /* Verwende Variable */
+    transition: background-color 0.3s, color 0.3s;
+}
