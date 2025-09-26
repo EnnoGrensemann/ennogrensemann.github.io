@@ -12,7 +12,7 @@ body {
   justify-content: center;
 }
 .container {
-    background: white;
+    background: rgb(255, 255, 255);
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -37,17 +37,17 @@ h1 {
     display: none;
 }
 button {
-    background: #3498db;
+    background: #be0000;
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 20px 40px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
     margin: 10px;
 }
 button:hover {
-    background: #2980b9;
+    background: #a51919;
 }
 button:disabled {
     background: #bdc3c7;
@@ -69,8 +69,10 @@ button:disabled {
     color: #7f8c8d;
 }
 .reset-button {
-    background: #e74c3c;
+    color: #707070;
+    background: #c7c7c736;
+    padding: 10px 20px;
 }
 .reset-button:hover {
-    background: #c0392b;
+    background: #c5c5c5b4;
 }
