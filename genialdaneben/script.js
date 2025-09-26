@@ -5,7 +5,6 @@ let currentQuestionIndex = -1;
 const questionBox = document.getElementById('questionBox');
 const answerBox = document.getElementById('answerBox');
 const nextQuestionBtn = document.getElementById('nextQuestionBtn');
-const progressInfo = document.getElementById('progressInfo');
 
 // Funktion zum Laden der Fragen aus der data.json
 async function loadQuestions() {
@@ -18,21 +17,18 @@ async function loadQuestions() {
         
         // Initialen Status setzen
         if (questions.length > 0) {
-            questionBox.innerHTML = 'Klicken Sie auf "Neue Zufallsfrage" um zu beginnen!';
+            questionBox.innerHTML = 'Klicken Sie auf "Nächste Frage" um zu beginnen!';
             answerBox.innerHTML = 'Die Antwort wird direkt hier erscheinen.'; // Initialer Text
             answerBox.style.display = 'block'; // Sicherstellen, dass die Box sichtbar ist
             nextQuestionBtn.disabled = false;
-            progressInfo.textContent = 'Bereit! Es gibt ' + questions.length + ' Fragen.';
         } else {
             questionBox.innerHTML = 'Fehler: Keine Fragen in data.json gefunden.';
-            progressInfo.textContent = 'Ladefehler.';
         }
         updateCounters();
 
     } catch (error) {
         console.error('Fehler beim Laden der Fragen:', error);
         questionBox.innerHTML = '<strong>Ladefehler!</strong><br>Konnte Fragen nicht laden. Stelle sicher, dass "data.json" existiert und korrekt ist.';
-        progressInfo.textContent = 'Fehler beim Laden der Daten.';
     }
 }
 
@@ -46,7 +42,6 @@ function showRandomQuestion() {
             '<strong>Glückwunsch!</strong><br>Sie haben alle Fragen durchgespielt! Klicken Sie auf "Fragen zurücksetzen" um von vorne zu beginnen.';
         answerBox.innerHTML = '';
         nextQuestionBtn.disabled = true;
-        progressInfo.textContent = 'Alle Fragen wurden angezeigt!';
         updateCounters();
         return;
     }
@@ -72,7 +67,6 @@ function showRandomQuestion() {
     
     // Buttons und Info aktualisieren
     nextQuestionBtn.disabled = usedQuestions.length >= questions.length;
-    progressInfo.textContent = `Frage ${usedQuestions.length} von ${questions.length}`;
     updateCounters();
 }
 
@@ -80,10 +74,9 @@ function resetUsedQuestions() {
     usedQuestions = [];
     currentQuestionIndex = -1;
     questionBox.innerHTML = 
-        'Klicken Sie auf "Neue Zufallsfrage" um zu beginnen!';
+        'Klicken Sie auf "Nächste Frage" um zu beginnen!';
     answerBox.innerHTML = 'Die Antwort wird direkt hier erscheinen.';
     nextQuestionBtn.disabled = false;
-    progressInfo.textContent = 'Fragen zurückgesetzt - bereit für neue Runde!';
     updateCounters();
 }
 
