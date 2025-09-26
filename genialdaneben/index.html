@@ -12,16 +12,6 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/Genial_daneben.svg" height="150px">
     </div>
     <div class="container">
-        <h1>Zufällige Fragen</h1>
-        
-        <div class="progress-info" id="progressInfo">
-            Lade Fragen...
-        </div>
-        
-        <div class="button-container">
-            <button onclick="showRandomQuestion()" id="nextQuestionBtn" disabled>Neue Zufallsfrage</button>
-            <button onclick="resetUsedQuestions()" class="reset-button">Fragen zurücksetzen</button>
-        </div>
         
         <div class="question-box" id="questionBox">
             Bitte warten, Fragen werden geladen...
@@ -31,6 +21,11 @@
             Die Antwort wird direkt hier erscheinen.
         </div>
         
+        <div class="button-container">
+            <button onclick="showRandomQuestion()" id="nextQuestionBtn" disabled>Nächste Frage</button>
+            <button onclick="resetUsedQuestions()" class="reset-button">Neustart</button>
+        </div>
+
         <div class="counter">
             Fragen gesamt: <span id="totalCount">0</span> | 
             Bereits angezeigt: <span id="usedCount">0</span> | 
@@ -41,5 +36,3 @@
     <script src="script.js" defer></script>
 </body>
 </html>
-
-
