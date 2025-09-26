@@ -5,6 +5,12 @@ body {
     padding: 20px;
     background-color: #f5f5f5;
 }
+.header-logo {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .container {
     background: white;
     padding: 30px;
