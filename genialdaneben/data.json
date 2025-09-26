@@ -1,54 +1,1437 @@
 [
-    {
-        "question": "Woher kommt die Redensart „Mein Name ist Hase, ich weiß von nichts“?",
-        "answer": "Die Redensart geht auf einen deutschen Jurastudenten namens Viktor von Hase zurück. 1855 musste er sich vor Gericht verantworten, weil er einem Freund nach einer Straftat zur Flucht verholfen hatte. Er sagte bei der Verhandlung nur: „Mein Name ist Hase, ich weiß von nichts.“"
-    },
-    {
-        "question": "Mit welchem außergewöhnlichen Zahlungsmittel wurden im 14. Jahrhundert Pachtzinsen gezahlt?",
-        "answer": "Im Mittelalter wurde vor Ostern mit Eiern bezahlt. Denn in der Fastenzeit waren Eier verboten zu essen. Es gab sie also im Überschuss. Um sie haltbarer zu machen wurden sie gekocht. Um sie von rohen Eiern unterscheiden zu können, wurden sie eingefärbt. Das wird als eine Erklärung gesehen, warum heute zu Ostern Eier gefärbt werden."
-    },
-    {
-        "question": "Was wird in der Lebensmittelindustrie als „alte Jungfer“ bezeichnet?",
-        "answer": "Popcorn, das nicht aufpoppt, wird alte Jungfer bezeichnet. Circa 3 % aller Maiskörner haben einen Mikroriss, sodass sie nicht aufpoppen können."
-    },
-    {
-        "question": "Was ist ein „Blauer Wiener“?",
-        "answer": "Blauer Wiener ist die Zuchtbezeichnung für eine blauschimmernde Hasenrasse."
-    },
-    {
-        "question": "Woher kommt der Ausdruck „auf Wolke 7 schweben“?",
-        "answer": "In der Bibel und weiteren nicht in die Bibel aufgenommenen Schriften steht, dass der Himmel aus verschiedenen Schichten aufgebaut ist. Ganz oben, im siebten Himmel, soll Gott mit den Engeln leben. Wer also auf Wolke 7 schwebt, hat das höchste Glück erreicht."
-    },
-    {
-        "question": "Warum müssen Gäste eines Kapstadter Restaurants bei einer bestimmten Bestellung ihren linken Schuh abgeben?",
-        "answer": "Beliebte Biergläser wurden in diesem Restaurant öfters entwendet. Daher muss man nun den linken Schuh als Pfand abgeben, wenn man ein Kwak-Bier bestellt. Daher auch der Slogan: No shoe, no kwak."
-    },
-    {
-        "question": "Was ist eine „Naturplattform“?",
-        "answer": "Naturplattform ist ein Toiletten-Adapter, der die Benutzung der Toilette in der natürlichen Hockstellung erlaubt. Sie hilft bei Prostata-Problemen, Hämorrhoiden und Krankheiten des Verdauungstrakts. Die Naturplattform sieht aus wie ein Hocker, der an einer Seite nach abgerundet ist, sodass man ihn vor die Toilettenschüssel stellen kann. Man stellt sich auf den Hocker und geht in die Hocke und kann dann sein Geschäft in die Toilette verrichten."
-    },
-    {
-        "question": "Was ist ein sogenanntes „Hochzeitsgitter“?",
-        "answer": "Im Zoo werden ein weibliches und ein männliches Raubtier in, von einem Hochzeitsgitter getrennten, Käfigen untergebracht. Dadurch können sie sich so lange annähern bis sie paarungsbereit sind. Dann wird das Gitter entfernt und die Raubtiere können sich paaren. Das Gitter schützt also zuerst davor, dass sie aufeinander losgehen."
-    },
-    {
-        "question": "Woher kommt der Ausdruck „es faustdick hinter den Ohren haben“?",
-        "answer": "Der Ausdruck geht auf einen alten Volksglauben zurück. Laut diesem sitzen List und Verschlagenheit in Form kleiner Dämonen hinter den Ohren. Zu erkennen ist dies an Wülsten hinter den Ohren. Hat jemand besonders dicke, also faustdicke Wülste, gilt er als ziemlich gewieft."
-    },
-    {
-        "question": "Was ist die sogenannte „Honigfalle“?",
-        "answer": "Honigfalle nennt man eine operative Maßnahme von Agentinnen oder Agenten. Wenn eine Agentin bzw. ein Agent einer Zielperson Zuneigung vorspielt, um an Informationen zu kommen, also ihm quasi Honig um den Mund schmiert und diese Zielperson darauf einfällt, ist sie in die Honigfalle getappt."
-    },
-    {
-        "question": "Was ist der „Karnickelpass“?",
-        "answer": "Der Begriff Karnickelpass stammt aus den 50er Jahren und bezeichnete eine Fahrpreisermäßigung für Kinder aus kinderreichen Familien."
-    },
-    {
-        "question": "Was ist der „Obelix-Effekt“?",
-        "answer": "Dies ist ein Begriff aus dem Büroalltag. Der Büroangestellte, der nie von seinen Kollegen gefragt wird, ob er mit zum Mittagessen geht, also außen vor gelassen wird, ist quasi wie Obelix, der auch nie vom Zaubertrank trinken darf. Dieser Mobbing-Effekt heißt Obelix-Effekt."
-    },
-    {
-        "question": "Warum bleiben die Kirchturmglocken in Neustadt am Kulm um 20 Uhr stumm und läuten stattdessen fünf Minuten früher?",
-        "answer": "Weil um 20 Uhr die Tagesschau beginnt, läuten die Glocken fünf Minuten früher, damit niemand die Nachrichtensendung verpasst."
-    }
-]
+  {
+    "question": "Woher kommt die Redensart „Mein Name ist Hase, ich weiß von nichts“?",
+    "answer": "Die Redensart geht auf einen deutschen Jurastudenten namens Viktor von Hase zurück, der sich 1855 vor Gericht veransweren musste, weil er einem Freund nach einer Straftat zur Flucht verholfen hatte. Er sagte bei der Verhandlung nur: „Mein Name ist Hase, ich weiß von nichts.“"
+  },
+  {
+    "question": "Mit welchem außergewöhnlichen Zahlungsmittel wurden im 14. Jahrhundert Pachtzinsen gezahlt?",
+    "answer": "Im Mittelalter wurde vor Ostern mit Eiern bezahlt, da Eier in der Fastenzeit verboten waren und daher im Überschuss vorhanden waren. Um sie haltbarer zu machen, wurden sie gekocht und zur Unterscheidung von rohen Eiern eingefärbt. Dies gilt als eine Erklärung für das heutige Eierfärben zu Ostern."
+  },
+  {
+    "question": "Was wird in der Lebensmittelindustrie als „alte Jungfer“ bezeichnet?",
+    "answer": "Popcorn, das nicht aufpoppt, wird als alte Jungfer bezeichnet. Dies liegt daran, dass circa 3 % aller Maiskörner einen Mikroriss haben, der das Aufpoppen verhindert."
+  },
+  {
+    "question": "Was ist ein „Blauer Wiener“?",
+    "answer": "Blauer Wiener ist die Zuchtbezeichnung für eine blauschimmernde Hasenrasse."
+  },
+  {
+    "question": "Woher kommt der Ausdruck „auf Wolke 7 schweben“?",
+    "answer": "In der Bibel und weiteren nicht in die Bibel aufgenommenen Schriften steht, dass der Himmel aus verschiedenen Schichten aufgebaut ist. Ganz oben, im siebten Himmel, soll Gott mit den Engeln leben. Wer auf Wolke 7 schwebt, hat demnach das höchste Glück erreicht."
+  },
+  {
+    "question": "Warum müssen Gäste eines Kapstadter Restaurants bei einer bestimmten Bestellung ihren linken Schuh abgeben?",
+    "answer": "Beliebte Biergläser wurden in diesem Restaurant öfters entwendet. Daher muss man nun den linken Schuh als Pfand abgeben, wenn man ein Kwak-Bier bestellt (daher auch der Slogan: No shoe, no kwak)."
+  },
+  {
+    "question": "Was ist eine „Naturplattform“?",
+    "answer": "Die Naturplattform ist ein Toiletten-Adapter, der die Benutzung der Toilette in der natürlichen Hockstellung erlaubt. Sie sieht aus wie ein Hocker, der an einer Seite abgerundet ist, sodass man ihn vor die Toilettenschüssel stellen kann. Sie hilft bei Prostata-Problemen, Hämorrhoiden und Krankheiten des Verdauungstrakts."
+  },
+  {
+    "question": "Was ist ein sogenanntes „Hochzeitsgitter“?",
+    "answer": "Im Zoo werden ein weibliches und ein männliches Raubtier in durch ein Hochzeitsgitter getrennten Käfigen untergebracht, um sich so lange anzunähern, bis sie paarungsbereit sind. Das Gitter schützt zunächst davor, dass sie aufeinander losgehen."
+  },
+  {
+    "question": "Woher kommt der Ausdruck „es faustdick hinter den Ohren haben“?",
+    "answer": "Der Ausdruck geht auf einen alten Volksglauben zurück, wonach List und Verschlagenheit in Form kleiner Dämonen hinter den Ohren sitzen. Dies sei an Wülsten hinter den Ohren zu erkennen; wer besonders dicke, also faustdicke Wülste hat, gilt als ziemlich gewieft."
+  },
+  {
+    "question": "Was ist die sogenannte „Honigfalle“?",
+    "answer": "Honigfalle nennt man eine operative Maßnahme von Agentinnen oder Agenten, bei der einer Zielperson Zuneigung vorgespielt wird, um an Informationen zu gelangen (ihr quasi Honig um den Mund schmieren)."
+  },
+  {
+    "question": "Was ist der „Karnickelpass“?",
+    "answer": "Der Begriff Karnickelpass stammt aus den 50er Jahren und bezeichnete eine Fahrpreisermäßigung für Kinder aus kinderreichen Familien."
+  },
+  {
+    "question": "Was ist der „Obelix-Effekt“?",
+    "answer": "Dies ist ein Begriff aus dem Büroalltag, der einen Mobbing-Effekt beschreibt: Ein Büroangestellter, der nie von seinen Kollegen gefragt wird, ob er mit zum Mittagessen geht, wird außen vor gelassen, quasi wie Obelix, der auch nie vom Zaubertrank trinken darf."
+  },
+  {
+    "question": "Warum bleiben die Kirchturmglocken in Neustadt am Kulm um 20 Uhr stumm und läuten stattdessen fünf Minuten früher?",
+    "answer": "Die Glocken läuten fünf Minuten früher, weil um 20 Uhr die Tagesschau beginnt, damit niemand die Nachrichtensendung verpasst."
+  },
+  {
+    "question": "Was ist Bügelsex?",
+    "answer": "Bügelsex ist ein Begriff aus der Modebranche. Er bezeichnet die gute Wirkung eines Kleidungsstücks bereits auf dem Kleiderbügel, die den Kunden dazu bringt, es sofort haben zu wollen, ohne dass es auf einer Schaufensterpuppe präsentiert werden muss."
+  },
+  {
+    "question": "Warum musste der Spieler Jurij Rodionov vor seinem Tennismatch seine Unterhose wechseln?",
+    "answer": "Bei Wimbledon gilt die Pflicht zu weißer Kleidung. Bei Rodionov schien seine blaue Unterhose durch, was der Schiedsrichter sah und ihn zum Wechseln der Unterhose verpflichtete."
+  },
+  {
+    "question": "Was ist eine Inselprobe?",
+    "answer": "Die Inselprobe ist ein einfacher Qualitätstest für guten Espresso: Man gibt Zucker in den Espresso. Wenn sich eine Zuckerinsel bildet, die erst allmählich untergeht, ist der Espresso gut. Geht der Zucker zu schnell unter, hat der Espresso zu wenig Crema."
+  },
+  {
+    "question": "Wie bekam ein brasilianischer Fußballverein 2015 sein Hooligan Problem in den Griff?",
+    "answer": "Der Verein hatte die Mütter der 30 schlimmsten Hooligans zu Securitys ausgebildet. Die Söhne trauten sich daraufhin nicht mehr, eine Schlägerei anzufangen."
+  },
+  {
+    "question": "Warum gibt es auf der Queen Mary 2 einen roten New Yorker Hydranten?",
+    "answer": "Damit die Hunde auf der Queen Mary 2 ihr Beinchen heben können, gibt es diesen Hydranten."
+  },
+  {
+    "question": "Was bezeichnet man als römisches Roulette?",
+    "answer": "Römisches Roulette ist eine Methode der natürlichen Empfängnisverhütung, bei der die Frau ihre fruchtbaren Tage ausrechnet und an diesen Tagen verhütet oder enthaltsam ist. Die Bezeichnung geht auf Papst Pius XII. zurück, der diese Methode 1951 als einzig tolerierbare erklärte, und bezieht sich auf die Unsicherheit der Methode."
+  },
+  {
+    "question": "Warum waren Tauben der Stadt Hagen vor Feinden sicher, obwohl extra Turmfalken zur Jagd angeschafft wurden?",
+    "answer": "Die Stadt Hagen hatte die Turmfalken im Winter ausgesetzt. Daraufhin sind die Falken sofort in den Süden abgehauen, und die Tauben waren sicher."
+  },
+  {
+    "question": "Woher kommt der Ausspruch „jemanden übers Ohr hauen“?",
+    "answer": "Der Ausspruch kommt aus dem Fechtsport. Jemanden oberhalb der Ohren zu verletzen, ist zwar regelwidrig, erfordert aber besondere Geschicklichkeit."
+  },
+  {
+    "question": "Warum konnten Taxifahrer im Jahre 1900 in Frankreich für ihre Leistungen eine besondere Auszeichnung bekommen?",
+    "answer": "Taxifahren war 1900 als Zuverlässigkeitswettbewerb eine olympische Disziplin, weshalb Taxifahrer olympische Medaillen gewinnen konnten."
+  },
+  {
+    "question": "Warum sieht man in einem Fußballstadion in Janosovka von der Tribüne aus öfter mal das Spielfeld nicht?",
+    "answer": "Durch das Stadion fährt ein Zug. Zwischen Tribüne und Spielfeld verläuft ein Gleis, auf dem ein Zug fährt, der dann die Sicht auf das Spielfeld versperrt."
+  },
+  {
+    "question": "Was ist ein Affensitz?",
+    "answer": "Der Steuersitz in einem Rennruderboot wird als Affensitz bezeichnet."
+  },
+  {
+    "question": "Warum sieht man in der bolivianischen Hauptstadt La Paz regelmäßig Menschen in Zebra-Kostümen?",
+    "answer": "Um rücksichtslose Autofahrer zum Anhalten zu bewegen und Fußgänger über den Zebrastreifen und die Straße zu lassen, wurden Menschen in Zebra-Kostümen an die Seite gestellt, die die Autofahrer auf die kreuzenden Personen hinweisen."
+  },
+  {
+    "question": "Was war für das Hotel „Queen Elizabeth“ in Montreal bis 1998 verpflichtend vorgeschrieben?",
+    "answer": "Bis 1998 war das Hotel verpflichtet, das Pferd jedes Gastes kostenlos zu verpflegen."
+  },
+  {
+    "question": "Was ist das China-Restaurant-Syndrom?",
+    "answer": "China-Restaurant-Syndrom nennt man das Auftreten einer Glutamat-Unverträglichkeit nach dem Besuch eines China-Restaurants, das überwiegend Geschmacksverstärker verwendet."
+  },
+  {
+    "question": "Warum durften unter 25-Jährige im November 2017 in einer englischen Supermarkt-Kette keine Kiwis kaufen?",
+    "answer": "Der Sänger Harry Styles kam im November 2017 zu Konzerten nach England. Er singt ein Lied, das 'Kiwi' heißt. Bei vorherigen Konzerten hatten Zuschauer bei diesem Lied Kiwis auf die Bühne geworfen, worauf Harry Styles mehrmals ausrutschte. Um dies zu verhindern, entschied sich die Supermarktkette für ein Verkaufsverbot."
+  },
+  {
+    "question": "Warum gilt an einem Grab auf dem größten Pariser Friedhof seit 2011 Kussverbot?",
+    "answer": "Es handelt sich um das Grab von Oscar Wilde. Der Grabstein wurde von Verehrerinnen immer wieder geküsst, wodurch der Stein stark in Mitleidenschaft gezogen wurde. Zum Schutz des Steins wurde 2011 ein Kussverbot ausgesprochen. Mittlerweile wurden schützende Glaswände darum aufgestellt."
+  },
+  {
+    "question": "Was ist ein sogenannter „Warzenbeißer“?",
+    "answer": "Warzenbeißer ist eine Langfühler-Heuschreckenart, die sehr fest zubeißen kann und dabei einen ätzenden, braunen Saft absondert, der laut altem Glauben Warzen beseitigen kann. Früher ließ man die Heuschrecke in die Warzen beißen."
+  },
+  {
+    "question": "Was ist eine Dreilochjungfer?",
+    "answer": "Dreilochjungfer ist ein Begriff aus der Seefahrt. Eine Jungfer ist eine rundliche, stabile Holzscheibe mit drei Löchern für ein Tau, die zum Scheren eines Taus (ähnlich einem Flaschenzug) verwendet wird."
+  },
+  {
+    "question": "Was ist die sogenannte „Säuferschaltung“?",
+    "answer": "Die Säuferschaltung ist eine Einstellung der Hausalarmanlage, bei der der Alarm von Innen aktiviert und von Außen deaktiviert werden kann. Der Name kommt daher, weil diese Einstellung praktisch für Säufer ist, die spät abends nach Hause kommen."
+  },
+  {
+    "question": "Warum darf in Schweden ein weiblicher Hochzeitsgast kein rotes Kleid tragen?",
+    "answer": "In Schweden bedeutet ein rotes Kleid an der Hochzeit, dass man bereits einmal mit dem Bräutigam geschlafen hat."
+  },
+  {
+    "question": "Was ist ein Leckwerk?",
+    "answer": "Ein Leckwerk oder Gradierwerk ist eine Anlage zur Salzgewinnung, die aus einem Holzgerüst besteht, das mit Reisigbündeln verfüllt ist. Dabei wird Sole durch das Reisig geleitet, wodurch Wasser verdunstet und der Salzgehalt im Wasser erhöht wird. Zudem lagern sich Verunreinigungen ab, was die Qualität des Salzes verbessert."
+  },
+  {
+    "question": "Warum rief ein Bewohner in Newport im August 2017 die Polizei, nachdem er eine Katze im Baum sitzen sah?",
+    "answer": "Ein besorgter Anrufer berichtete, die Katze halte ein Maschinengewehr. Ein Officer stellte vor Ort fest, dass das angebliche Gewehr ein Ast war, der auf den ersten Blick einer Schusswaffe ähnelte. Die Katze kam mit einer mündlichen Verwarnung davon."
+  },
+  {
+    "question": "Warum wird in einem Wiener Kino bei manchen Vorstellungen das Licht angelassen?",
+    "answer": "Der Kinosaal in den Breitenseer Lichtspielen verwandelt sich regelmäßig in eine Strickstube, da die Gründerin des 1. Wiener Strickvereins die Idee dazu hatte. Das Licht bleibt während dem Kinofilm an, damit die Zuschauer häkeln und stricken können."
+  },
+  {
+    "question": "Woher kommt das Sprichwort „sich am Riemen reißen“?",
+    "answer": "Die Redewendung, die 'sich zusammennehmen' oder 'anstrengen' bedeutet, geht auf das Militär zurück. Saß die Uniform der Soldaten und mit ihr der Gürtel, der \"Riemen\", beim morgendlichen Appell nicht korrekt, mussten sie sich \"am Riemen reißen\" und ihn in die vorgeschriebene mittige Position bringen."
+  },
+  {
+    "question": "Warum balanciert der Mississippi-Alligator Stöckchen auf seiner Schnauze?",
+    "answer": "Er lockt damit Schreitvögel wie Reiher an, die in Vogelkolonien oft knappes Nistmaterial suchen. Wenn ein Vogel nach dem Stöckchen greift, schießt das Krokodil hoch und schnappt ihn."
+  },
+  {
+    "question": "Was ist eine Sprachbanane?",
+    "answer": "Wenn der Lautstärke- und Frequenzbereich, in dem gesprochene Sprache am häufigsten vorkommt, in einem Diagramm abgebildet und hervorgehoben wird, sieht diese Hervorhebung wie eine Banane aus."
+  },
+  {
+    "question": "Was war das mächtige Häuflein?",
+    "answer": "Die Gruppe der Fünf oder das mächtige Häuflein war eine Gruppe russischer Komponisten des 19. Jahrhunderts (Mili Balakirew, Alexander Borodin, César Cui, Modest Mussorgski und Nikolai Rimski-Korsakow). Sie selbst nannten sich die Novatoren."
+  },
+  {
+    "question": "Was ist die wandernde Wurst?",
+    "answer": "Die wandernde Wurst ist ein Tausendfüßer, der im Osten Tansanias lebt. Er wird 16 cm lang, 1,5 cm dick, hat 112 Beine und wird aufgrund seines Aussehens so genannt."
+  },
+  {
+    "question": "Warum wurde die geplante Riesenpanda-Geburt 2014 in China zu einer Überraschung?",
+    "answer": "Die Geburt wurde von der Pandabärin nur vorgetäuscht, um extra Portionen leckerer Nahrung zu bekommen."
+  },
+  {
+    "question": "Was ist ein Gummikavalier?",
+    "answer": "Gummikavalier ist ein Begriff aus den 20er Jahren und bezeichnet einen aufblasbaren Schwimmreifen, der den Badenden wie ein Kavalier auf Händen über das Wasser trägt."
+  },
+  {
+    "question": "Warum kann man seit Mai 2017 in manchen australischen Eisdielen keine geschmacksgleichen Kugeln bestellen?",
+    "answer": "Die Eissortenfirma Ben & Jerry´s führte diese Vorschrift ein, solange die Ehe unter gleichgeschlechtlichen Paaren in Australien verboten ist, um ein Zeichen für die Legalisierung der gleichgeschlechtlichen Ehe zu setzen."
+  },
+  {
+    "question": "Woher kommt der Ausdruck „nicht gut Kirschen essen“?",
+    "answer": "Im Mittelalter waren süße Früchte wie Kirschen selten und teuer. Feine Gesellschaften trafen sich zum Kirschenessen. Wer nicht schick genug war, wurde weggeschickt (verjagt)."
+  },
+  {
+    "question": "Warum sorgte die Ernte einer Möhre bei einer 84-jährigen Witwe aus Kanada im August 2017 für Begeisterung?",
+    "answer": "Die Witwe hatte 13 Jahre zuvor ihren Verlobungsring verloren. Der Ring war im August 2017 wieder aufgetaucht, da die Möhre durch ihn gewachsen war."
+  },
+  {
+    "question": "Warum feuerte eine kommunistische Partei in Indien 2013 einen Politiker, als er sich einen Kindheitstraum erfüllte?",
+    "answer": "Der Politiker hatte 24.000 Euro abgehoben und darin ein Geldbad genommen. Das missfiel der kommunistischen Partei, woraufhin er gefeuert wurde."
+  },
+  {
+    "question": "Was ist eine Dilemmazone?",
+    "answer": "Die Dilemmazone ist der Bereich vor der Ampel, in der der anfahrende Fahrzeugführer überlegt, ob er es noch über die Kreuzung schafft oder besser anhalten sollte, weil er sich quasi in einem Dilemma befindet."
+  },
+  {
+    "question": "Warum ist das Maskottchen des Eishockeyteams „Adler Mannheim“ ein Hamster?",
+    "answer": "Beim Bau des Stadions dieses Eishockeyteams musste eine Hamsterpopulation umgesiedelt werden. Als Gedenken daran wurde ein Hamster zum Maskottchen des Teams."
+  },
+  {
+    "question": "Was ist Fertigschweiß?",
+    "answer": "Fertigschweiß ist ein mineralischer Normalputzmörtel, der als Oberputz innerhalb von Gebäuden angewendet wird."
+  },
+  {
+    "question": "Warum sind in Japan fast alle Handys wasserdicht?",
+    "answer": "Japanische Frauen sind so sehr auf ihr Smartphone fixiert, dass viele es mit unter die Dusche nehmen. Viele Hersteller haben dieses Bedürfnis erkannt und bieten daher wasserdichte Modelle an."
+  },
+  {
+    "question": "Was sind Autobumser?",
+    "answer": "Autobumser ist die umgangssprachliche Bezeichnung für Personen, die Verkehrsunfälle mit ausschließlich Sachschäden fingieren oder provozieren, um den Unfallgegner oder Versicherungsgesellschaften, insbesondere die Kfz-Haftpflichtversicherung, zu betrügen."
+  },
+  {
+    "question": "Was ist der heilige Ausguss?",
+    "answer": "Wenn in der katholischen Kirche Hostien auf dem Boden landen oder Messwein verschüttet wird, kommt der heilige Ausguss zum Einsatz (Sakrarium). Da die heiligen Materialien nicht im einfachen Müll entsorgt werden dürfen, gibt es eine Öffnung im Boden der Kirche oder der Sakristei, die ins Erdreich führt, um die Materialien würdig zu entsorgen."
+  },
+  {
+    "question": "Woher kommt die Redensart „jemandem nicht das Wasser reichen können“?",
+    "answer": "Die Redensart stammt aus dem Mittelalter, als auch die besseren Stände mit den Fingern aßen. Da die Finger fettig und schmutzig wurden, reichte der Adel Tischdienern Wasserschalen zur Reinigung. War jemand nicht einmal für diese einfache Tätigkeit geeignet, konnte er einem quasi nicht mal das Wasser reichen."
+  },
+  {
+    "question": "Was ist eine Schwabbelscheibe?",
+    "answer": "Die Schwabbelscheibe ist eine aus Stoffscheiben bestehende Scheibe für Poliermaschinen, mit der Polierwachs aufgetragen wird."
+  },
+  {
+    "question": "Was ist ein Sauersack?",
+    "answer": "Der Sauersack ist eine Pflanzenart der Annonengewächse, die Stachelannone. Dieser immergrüne Baum hat große Beeren, deren Hülle mit weichen Stacheln besetzt ist."
+  },
+  {
+    "question": "Was ist ein Fischfernseher?",
+    "answer": "Ein Fischfernseher ist eine transparente, mit Teichwasser gefüllte Kugel oberhalb der Wasseroberfläche. Durch eine Öffnung können die Fische von unten in die Kugel schwimmen und so einen Blick über die Wasseroberfläche werfen, während sie wie in einem Fernseher beobachtet werden können."
+  },
+  {
+    "question": "Warum hat ein Kneipier in Indien den Zugang für die Gäste seiner Bar durch die Errichtung eines Labyrinths erschwert?",
+    "answer": "In Indien galt seit dem 1. April 2017 ein Verkaufsverbot für Alkohol entlang von Bundes- und Staatsstraßen (Mindestsabstand von 200 oder 500 Metern). Der Wirt baute einen Labyrinth-ähnlichen Eingang vor seine Bar, um die Distanz zur Straße auf über 500 Meter zu erhöhen und so wieder Alkohol verkaufen zu können."
+  },
+  {
+    "question": "Was ist ein Trottelbecken?",
+    "answer": "Trottelbecken nennt man ein Aufzuchtbecken für junge Seehunde. Seehunde, die sich beim Futtern dämlich anstellen, bekommen dort das Futter direkt ins Maul, daher der Name."
+  },
+  {
+    "question": "Was sind Venusbrüstchen?",
+    "answer": "Venusbrüstchen ist eine Tomatensorte aus der Familie der Datteltomaten, deren Aussehen an eine Brust erinnert, da sie zu einer länglichen Spitze zuläuft."
+  },
+  {
+    "question": "Warum sagt man, jemand soll „die Klappe halten“?",
+    "answer": "Die Redewendung geht auf liturgische Rituale katholischer Klöster zurück. Die Sitze der Mönche im Chorgestühl waren mit einer Klappvorrichtung versehen. Beim Aufstehen während des Gottesdienstes wären die Stühle mit einem Knall zurück in ihre Position geschnallt. Um keinen Lärm zu machen, mussten die Mönche die Klappe festhalten."
+  },
+  {
+    "question": "Was ist Froschfotzenleder?",
+    "answer": "Froschfotzenleder war die Bezeichnung für ein Lederimitat, mit dem Autositze in der DDR bespannt waren."
+  },
+  {
+    "question": "Wieso sind alle Häuser des spanischen Ortes Juzcar blau?",
+    "answer": "Im Sommer 2011 hatte die Produktionsfirma Sony Werbung für den 3D-Film „Die Schlümpfe“ in dem 250-Einwohner-Dorf Juzcar gedreht. Dafür hatten sie alle Häuser blau angemalt. Da den Einwohnern die blaue Farbe gefiel, wurden die Häuser blau gelassen."
+  },
+  {
+    "question": "Wer oder was ist ein „Mädchenfänger“?",
+    "answer": "Mädchenfänger ist eine medizinische Vorrichtung, mit der einzelne Finger fixiert werden können, was vor allem bei Unterarmbrüchen notwendig ist, um die richtige Stellung der Knochen zu gewährleisten."
+  },
+  {
+    "question": "Warum wurde die Hoff-Krabbe nach David Hasselhoff benannt?",
+    "answer": "Der Brustpanzer dieser Krabbe ist sehr stark behaart. In Anlehnung an David Hasselhoff in Baywatch wurde sie daher nach ihm benannt."
+  },
+  {
+    "question": "Was ist die ostfriesische Palme?",
+    "answer": "Ostfriesische Palme ist der Grünkohl."
+  },
+  {
+    "question": "Was ist eine Brechpackung?",
+    "answer": "Brechpackung ist ein Begriff aus der Verpackungsindustrie und bezeichnet eine teilbare Packung, wie es sie früher zum Beispiel von „Tempo“ mit zweimal zehn Taschentüchern gab."
+  },
+  {
+    "question": "Warum werden Schwänze von tibetanischen Yaks in die USA importiert?",
+    "answer": "In den USA werden aus den Schwanzhaaren Weihnachtsmannbärte gemacht."
+  },
+  {
+    "question": "Warum sagt man in Frankreich statt „Toi, toi, toi“ „Merde“?",
+    "answer": "„Merde“ bedeutet „Scheiße“ auf Deutsch und wird oft im Theater als guter Wunsch verwendet. Der Ursprung kommt aus der Zeit, als die Leute noch mit Pferdekutschen zum Theater fuhren. Viele Pferdeäpfel vor dem Theater bedeuteten, dass viele Leute im Theater sind. Mit „Merde“ wünschte man sich also ein volles Haus."
+  },
+  {
+    "question": "Was ist eine Sackmulde?",
+    "answer": "Die Sackmulde ist eine 20 km lange und 6 km breite geologische Struktur nord- bis südöstlich der Stadt Alfeld in Niedersachsen, die nach dem Alsfelder Ortsteil Sack benannt ist."
+  },
+  {
+    "question": "Warum ist es in Nordsibieren üblich, dass die dort lebenden Frauen mit Feldschnecken werfen?",
+    "answer": "In Nordsibirien ist es Tradition, dass verliebte Frauen ihre Angebeteten, die davon noch nichts wissen, mit Schnecken bewerfen. Dies soll die erste Kontaktaufnahme sein."
+  },
+  {
+    "question": "Was ist ein Alkoholschloss?",
+    "answer": "Das Alkoholschloss ist ein Autoschloss, das seit 2011 in Holland in Autos von Fahrern eingebaut wird, die mit mindestens 1,3 Promille erwischt wurden. Vor dem Anlassen des Motors muss der Fahrer eine Atemprobe abgeben, um zu bestätigen, dass er nicht unter Alkoholeinfluss steht."
+  },
+  {
+    "question": "Warum stellen sich Einsiedlerkrebse in einer Reihe auf?",
+    "answer": "Die Einsiedlerkrebse stellen sich der Größe nach auf, um ihre Häuser zu tauschen. Der größte legt sein Haus ab, wenn er ein passendes gefunden hat. Der Reihe nach legen die Krebse dann jeweils ihr Haus ab und nehmen das des nächstgrößeren Krebses."
+  },
+  {
+    "question": "Was ist eine Fresstäuschung?",
+    "answer": "Der Seehase ist eine Meeresschnecke, die beim Angriff von Fressfeinden eine Tintenwolke ausstößt. Die Tintenwolke enthält eine milchige Flüssigkeit mit Stoffen, die der Fressfeind für Futter hält und die ihn vom Fressen abhalten. Es wird hierbei Fressen vorgetäuscht."
+  },
+  {
+    "question": "Was ist eine Mittagsbeule?",
+    "answer": "Wenn der Benzinpreis mittags um 3 Cent angehoben wird, nennt man das eine Mittagsbeule."
+  },
+  {
+    "question": "Warum bestreitet die Eintracht Fuhlsbüttel in Hamburg nur Heimspiele?",
+    "answer": "In diesem Fußballverein sind Gefängnisinsassen vollwertige Mitglieder und nehmen seit 1976/77 auch am Spielbetrieb teil. Daher müssen alle Spiele zu Hause ausgetragen werden."
+  },
+  {
+    "question": "Warum haben antike Statuen immer kleine Penisse?",
+    "answer": "Ein kleiner Penis galt als Symbol für Selbstbeherrschung, Selbstkontrolle und Selbstdisziplin. Ein Mann mit großem Penis galt als jemand, der sich selbst nicht im Griff hat."
+  },
+  {
+    "question": "Was ist ein Triple Willy?",
+    "answer": "Triple Willy ist ein Toilettenpapierspender für drei Toilettenpapierrollen. Ist eine Rolle leer, wird die nächste automatisch bereitgestellt."
+  },
+  {
+    "question": "Was ist die sogenannte Kronen-Schüchternheit?",
+    "answer": "Bei der Kronen-Schüchternheit vermeiden Bäume, sich gegenseitig zu berühren. Äste hören auf zu wachsen, sobald sie die Blätter des Nachbarbaumes berühren. Dadurch wird vermieden, dass sie sich gegenseitig das Licht nehmen."
+  },
+  {
+    "question": "Warum verlangte ein Baseball-Club aus North Carolina am 12. Juli 2016 $5 Eintritt, obwohl gar kein Spiel stattfand?",
+    "answer": "Viele der zu suchenden Pokemons des Handyspiels „Pokemon Go“ lagen auf dem Spielfeld. Daher hat der Club Eintritt für das Betreten des Spielfelds verlangt."
+  },
+  {
+    "question": "Was ist der Röstigraben?",
+    "answer": "Die Sprachgrenze zwischen der französischen und deutschen Schweiz wird Röstigraben genannt."
+  },
+  {
+    "question": "Warum drohte das Postamt in England einer Dame im April 2016 mit einem Streik?",
+    "answer": "Das Postamt drohte der Dame, nicht mehr zu ihr zu kommen, weil ihre Katze jeden Tag vor dem Briefschlitz wartete und den Postboten kratzte, wenn er einen Brief einwarf."
+  },
+  {
+    "question": "Woher kommt der Begriff Altweibersommer?",
+    "answer": "Altweibersommer leitet sich von den Spinnfäden her, mit denen Baldachinspinnen im Herbst durch die Luft segeln. Der Flugfaden, den die Spinnen produzieren und auf dem sie durch die Luft schweben, erinnert an das graue Haar alter Frauen."
+  },
+  {
+    "question": "Was ist eine Tankwart-Biene?",
+    "answer": "Im Bienenstock gibt es Heizer-Bienen, die mit ihren Flügeln fächeln, um während der Puppenphase 33°C bis 36°C im Bienenstock zu erreichen. Während dieser Zeit werden sie von den sogenannten Tankwart-Bienen mit Honig versorgt (quasi von ihnen betankt)."
+  },
+  {
+    "question": "Welche Überraschung erlebten Schweizer TV-Zuschauer bei der Übertragung eines Skirennens?",
+    "answer": "Während die Sendung „sportaktuell“ im Schweizer Sender SRF1 lief, konnten die Zuschauer unpassende Untertitel („Du darfst Sex haben und ich nicht. Das ist unfair.“ oder „Wie oft habt ihr gerade gevögelt?“) lesen. Ursprung war wohl ein Serverfehler, der den Untertitel der Sendung „Jungfrau (40), männlich, sucht …“ von SRF2 auch auf SRF1 ausstrahlen ließ."
+  },
+  {
+    "question": "Was ist das Großmutterloch?",
+    "answer": "Zwischen Ende Oktober und Mitte Februar blitzen die Sonnenstrahlen in der Schweiz für wenige Minuten durch einen natürlichen Spalt in der Gastlosen-Bergkette. Der Legende nach soll der Teufel im Zorn seine Großmutter gegen den Felsen geschmettert haben. Daher nennt man dies das Großmutterloch."
+  },
+  {
+    "question": "Warum muss das Huhn Polly aus Dielingen als Einzige aus dem Stall regelmäßig Schutzkleidung tragen?",
+    "answer": "Hühner, die wiederholt aus ihrem Gehege ausbrechen und als Fußgänger am Straßenverkehr teilnehmen, müssen aus Sicherheitsgründen Warnwesten tragen. Landwirt Clemens Keßmann hat sein Ausreißer-Huhn Polly mit einer reflektierenden Warnweste ausgestattet, da sie regelmäßig über den Zaun fliegt und an der Bundesstraße 51 spazieren geht."
+  },
+  {
+    "question": "Warum zahlen die Besucher des Londoner „Café Ziferblat“ nicht für Speisen und Getränke?",
+    "answer": "Im Café Ziferblat ist alles kostenlos (Kaffee, Tee, Gebäck, Obst und Gemüse, etc.), außer der Zeit, die ein Gast dort verbringt. Es herrscht das Pay-per-minute-Prinzip (eine Stunde kostet 2,20 Euro)."
+  },
+  {
+    "question": "Was ist der Wurstsemmel-Paragraph?",
+    "answer": "Der Wurstsemmelparagraph (§151 ABGB) in Österreich gestattet Kindern (0 bis 7 Jahre) den Abschluss geringfügiger Geschäfte des täglichen Lebens, wie zum Beispiel den Erwerb von Wurstsemmeln, obwohl sie sonst ohne Einverständnis der Erziehungsberechtigten nichts kaufen können."
+  },
+  {
+    "question": "Warum tummelten sich 1992 zahlreiche Flamingos in einem öffentlichen Klohäuschen in Miami?",
+    "answer": "Während des Hurrikans Andrew wurden die Flamingos eines Zoos in einem Klohäuschen in Sicherheit gebracht. Das Häuschen wurde dafür mit Stroh ausgelegt."
+  },
+  {
+    "question": "Warum ist das Parfüm „Obsession for Men“ das gefährlichste der Welt?",
+    "answer": "Raubkatzen (wie Geparden) reagierten in einem Versuch besonders stark auf das Parfum “Obsession for men” von Calvin Klein. Sie schnüffelten, tasteten und rieben sich an dem duftmarkierten Gegenstand. Männer sollten es auf einer Safari-Tour besser nicht tragen, es sei denn, der ausgiebige Kontakt mit Raubkatzen ist erwünscht."
+  },
+  {
+    "question": "Was ist eine Schlüsselparty?",
+    "answer": "Die Schlüsselparty findet meist in privaten Räumen statt. Die Männer werfen ihre Autoschlüssel in eine Urne. Die Frauen ziehen am Ende der Party einen Schlüssel aus der Urne, um zu bestimmen, mit welchem Mann sie nach Hause fahren und die Nacht verbringen."
+  },
+  {
+    "question": "Warum werden im Clowns Gallery-Museum in England 300 Eier, die wie Clowns geschminkt sind, aufbewahrt?",
+    "answer": "In diesem Museum befindet sich das Clown Egg Register. Auf die Eier malten Clowns ihr individuelles Make Up-Muster, um ihr Schminkmuster vor Imitation zu schützen."
+  },
+  {
+    "question": "Woher kommt der Ausdruck „Mantel des Schweigens“?",
+    "answer": "Der Mantel ist ein Symbol der Verhüllung oder des Beschützens. Im Mittelalter konnte man uneheliche Kinder während der Trauung unter dem Mantel der Frau verstecken, wodurch die Kinder als legitimiert und den eigenen Kindern gleichgestellt galten."
+  },
+  {
+    "question": "Worum handelt es sich bei der „Melonen-Regel“?",
+    "answer": "Die Melonen-Regel gibt es bei der Inneneinrichtung. Sie besagt, dass in kleinen Zimmern keine Gegenstände, die kleiner als eine Melone sind, stehen sollten, da der Raum sonst unaufgeräumt wirkt."
+  },
+  {
+    "question": "Was ist der „Wasserschluckwert“?",
+    "answer": "Der Wasserschluckwert ist ein Kriterium für die Beurteilung von Rasensportplätzen. Er gibt an, ob der Platz nach Regenfällen bespielbar ist."
+  },
+  {
+    "question": "Was ist Bedingung, um in der japanischen Girlgroup KBG84 zu singen?",
+    "answer": "Die Sängerinnen müssen mindestens 80 Jahre alt sein, Falten im Gesicht haben und eine gebückte Körperhaltung aufweisen. KBG84 bedeutet übersetzt Großmütterchenchor aus Kohama."
+  },
+  {
+    "question": "Was ist ein „Taxi-Tänzer“?",
+    "answer": "Taxi-Tänzer ist ein professioneller Tanzpartner, meist männlich, für Menschen, die jemanden zum Üben oder zum Tanzen suchen (da bei Tanzveranstaltungen oft ein Frauenüberschuss herrscht). Der Tanzpartner muss bezahlt werden."
+  },
+  {
+    "question": "Warum werden in Neuseeland Spielplätze aufgebaut, die nicht von Kindern genutzt werden?",
+    "answer": "Kea ist eine nur in Neuseeland vorkommende Papageienart. Sie zeichnet sich dadurch aus, dass sie bei Langeweile Brieftaschen oder andere Gegenstände klauen. Um dies zu verhindern, werden die Keas mit diesen Spielplätzen beschäftigt, auf denen sie sich austoben können."
+  },
+  {
+    "question": "Was ist ein „Errötendes Mädchen“?",
+    "answer": "Errötendes Mädchen ist eine aus Schleswig-Holstein stammende traditionelle Süßspeise, bestehend aus Buttermilch und Preiselbeeren."
+  },
+  {
+    "question": "Was ist die sogenannte „Deppenfalle“?",
+    "answer": "Als Deppenfalle wird eine Brückenunterführung in Frauenfeld in der Schweiz bezeichnet. Bei dieser Brücke bleiben häufig LKW-Fahrer stecken, weil sie die Maximalhöhe nicht beachten."
+  },
+  {
+    "question": "Was ist ein „Liebespfeil“?",
+    "answer": "Ein Liebespfeil kommt bei der Paarung von Landschneckengruppen zum Einsatz. Er wird im Genitalapparat der Schnecke gebildet und während des Paarungsvorspiels dem Partner in den Fuß gestochen."
+  },
+  {
+    "question": "Warum wurde 2017 in Russland versucht, ein Verbot gegen den Kinofilm „Es“ durchzusetzen?",
+    "answer": "Die Fast Food-Kette Burger King versuchte, das Verbot durchzusetzen, da sie behaupteten, der Clown im Film ähnele zu sehr Ronald McDonald, einer Figur des Konkurrenten McDonalds, und der Film sei somit eine versteckte Werbung. Das Verbot konnte nicht durchgesetzt werden."
+  },
+  {
+    "question": "Woher kommt die Geste, dass man jemandem die Daumen drückt?",
+    "answer": "Die Geste stammt von einem germanischen Volksglauben. Jeder Finger stand für einen eigenständigen Geist. Der Daumen stand für den Kobold. Um zu verhindern, dass der Kobold dem Anderen in die Quere kommt und ihm nichts anhaben kann, wurde der Daumen in der Faust versteckt (gedrückt)."
+  },
+  {
+    "question": "Warum stellte sich die Londoner Feuerwehr im April 2013 auf steigende Einsätze ein?",
+    "answer": "Im April 2013 hatte der Film „Shades of Grey“ Premiere. Die Feuerwehr in London bereitete sich darauf vor, dass sich einige Personen nicht mehr aus den Fesselspielen befreien konnten."
+  },
+  {
+    "question": "Was ist eine „Porzellanfuhre“?",
+    "answer": "Porzellanfuhre ist ein Begriff aus Wien und war ein Codewort für Fiaker. Wenn ein Fahrgast eine Porzellanfuhre bestellte, bedeutete das für den Kutscher, dass er vorsichtig und langsam fahren sollte, weil der Gast eine Prostituierte dabei hatte und während der Fahrt mit ihr Geschlechtsverkehr verrichten wollte."
+  },
+  {
+    "question": "Warum machte ein Fass die amerikanische Lehrerin Annie Edson Taylor im 20. Jahrhundert berühmt?",
+    "answer": "Annie Tylor war 1901 die erste Frau, die in einem Fass die Niagara-Fälle herunterfuhr und es überlebte."
+  },
+  {
+    "question": "Was verbirgt sich hinter dem Begriff „Schleuderpost“?",
+    "answer": "Früher mussten Flugzeuge der Luftpost bei langen Routen mehrmals zwischenlanden, um aufzutanken, unter anderem auf Schiffen im Südpazifik. Für den Weiterflug wurden sie mit einem Katapult vom Schiff geschleudert. Das verstand man unter Schleuderpost."
+  },
+  {
+    "question": "Was sind Putzwellen?",
+    "answer": "Putzwellen ist ein Begriff aus der Medizin. Es handelt sich dabei um Kontraktionen, mit denen unverdauliche Objekte aus dem Magen entleert werden."
+  },
+  {
+    "question": "Was ist der Google-Effekt?",
+    "answer": "Aufgrund des Google-Effekts verschlechtert sich die Leistung unseres Gedächtnisses. Der Mensch denkt, dass er sich die Inhalte im Internet nicht merken muss, weil er sie jederzeit dort wieder anschauen kann. Daher speichert er es sich nicht im Gedächtnis ab."
+  },
+  {
+    "question": "Warum spielten Lieder von Tina Turner am Flughafen von Gloucestershire eine wichtige Rolle?",
+    "answer": "Vögel sind auf den Rollbahnen dieses Flughafens ein großes Sicherheitsproblem. Per Zufall hatte man entdeckt, dass die Vögel bei Liedern von Tina Turner flüchten, weil sie diese Frequenzen nicht vertragen. Daher werden dort Lieder von Tina Turner abgespielt."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Das schlägt dem Fass den Boden aus.“?",
+    "answer": "Wenn ein Brauer früher ungenießbares Bier verkaufen wollte und dabei erwischt wurde, hat die Polizei den Fassboden eingeschlagen. Dadurch lief das Bier aus und konnte nicht mehr verkauft werden. Das Zerschlagen war gleichzeitig die Strafe für den Brauer."
+  },
+  {
+    "question": "Was ist der Fuselfelsen?",
+    "answer": "Helgoland wird als Fuselfelsen bezeichnet. In den 60er und 70er Jahren konnten Touristen dort zollfrei einkaufen. Die Insel galt daher als billiger Einkaufsort, woraus der Begriff entstand."
+  },
+  {
+    "question": "Was ist der sogenannte „Betteltanz“?",
+    "answer": "Seit 1860 findet in Raisting in Bayern der Betteltanz statt. Dabei werden ledige Mädchen mit ledigen Jungen für einen Tag verkuppelt. Der Name kommt daher, da die Angebetete angebettelt wird."
+  },
+  {
+    "question": "Warum wurde im 15. Jahrhundert der Biber zu der Kategorie Fisch erklärt?",
+    "answer": "Im Konstanzer Konzil wurde der Biber als Fisch deklariert, damit ihn die Menschen auch in der Fastenzeit essen durften."
+  },
+  {
+    "question": "Was ist ein „Wilder Stinker“?",
+    "answer": "Als „Wilder Stinker“ wird ein 2017 erkorenes Regionalgericht aus dem Harz bezeichnet. Es ist dem Harzer Tourismusverband entsprungen und besteht aus einer Wildschwein-Currywurst, die mit Harzer Käse überbacken ist."
+  },
+  {
+    "question": "Was ist eine Schamkapsel?",
+    "answer": "Schamkapsel ist der Name für den auffällig gestalteten Hosenlatz, der im 15. und 16. Jahrhundert bei Männern Mode war. Die Schamkapsel wurde über der Scham getragen und symbolisierte männliche Potenz."
+  },
+  {
+    "question": "Warum brachte ein 38-jähriger Erpresser zur Lösegeldübergabe seine Mutter mit?",
+    "answer": "Der 38-Jährige wollte die Handelskette Rewe erpressen. Als er zur vermeintlichen Lösegeldübergabe kam (die Polizei gaukelte Verhandlungen vor), hatte er seine Mutter im Auto mit dabei. Er answerete auf die question, warum er seine Mutter mitgebracht hatte: „Ich hätte das Auto sonst nicht bekommen.“"
+  },
+  {
+    "question": "Was sind graue Nomaden?",
+    "answer": "Als graue Nomaden werden in Australien Reisende der älteren Generation bezeichnet. Viele dieser reiselustigen Rentner haben ihre Ersparnisse für ein Wohnmobil geopfert und bereisen damit nun Australien."
+  },
+  {
+    "question": "Wann wird die Abschlussnote eines britischen Abiturienten automatisch um 2 % angehoben?",
+    "answer": "Der dortige oberste Prüfungsausschuss hat beschlossen, dass bei traumatischen Ereignissen die Abiturnote um 2 % angehoben wird (z.B. wenn am Tag der Prüfung das Haustier stirbt). Für einen Knochenbruch oder einen Asthmaanfall gibt es 3 % Verbesserung, und bei Kopfweh 1 %."
+  },
+  {
+    "question": "Warum sagt man „einen Stein im Brett haben“?",
+    "answer": "Der Ursprung dieser Redewendung liegt in einem Brettspiel namens „Puffspiel“ oder auch „Tricktrack“. Wer dabei zwei nebeneinanderliegende Felder mit seinen Steinen belegt, erschwert seinem Mitspieler das Gewinnen. Ein guter Freund, der einem zur Seite steht, ist quasi wie ein guter Stein im Brett."
+  },
+  {
+    "question": "Warum dürfen in Turkmenistan nur weiße Autos zugelassen werden?",
+    "answer": "Der Präsident Berdimuhamedow hat weiß zu seiner Lieblingsfarbe erklärt. Er hat in der Hauptstadt viel weißen Marmor verbaut, reitet auf weißen Hengsten und zeigt sich oft in weißer Kleidung. Daher beschloss er, dass nur noch weiße Autos zugelassen werden."
+  },
+  {
+    "question": "Was ist ein Vorspritzer?",
+    "answer": "Ein Vorspritzer ist ein dünnflüssig aufgespritzter Mörtel zur Vorbereitung des Untergrunds für einen nachfolgenden Putz."
+  },
+  {
+    "question": "Was ist ein Kniescheibentermin?",
+    "answer": "Die regelmäßige Hauptuntersuchung für Autos wurde 1951 eingeführt. Bis 1961 fanden die Untersuchungen oft auf Marktplätzen statt, ohne spezielle Prüfstände, Hebebühnen oder Gruben. Für einen Blick unter das Fahrzeug musste man sich hinknien und bücken. Diese Termine hießen Kniescheibentermine."
+  },
+  {
+    "question": "Warum musste die Raumfähre Discovery 1995 ihren Start kurzfristig verschieben?",
+    "answer": "Ein Specht hämmerte 105 Löcher in die Isolationsschicht des externen Tanks der Raumfähre, wodurch die Discovery zur Reparatur zurück in die Montagehalle musste. Seitdem befinden sich dort Eulenattrappen, um die Vögel abzuschrecken."
+  },
+  {
+    "question": "Was ist eine Bumskeule?",
+    "answer": "Die Bumskeule wird auch Kanonenputzer, Lampenputzer oder Schlotfeger genannt. Der offizielle Name dieser Pflanze ist Rohrkolben. Es ist eine Wasser- und Sumpfpflanze, die in Feuchtgebieten dichte Bestände entwickeln kann."
+  },
+  {
+    "question": "Was ist die „Heiratsstrafe“?",
+    "answer": "In der Schweiz ist es möglich, dass Verheiratete mehr Steuern zahlen müssen, als wenn sie nicht verheiratet sind. Das bezeichnet man umgangssprachlich als Hochzeitsstrafe."
+  },
+  {
+    "question": "Was versuchte der Bankräuber McArthur Wheeler 1995 in Pittsburgh, damit er in Überwachungskameras unerkannt blieb?",
+    "answer": "McArthur Wheeler hatte gelesen oder gehört, dass Zitronensaft als unsichtbare Tinte verwendet werden kann. Daher rieb er sich sein Gesicht mit Zitronensaft ein, weil er dachte, dass ihn die Überwachungskameras so nicht erkennen würden."
+  },
+  {
+    "question": "Warum versuchen sich viele Japaner durch ein enges Loch in einem Tempel zu quetschen?",
+    "answer": "Vor einem großen buddhistischen Tempel in Japan steht eine große Buddha-Statue. Wer durch eines seiner zwei Nasenlöcher passt, erhält immerwährendes Glück und ein verlängertes Leben. Daneben wurde ein gleich großes Loch in eine Säule gebohrt, damit Besucher üben können, ob sie durch das Nasenloch passen."
+  },
+  {
+    "question": "Was verlangten die USA von den drei Astronauten der Apollo 11 bei deren Rückkehr?",
+    "answer": "Die Astronauten mussten einen Einreiseantrag stellen. Auf die question „Woher kommen Sie“ auf dem Antrag trugen die Astronauten „vom Mond“ ein."
+  },
+  {
+    "question": "Woher stammt die Redensart „Jemandem einen Bärendienst erweisen“?",
+    "answer": "Diese Redensart ist durch eine Geschichte von Jean de la Fontaine entstanden. Ein Bär, der seinen menschlichen Freund umsorgte, schlug im Schlaf mit einem Stein auf eine Fliege, die auf dem Kopf des Mannes saß, und tötete dabei beide. Dieser nicht hilfreiche Dienst ist der Ursprung der Redewendung."
+  },
+  {
+    "question": "Wozu brauchen Buddhisten in China eine staatliche Erlaubnis?",
+    "answer": "Seit 2007 ist es den Buddhisten in China verboten, nach dem Tod wiedergeboren zu werden. Um die Macht in Tibet zu festigen, hat die Regierung dieses Verbot ausgesprochen, sodass man sich die Wiedergeburt staatlich genehmigen lassen muss."
+  },
+  {
+    "question": "Was ist eine „Fotzelschnitte“?",
+    "answer": "„Fotzel“ ist schweizerisch und bedeutet Schnipsel. Fotzelschnitte sind in Ei getunkte Brotscheiben, die in Butter gebraten und mit Zimtzucker serviert werden. Es ist die schweizerische Bezeichnung für „Arme Ritter“."
+  },
+  {
+    "question": "Was ist ein „Nebeltest“?",
+    "answer": "Den Nebeltest macht der Juwelier: Er haucht den Diamanten an. Bleibt der Edelstein für einige Sekunden vernebelt, handelt es sich vermutlich um einen Industriediamanten. Wird der Diamant sofort klar, handelt es sich eher um einen echten, da echte Diamanten Wärme abstoßen."
+  },
+  {
+    "question": "Warum war der sonntägliche Gottesdienst von Pfarrer Larry Deitch in Florida ein Geheimtipp unter Touristen?",
+    "answer": "Pfarrer Larry Deitch hat eine Drive-In-Kirche. Man kann mit dem Auto zum Gottesdienst fahren und während des Gottesdienstes im Auto sitzen bleiben."
+  },
+  {
+    "question": "Was ist der „Lippenstift-Effekt“?",
+    "answer": "Der Lippenstift-Effekt ist ein Indikator für ökonomische Veränderungen. In ökonomisch schlechten Zeiten geben Nachquestionr mehr Geld für Kosmetikprodukte aus, um sich eine kleine Freude zu machen, da sie sich größere Anschaffungen nicht leisten können."
+  },
+  {
+    "question": "Warum galt ab 2005 der erste Gang am Morgen des Greenkeepers eines norwegischen Golfclubs immer den Löchern der Anlage?",
+    "answer": "Im „Stavanger Golfklubb“ hatte sich seit 2005 ein Unbekannter regelmäßig in den Löchern der Anlage erleichtert (Kot). Deswegen inspizierte der Greenkeeper am Morgen zuerst alle Löcher der Anlage."
+  },
+  {
+    "question": "Was führte dazu, dass im Juli 2017 die Schwandorfer Feuerwehr ausrücken musste, um eine schmierige Fahrbahn zu reinigen?",
+    "answer": "Auf einer Brücke hatten sich im Juli 2017 tausende Eintagsfliegen gepaart. Die Männchen sterben nach dem Liebesakt und fallen zu Boden. Aufgrund der Vielzahl an Tierchen wurde die Fahrbahn glatt und schmierig, sodass die Feuerwehr sauber machen musste."
+  },
+  {
+    "question": "Was ist ein „Knallschein“?",
+    "answer": "Der „Knallschein“ ist ein Fachkundenachweis für Seenotsignalmittel wie eine Pistole mit Munition, Handfackeln oder Signalraketen. Da diese nicht ungefährlich sind, ist ein Knallschein erforderlich, der stets an Bord mitgeführt werden muss."
+  },
+  {
+    "question": "Warum wurde ein Kaninchen zum Symbol für die Amtszeit des ehemaligen US-Präsidenten Jimmy Carter?",
+    "answer": "Während eines Angelausflugs in Georgia wurde Jimmy Carter von einem Sumpfkaninchen angegriffen. Er vertrieb es mit einem Paddel und wurde dabei fotografiert. Fortan waren Carter und das „Killerkaninchen“ in den Medien weit verbreitet. Das Kaninchen wurde darauf das Symbol für einen schwachen und machtlosen Präsidenten."
+  },
+  {
+    "question": "Warum leckt ein Mann aus Wien regelmäßig an Gebäuden?",
+    "answer": "Dieser Mann ist Geologe und Professor. Mittels Schleckprobe ermittelt er die Sanierungsbedürftigkeit von Fassaden. Wird der Speichel unmittelbar aufgesogen und die Zunge bleibt nicht an der Wand kleben, so ist das Gebäude in gutem Zustand."
+  },
+  {
+    "question": "Was ist die „Bananenstellung“?",
+    "answer": "Die Bananenstellung macht die Seerobbe, wenn sie sich sonnt. Sie liegt dann gekrümmt wie eine Banane auf dem Strand."
+  },
+  {
+    "question": "Warum mussten die Bewohner einer Straße in Rocky River (Ohio) selbst ihre Post abholen?",
+    "answer": "In der Straße waren freilebende und aggressive Truthähne, die die Post am Austragen hinderten. Da das Töten der Tiere nicht erlaubt war, blieb den Bewohnern nur die Möglichkeit, ihre Post selbst abzuholen."
+  },
+  {
+    "question": "Warum kassierte ein Fußballspieler 2014 in einer italienischen Amateurliga eine rote Karte beim Torjubel?",
+    "answer": "Der Torschütze sprintete nach dem Tor auf die Ersatzspieler an der Außenlinie zu und sprang mit dem Kopf voran durch die Plexiglasscheibe der Spielerbank. Daraufhin schickte ihn der Schiedsrichter mit Rot vom Platz."
+  },
+  {
+    "question": "Was versteht man unter dem „Hosenbodengefühl“?",
+    "answer": "Vom Hosenbodengefühl sprechen Piloten. Es ist das Gefühl der räumlichen Orientierung (Wahrnehmung der Beschleunigungskräfte auf den Körper), die Piloten bei Start und Landung empfinden und an denen ein erfahrener Pilot erkennen kann, wie das Flugzeug in der Luft liegt."
+  },
+  {
+    "question": "Woher kommt die Bezeichnung „Studentenfutter“?",
+    "answer": "Der Begriff stammt aus dem 17. Jahrhundert. Damals konnten nur reiche Leute studieren. Exotische Früchte und besonders Mandeln waren sehr teuer. Nur finanziell gut gestellte, wie die Studenten, konnten sich Mandeln leisten. Außerdem nahm man damals an, dass Mandeln gut gegen Alkohol (einen Kater) sind."
+  },
+  {
+    "question": "Was ist ein „Leckmittel“?",
+    "answer": "Im Mittelalter wurde Medizin mit einer Saft-Honig-Zubereitung verabreicht, weil die Medizin allein nicht schmeckte. Das bezeichnete man als Leckmittel."
+  },
+  {
+    "question": "Warum schaffte es die neuseeländische Kuh „Marge“ im Jahr 2007 in die Schlagzeilen?",
+    "answer": "Die Kuh Marge hatte einen Gendefekt. Der Fettanteil ihrer Milch betrug nur etwa 1 % (normal sind ca. 4 %)."
+  },
+  {
+    "question": "Was ist der „Türrahmen-Effekt“?",
+    "answer": "Dieser psychologische Effekt beschreibt die Situation, wenn man durch einen Türrahmen geht und vergisst, was man sich gerade noch merken wollte oder was man machen wollte."
+  },
+  {
+    "question": "Warum wurde die Höchstgeschwindigkeit in Tavullia 2008 auf 46 km/h reduziert, während sonst 50 km/h erlaubt sind?",
+    "answer": "In Tavullia in Italien wurde Valentino Rossi geboren. Da er neun WM-Titel beim Motorradfahren gewann und immer die Startnummer 46 hatte, wurde ihm zu Ehren die Höchstgeschwindigkeit in Tavullia auf 46 km/h reduziert."
+  },
+  {
+    "question": "Woher hat die „Nordhäuser Winterforelle“ ihren Namen?",
+    "answer": "Die Nordhäuser Winterforelle ist ein Birnbaum (nicht ein Fisch). Sie hat ihren Namen von großen rotumsäumten Punkten auf der Schale ihrer Früchte."
+  },
+  {
+    "question": "Was war das sogenannte „Karfreitagsexperiment“?",
+    "answer": "Das Experiment wurde am 20.04.1962 in Amerika durchgeführt. Forscher der Harvard Universität überprüften die Wirkung halluzinogener Pilze auf Karfreitagsgottesdienstbesucher. Sie wollten wissen, ob diese Pilze die gleiche Wirkung wie bei besonders gläubigen Menschen in religiöser Trance bewirken. Die Menschen berichteten tatsächlich von spirituellen Grenzerfahrungen."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Einen Frosch im Hals haben“?",
+    "answer": "Die Redewendung geht zurück auf eine Schwellung der Speicheldrüse, die medizinisch „ranula“ heißt. Entzündet diese, schwillt die Speicheldrüse an und sieht aus wie die Schallblase eines Frosches (Frosch heißt lateinisch „rana“). Bei einer „ranula“ hat man Sprechprobleme, wie auch beim „Frosch im Hals“."
+  },
+  {
+    "question": "Was ist eine „Gammellage“?",
+    "answer": "Gammellage ist die Bezeichnung für eine Wetterlage, die weder eindeutig ein Tief- noch ein Hochdruckgebiet ist. Der Name kommt von dem Wort „gammel“, weil sich die Luftmassen kaum bewegen (quasi gammelt die Luft vor sich hin)."
+  },
+  {
+    "question": "Warum wurde im März 2018 das „M“ einer kalifornischen McDonald´s Filiale auf den Kopf gedreht?",
+    "answer": "Zum internationalen Weltfrauentag hatte diese Filiale das „M“ umgedreht, damit es ein „W“ wird. Das „W“ stand für Woman und sollte ein Zeichen für die Gleichberechtigung der Geschlechter sein."
+  },
+  {
+    "question": "Was ist eine „Schnitzelbank“?",
+    "answer": "Eine Schnitzelbank ist in der Schweiz eine Zusammenstellung kurzer Verse, die meist rhythmisch oder gesanglich vorgetragen werden und die Zuhörer mit der humorvollen Schilderung aktueller oder allgemein menschlicher Vorkommnisse erheitern sollen. Der Name geht auf eine spezielle Werkbank zurück, wie sie in Küferwerkstätten zu finden war (die „Schnitzel“ sind die verteilten Texte)."
+  },
+  {
+    "question": "Warum haben sich 42 Schweden im Jahre 2013 in „Klaus-Heidi“ umbenannt?",
+    "answer": "Der Grund war ein Gewinnspiel der Lufthansa. Jeder Teilnehmer, der sich in Klaus-Heidi umbenennt und das per Ausweis belegen konnte, konnte einen einjährigen Aufenthalt in Berlin gewinnen. Klaus und Heide gelten in Schweden als typisch deutsche Namen."
+  },
+  {
+    "question": "Warum erhielt ein finnischer Uhu 2007 die Auszeichnung „Ehrenbürger des Jahres“ der Stadt Helsinki?",
+    "answer": "Im Fußballspiel Finnland gegen Belgien schwebte der Uhu von Tor zu Tor, bis der Schiedsrichter das Spiel unterbrach. Diese Unterbrechung tat dem finnischen Team gut, sodass sie anschließend das Spiel mit 2:0 gewannen. Daher dankte man dem Uhu, indem man ihn zum „Ehrenbürger des Jahres“ ernannte."
+  },
+  {
+    "question": "Was ist eine „Saubere Susi“?",
+    "answer": "Die „Saubere Susi“ dient der schnellen und einfachen Reinigung von Mikrowellen. Es handelt sich um einen Behälter, der mit Weißweinessig und Wasser befüllt wird. Man stellt ihn in die Mikrowelle, schaltet sie ein und Fett und Schmutz lösen sich."
+  },
+  {
+    "question": "Warum ist „Luisa“ in einigen Bars, Clubs und Cafes in Münster so bekannt?",
+    "answer": "„Luisa“ ist das Codewort der Frauennotrufkampagne in Münster. Frauen können beim Thekenpersonal „Ist Luisa da?“ questionn, falls sie belästigt werden. Das Personal ruft dann ein Taxi oder bringt die Person in einen sicheren Bereich, um die Situation zu entschärfen."
+  },
+  {
+    "question": "Wie haben einige Jugendliche in Neuseeland Silvester 17/18 das Alkoholverbot in der Öffentlichkeit umgangen?",
+    "answer": "Die Jugendlichen schütteten bei Ebbe eine Insel auf, die nicht mehr in Neuseeland lag, wodurch dort das Alkoholverbot nicht mehr galt."
+  },
+  {
+    "question": "Was ist das Einzigartige am alljährlich ausgerichteten Musikfestival im norwegischen Skiort Geilo?",
+    "answer": "Die Musiker spielen auf Instrumenten, die aus Eis gefertigt sind."
+  },
+  {
+    "question": "Warum waren 2011 einige Wochen alle Züge auf der höchsten Eisenbahnbrücke Deutschlands ohne Passagiere unterwegs?",
+    "answer": "Die Brücke wurde saniert. In dieser Zeit war die Brücke nur für 72 t freigegeben, was genau dem Leergewicht des Zuges entsprach. Die Fahrgäste fuhren bis zur Brücke, stiegen aus, der Zug fuhr leer über die Brücke, die Passagiere fuhren mit dem Bus weiter und stiegen am anderen Brückenende wieder in den Zug ein."
+  },
+  {
+    "question": "Was ist ein „Haustrunk“?",
+    "answer": "Als „Haustrunk“ wird das Recht eines Brauereimitarbeiters auf eine bestimmte Menge an Produkten aus dem eigenen Sortiment pro Monat bezeichnet. Dieses Recht steht im Tarifvertrag und wurde ursprünglich eingeführt, um Diebstahl zu vermeiden (üblicherweise 70 l kostenlos pro Monat)."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Mein lieber Freund und Kupferstecher“?",
+    "answer": "Die Redewendung bedeutet, dass man jemand vorwarnen möchte. Der Kupferstecher war der erste Beruf, bei dem man Kopien herstellen konnte, wodurch man nicht wusste, ob Kopie oder Original vorlag."
+  },
+  {
+    "question": "Was ist der „Goldene Fallschirm“?",
+    "answer": "Als „Goldenen Fallschirm“ bezeichnet man eine Klausel im Arbeitsvertrag von leitenden Mitarbeitern, in der bereits festgelegt wird, wie viel der Mitarbeiter als Abfindung erhält, sollte er aus dem Unternehmen entlassen werden."
+  },
+  {
+    "question": "Warum warten manche Krähen an Fußgängerübergängen auf Grün, bevor sie die Straßen betreten?",
+    "answer": "Intelligente Krähen legen Nüsse auf die Straße, warten bis Autos darüberfahren und die Nüsse knacken. Bei Grün wissen sie, dass es sicher ist, und betreten die Straße, um sich geknackte Nüsse zu holen."
+  },
+  {
+    "question": "Was verbirgt sich hinter der „2-2-2 Regel“?",
+    "answer": "Die 2-2-2 Regel ist ein Ratschlag zur Verbesserung der Beziehung eines Paares. Sie besagt, dass man alle 2 Wochen schick Essen gehen, alle 2 Monate ein gemeinsames Wochenende verbringen und alle 2 Jahre gemeinsam in den Urlaub fahren sollte."
+  },
+  {
+    "question": "Woher kommt der Bommel an der Bommelmütze?",
+    "answer": "Die Bommelmütze kommt aus dem 19. Jahrhundert aus der Seefahrt. Unter Deck war es oft so eng, dass man sich den Kopf anschlug. Der Stoffball (Bommel) diente als Stoßdämpfer."
+  },
+  {
+    "question": "Was ist das Paradoxe am „Paradoxen Frosch“?",
+    "answer": "Der „Paradoxe Frosch“ ist als Kaulquappe bis zu 25 cm lang. Als erwachsenes Tier schrumpft er jedoch auf eine Länge von 4,5 cm."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Durch den Kakao ziehen“?",
+    "answer": "Vor 100 Jahren machte man sich über jemanden lustig, indem man ihn durch Dreck oder derber durch Scheiße zog. Die Leute sprachen aufgrund des Brauntons davon, dass jemand durch den Kakao gezogen wird."
+  },
+  {
+    "question": "Warum schwimmen im Golf von Mexiko zunehmend taube Fische im Wasser?",
+    "answer": "Männliche Umberfische (auch Trommler genannt) treffen sich während der Laichzeit in Gruppen von bis zu 1,5 Millionen Fischen und erzeugen laute Geräusche (bis zu 177 Dezibel), die das Gehör anderer Meeresbewohner schädigen."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Aus dem Schneider sein“?",
+    "answer": "Die Redewendung stammt aus dem Kartenspielen. Hatte man weniger als die Hälfte der Punkte, stand man nicht gut da (Schneider galt als kein guter Beruf, der auf der Verliererseite stand). Hatte man mehr als die Hälfte der Punkte, war man \"aus dem Schneider\" und konnte nicht mehr verlieren."
+  },
+  {
+    "question": "Was ist ein „Ghost Restaurant“?",
+    "answer": "Ein „Ghost Restaurant“ ist ein Restaurant ohne Gastraum, bei dem die vorbereiteten Speisen nur über den Lieferservice zum Kunden gebracht werden."
+  },
+  {
+    "question": "Was macht man, wenn man in Hamburg „einen Drachen steigen lässt“?",
+    "answer": "Es handelt sich um einen alten Brauch. Am Fuße der Hauptkirche Hamburgs, dem Michel, trägt der frisch gebackene Bräutigam seine Schwiegermutter die Treppenstufen hoch, während ihn seine Braut von unten anfeuert. Da die Schwiegermutter böserweise auch als „Drache“ bezeichnet wird, lässt der Bräutigam somit einen Drachen steigen."
+  },
+  {
+    "question": "Warum durfte der Song „Marmor, Stein und Eisen bricht“ 1965 nicht im Bayerischen Rundfunk gespielt werden?",
+    "answer": "Der Bayerische Rundfunk boykottierte den Song einige Zeit, da er einen grammatikalischen Fehler enthält. Es müsste „Marmor, Stein und Eisen brechen“ heißen. (Der Song wurde auch in der DDR verboten, da er sich angeblich auf die Berliner Mauer bezog.)"
+  },
+  {
+    "question": "Woher kommt die Redensart „blau sein“?",
+    "answer": "Die blaue Farbe wurde im Mittelalter aus Färberwaidblättern gewonnen. Um die Farbe Indigo auszulösen, musste die Pflanze mit Alkohol vermischt werden. Die biertrinkenden Färber bedeckten die Pflanzen mit ihrem Urin und stellten das Gemisch in die Sonne, damit es zu gären begann. Für die blaue Farbe mussten die Färber also viel Bier trinken und waren somit \"blau\" (betrunken)."
+  },
+  {
+    "question": "Wie hat der Sohn eines Schlagerfans im Oktober 2015 einen Polizeieinsatz ausgelöst?",
+    "answer": "Eine Autofahrerin rief die Polizei, weil der Sohn \"Hilfe\" am Auto signalisierte. Die Polizei fand den Sohn, der sich lediglich über den Musikgeschmack seines Vaters beschwert hatte."
+  },
+  {
+    "question": "Was ist der „Anita Effekt“?",
+    "answer": "Der „Anita Effekt“ ist in einer von Männern dominierten Branche bekannt und wurde nach einer Praktikantin einer Marketingfirma benannt. Der Effekt besagt, dass die Rücklaufquoten bei Online-Studien höher sind, wenn der Absender der Einladungsmail weiblich ist."
+  },
+  {
+    "question": "Was ist der „Helene Fischer Effekt“?",
+    "answer": "Der \"Helene Fischer Effekt\" beschreibt, dass eine Person oder ein Produkt trotz relativ geringer Fanbasis (wie Helene Fischer mit 10 % der Deutschen) einen sehr großen Erfolg haben kann. Dies wird mit dem Homeshopping verglichen, wo nur wenige Leute einkaufen, aber einen großen Umsatz verursachen."
+  },
+  {
+    "question": "Was ist ein Schnapskopf?",
+    "answer": "Den Kaktus Lophophora williamsii nennt man auch Schnapskopf. Der in Texas und dem Norden Mexikos vorkommende Kaktus enthält unter anderem das halluzigene Mescalin, weswegen er diesen Namen hat."
+  },
+  {
+    "question": "Warum bekam die Taube Winston im Jahre 2009 einen USB-Stick ans Bein geheftet und ist 100 km weit geflogen?",
+    "answer": "Der Mitarbeiter einer afrikanischen IT-Firma wollte damit zeigen, wie langsam die örtliche DSL-Verbindung ist. Er schickte eine Taube mit USB-Stick los und begann gleichzeitig eine Mail mit der gleichen Datei loszuschicken. Als die Taube am Ziel ankam, war der Upload der Datei erst bei 4 %."
+  },
+  {
+    "question": "Was verursacht das Happy-Hour-Gen bei Fruchtfliegen?",
+    "answer": "Fruchtfliegen, die mit dem Happy-Hour-Gen behaftet sind, reagieren sehr empfindlich auf Alkohol. Sie fallen schnell betrunken um."
+  },
+  {
+    "question": "Warum wurde der Viehhändler im Mittelalter auch „Schmuser“ genannt?",
+    "answer": "Aufgrund seines Jobs kam der Viehhändler viel herum und wusste, wer ledig war und wen er miteinander vermitteln konnte. Das Wort \"schmusen\" ist jüdisch und bedeutet \"vermitteln\". Daher wurden Viehhändler auch Schmuser genannt."
+  },
+  {
+    "question": "Warum drehen sich traditionelle Karusselle auch heute noch gegen den Uhrzeigersinn?",
+    "answer": "Früher übten Ritter mithilfe eines Karussells für Turniere. Sie saßen auf dem Pferd, hielten die Lanze auf der rechten Seite (meist Rechtshänder) und ritten auf das Karussell zu, um Ringe aufzuspießen. Das Karussell drehte sich daher gegen den Uhrzeigersinn."
+  },
+  {
+    "question": "Warum hat die Schwedin Johanna Giselhäll Sandström ihren Sohn in Kelvin umbenennen lassen?",
+    "answer": "Ihr Sohn hieß vorher Kevin. Sie wollte sich die Namen ihrer Kinder Nova und Kevin auf den Arm tätowieren lassen. Der Tätowierer hatte sich allerdings verschrieben und Kelvin auf den Arm tätowiert. Damit das Tattoo wieder stimmt, ließ die Mutter ihren Sohn in Kelvin umbenennen."
+  },
+  {
+    "question": "Warum steht in der New Yorker Hot Dog Bar „Crif Dogs“ eine alte Telefonzelle?",
+    "answer": "Wählt man die Nummer 1, meldet sich eine Person, die eine Reservierungsnummer wissen möchte. Nur dann öffnet sich die Rückwand der Telefonzelle und man erhält Eintritt in die geheime Bar PDT, was „please, don´t tell“ bedeutet."
+  },
+  {
+    "question": "Was ist das musikalische Highlight auf der Route 66 zwischen Albuquerque und Tijeras?",
+    "answer": "Fährt man auf dieser Strecke exakt 45 Meilen pro Stunde, ertönt das Lied „America the Beautiful“. In der Fahrbahn sind Rillen, die beim Darüberfahren die Melodie im Auto erzeugen."
+  },
+  {
+    "question": "Wer oder was ist der „Klub der armen Schweine“?",
+    "answer": "Den „Klub der armen Schweine“ kann man in einem Golfclub finden. Die Mitglieder dieses inoffiziellen Klubs sind die Männer, deren Partnerinnen ein besseres Handicap haben als sie."
+  },
+  {
+    "question": "Warum gab der King of Rock’n’Roll Elvis Presley nie außerhalb von Nordamerika ein Konzert?",
+    "answer": "Tom Parker, der Manager von Elvis Presley, war 1920 illegal nach Amerika eingereist. Aus Angst, dass er nicht mehr zurückdürfte, hielt er sich nie außerhalb von Nordamerika auf. Aus langer Freundschaft gab Elvis Presley daher nie außerhalb von Nordamerika ein Konzert."
+  },
+  {
+    "question": "Woher kommt die Redewendung, dass jemandem „Der Arsch auf Grundeis“ geht?",
+    "answer": "Wenn sich das Grundeis auf dem Boden eines Sees löst, bricht es in Plattenform ab, donnert an die Wasseroberfläche und erzeugt dabei laute Geräusche. Da dieses den Geräuschen bei Magen-Darm-Verstimmungen ähnelte, ging demjenigen mit entsprechender Erkrankung der Arsch auf Grundeis."
+  },
+  {
+    "question": "Was war das Außergewöhnliche am Fußballspiel der Spvg Niederndorf 09 gegen Kreuztal-Littfeld 2017 in der Kreisliga-D?",
+    "answer": "Alle elf Spieler des Spvg Niederndorf 09 hatten den gleichen Nachnamen, nämlich Uebach."
+  },
+  {
+    "question": "Welche Straftat kann im Zusammenhang mit einem Bienenschwarm legal werden?",
+    "answer": "Fliegt ein Bienenschwarm dem Eigentümer davon, muss er ihn verfolgen, weil er sonst das Eigentum daran verliert. In diesem Fall darf der Eigentümer legal auf ein privates Gelände gehen, wenn er den Bienenschwarm verfolgt (§962 Satz 1 BGB)."
+  },
+  {
+    "question": "Was ist die „12-Uhr-Markierung“?",
+    "answer": "Rennwagen im Rennsport haben oben am Lenkrad eine Markierung. Damit wird es dem Fahrer erleichtert zu erkennen, wie das Lenkrad steht, wenn er gerade in einer Kurve fährt."
+  },
+  {
+    "question": "Wofür wurde im alten Ägypten Krokodilmist verwendet?",
+    "answer": "Der Krokodilmist wurde als Verhütungsmittel verwendet. Zerstoßener Kot der Krokodile wurde mit gegorenem Pflanzenschleim oder in Honig vermischt und dann vaginal eingeführt. Man weiß heute, dass dies tatsächlich die Beweglichkeit von Spermien beeinflussen kann."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Einen Eiertanz aufführen“?",
+    "answer": "Die Redewendung geht auf Johann Wolfgang von Goethe zurück. Er beobachtete ein Mädchen, das Eier auf einen Teppich legte und mit verbundenen Augen auf dem Teppich tanzte, ohne ein Ei zu zerbrechen. Er schrieb es auf, und so entstand die Redewendung."
+  },
+  {
+    "question": "Was ist eine Schweinerolle?",
+    "answer": "Schweinerolle ist eine Wurftechnik aus dem Judo. Dieser Außendrehwurf heißt auch Soto-Maki-Komi."
+  },
+  {
+    "question": "Warum durften bei Van Halen Konzerten keine braunen M&Ms in der Schüssel backstage sein?",
+    "answer": "Van Halen hat in den Verträgen einen Absatz eingefügt, dass in der Garderobe eine Schale M&Ms sein muss, in der keine braunen M&Ms sein dürfen. Da der Bühnenaufbau der Band sehr komplex war, diente dieser Absatz als Test, ob der Vertrag bis ins letzte Detail gelesen wurde. Wurden die M&Ms nicht wie verlangt geliefert, war meist auch etwas beim Bühnenaufbau fehlerhaft."
+  },
+  {
+    "question": "Was ist ein Geschlechtswandler?",
+    "answer": "Ein Geschlechtswandler ist ein Verbindungsstück, das zwei Kabel mit der gleichen Steckverbindung verbindet, die sonst nicht aufeinanderpassen würden."
+  },
+  {
+    "question": "Warum ließ sich der Künstler Neil Harbisson eine Antenne in den Kopf implantieren?",
+    "answer": "Neil Harbisson ist farbenblind. Die Antenne wandelt Farben in Töne um, sodass er Farben zwar nicht sehen, aber hören kann."
+  },
+  {
+    "question": "Warum stieg der Aktienkurs eines südkoreanischen Kondomherstellers im Februar 2015 rapide an?",
+    "answer": "1953 wurde ein Gesetz erlassen, das Ehebruch mit zwei Jahren Haft bestrafte. Im Februar 2015 wurde dieses Gesetz aufgehoben. Da viele Südkoreaner auf den lokalen Kondomhersteller Unidus zurückgriffen, machte dessen Aktienkurs einen Sprung von 15 %."
+  },
+  {
+    "question": "Warum stopfen verschiedene Vogelarten in Stadtnähe ihre Nester mit Zigarettenstummeln?",
+    "answer": "Manche Vogelarten haben erkannt, dass gewisse Giftstoffe in den Zigarettenstummeln wie Pestizide wirken und so ihr Nest vor Parasiten schützen."
+  },
+  {
+    "question": "Was sind die „Drei warmen Brüder“?",
+    "answer": "Als die „drei warmen Brüder“ werden im Volksmund drei Schornsteine eines Heizkraftwerks in Hannover bezeichnet."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Das ist keinen Pfifferling wert“?",
+    "answer": "Pfifferlinge wurden früher in großen Mengen gefunden. Um satt zu werden, brauchte man viele dieser Pilze. Ein einzelner Pfifferling war quasi wertlos. Daher sagte man „Das ist keinen Pfifferling wert“."
+  },
+  {
+    "question": "Was ist Leckbier?",
+    "answer": "Als Leckbier bezeichnet man den übergeschäumten oder abgestrichenen Bierschaum von Zapfbier. Dieser wird in einer Pfanne unter dem Zapfhahn aufgefangen. Früher wurde dieses Bier als Leckbier auch an schlechter gestellte Kunden ausgeschenkt."
+  },
+  {
+    "question": "Was ist ein unzüchtiger Penis?",
+    "answer": "Der unzüchtige Penis ist ein Pilz, auch gemeiner Stinkmorchel genannt. Er wächst von Juli bis Oktober und sein Aussehen ähnelt dem männlichen Geschlechtsteil."
+  },
+  {
+    "question": "Warum werden die Weibchen der Breitfuß-Beutelmaus wesentlich älter als die Männchen?",
+    "answer": "Die männliche Breitfuß-Beutelmaus lebt, um sich zu paaren. Sie paart sich drei Wochen lang mit so vielen Weibchen wie möglich. Diese Orgie kann bis zu 14 Stunden am Stück dauern. Da dabei viel Stress entsteht und übermäßig Cortison ausgeschüttet wird, versagt das Immunsystem des Männchens und es stirbt."
+  },
+  {
+    "question": "Was ist eine Notpraline?",
+    "answer": "Bei der Notpraline handelt es sich um die Süßigkeit Dominostein. 1936 wurde sie von einem Dresdner Chocolatier erfunden. Da sie mit ihrer Klotzform leicht transportfähig ist, für den Zweck, dass man unterwegs eine Süßigkeit braucht, nannte man sie Notpraline."
+  },
+  {
+    "question": "Wie brachte eine Frau während des Stromausfalls ihr Haus zum Explodieren?",
+    "answer": "Bei dem Stromausfall wollte die Frau für Licht sorgen und holte aus dem Keller Kerzen, die sie anzündete. Allerdings handelte es sich nicht um Kerzen, sondern um vom Vorbesitzer dort gelagerte Dynamitstangen. Das führte zur Explosion. Die Frau überlebte glücklicherweise."
+  },
+  {
+    "question": "Was ist der französische Wechsel?",
+    "answer": "Der französische Wechsel (auch blinder Wechsel genannt) kommt im Hundesport vor. Während des Rennens laufen Herrchen und Hund nebeneinander. Ändert das Herrchen die Führhand, wechselt der Hund auf die andere Seite."
+  },
+  {
+    "question": "Warum strahlte die BBC in den Jahren 1946 bis 1957 am Vorabend kein Programm aus?",
+    "answer": "Am Vorabend wurde kein Programm ausgestrahlt, da zu dieser Zeit die Kinder ungestört ins Bett gebracht werden sollten. Später, wenn die Kinder im Bett waren, gab es wieder Programm."
+  },
+  {
+    "question": "Warum nehmen viele Menschen eine weite Anreise zu einer Recycling-Station im spanischen Málaga in Kauf?",
+    "answer": "In Málaga befindet sich eine Recycling-Station für katholische, gesegnete Objekte. Da Gegenstände wie Bibeln, Rosenkränze und Heiligenstatuen nach kanonischem Recht nicht weggeworfen werden dürfen, kann man sie dort abgeben. Sie werden dann, wenn möglich, recycelt, verbrannt und dann vergraben."
+  },
+  {
+    "question": "Was ist der sogenannte Heiligenschein-Effekt?",
+    "answer": "Der Heiligenschein-Effekt (auch Halo-Effekt genannt) kommt aus der Psychologie. Dieser liegt vor, wenn bei der Beurteilung eines Menschen durch ein einziges hervorstechendes Merkmal (z.B. attraktives Aussehen) auf weitere Eigenschaften (z.B. Klugheit oder Freundlichkeit) geschlossen wird."
+  },
+  {
+    "question": "Wer oder was ist ein „Schleudersachse“?",
+    "answer": "Der Schleudersachse ist ein Negativpreis für die größte Steuerverschwendung in Sachsen. Der Preis, initiiert vom Bund der Steuerzahler, geht darauf zurück, dass hier quasi Geld verschleudert wird."
+  },
+  {
+    "question": "Warum wurde das Spiel zweier Wiener Fußballmannschaften im Jahr 1936 abgebrochen und mit 4:1 für den FC Austria gewertet?",
+    "answer": "In diesem Spiel traten zwei Wiener Damenklubs gegeneinander an. Als es in der zweiten Halbzeit zu regnen begann, wollte eine Torhüterin zum Schutz ihrer Dauerwelle nicht weiterspielen. Sie verließ mit ihrer gesamten Mannschaft den Platz. Daraufhin wurde das Spiel vorzeitig beendet und mit 4:1 für die gegnerische Mannschaft gewertet."
+  },
+  {
+    "question": "Was sind Geilstellen?",
+    "answer": "Wenn Pferde oder Kühe auf der Weide häufig an die gleiche Stelle kacken, wird die Wiese in diesem Bereich übermäßig gedüngt, und das Gras wächst schnell und gut. Diese Stellen nennt man Geilstellen."
+  },
+  {
+    "question": "Wie wurde ein Autohersteller unfreiwillig „Opfer“ einer Marketingkampagne von Burger King?",
+    "answer": "Ein Tesla-Fahrer postete ein Video, auf dem zu sehen war, wie der Autopilot eine Vollbremsung einlegte, weil er ein Burger King-Schild für ein Stopp-Schild hielt. Burger King vergab daraufhin an jeden, der ein ähnlich kreatives Video postete, einen Gratisburger."
+  },
+  {
+    "question": "Welcher Skandal sorgte 1983 für die Neuweihe der Willibaldkirche in Jesenwang im Kreis Fürstenfeldbruck?",
+    "answer": "Die Band Die Toten Hosen wählten diese Kirche als Location für das Video zum Lied 'eisgekühlter Bommerlunder'. Das Video zeigte eine ausufernde Punk-Hochzeit, bei der angeblich ein Bandmitglied auch gegen die Kirchentür urinierte. Der Pfarrer empfand die Kirche als entweiht und weihte sie daher neu."
+  },
+  {
+    "question": "Warum rannten BBC Mitarbeiter in den 80er Jahren verzweifelt durch eine chinesische Großstadt auf der Suche nach Kondomen?",
+    "answer": "Die BBC Mitarbeiter benötigten für Unterwasseraufnahmen von Jangtse-Delfinen einen Schutz für ihre Mikrofone. Auf die question nach Latex empfahl man ihnen allerdings häufig nur die Pille."
+  },
+  {
+    "question": "Warum kann das Herumalbern mit einem Baby bei den Navajo-Indianern eine teure Angelegenheit werden?",
+    "answer": "Die Navajo-Indianer feiern das erste Lachen eines Babys mit einer besonderen Familienfeier. Das erste Lachen zeigt, dass das Baby nun in der physischen Welt mit seinen Eltern lebt. Der Verursacher des ersten physischen Lachens des Babys darf die Feier bezahlen und im Namen des Babys Geschenke verteilen (besondere Ehre)."
+  },
+  {
+    "question": "Was passiert, wenn man im Weißen Haus an einer mobilen Holzbox auf den roten Knopf drückt?",
+    "answer": "Die mobile Holzbox ist für den Präsidenten bestimmt. Indem er auf den Knopf drückt, kann er einen Butler rufen (z.B. bekam Trump eine Cola gebracht, Barack Obama einen Tee)."
+  },
+  {
+    "question": "Wie wurde Rainer damit bekannt, dass er ein unappetitlicher Typ ist?",
+    "answer": "Rainer ist Taucher und bietet Tauchtouren an. Im Frühjahr 2019 tauchte hinter ihm ein Wal auf und erfasste ihn mit seinem Maul. Da der Schlund dieses Wales zu klein war, um einen Menschen zu verschlucken, hatte der Wal den Taucher wieder ausgespuckt."
+  },
+  {
+    "question": "Was ist ein Trockenspanner?",
+    "answer": "Beim Trockenspanner handelt es sich um ein legiertes Metallgestell zum Trocknen von bereits gebrauchten und anschließend ausgewaschenen Kondomen. Diese Erfindung aus den 50er Jahren diente dazu, die Kondome wiederverwenden zu können."
+  },
+  {
+    "question": "Wie löste eine elektrische Zahnbürste im März 2020 in Bremen einen Polizeieinsatz aus?",
+    "answer": "Die elektrische Zahnbürste hing am Ladegerät und blinkte dabei rot. Ein benachbartes Ehepaar fiel während des Liebesspiels das rote Blinken auf und dachte, sie würden von einem Spanner gefilmt. Daraufhin riefen sie die Polizei."
+  },
+  {
+    "question": "Welche Idee steckt hinter dem icow-Projekt?",
+    "answer": "Australische Wissenschaftler haben Augenpaare auf die Hinterteile von Kühen gemalt (icow setzt sich aus cow für Kuh und englisch ausgesprochen i für eye/Auge zusammen). Diese Augen schrecken Löwen ab, was in Botswana erfolgreich getestet wurde, da keine der angemalten Kühe angegriffen wurde."
+  },
+  {
+    "question": "Was ist ein „Kölner Brett“?",
+    "answer": "Kölner Brett ist eine spezielle Aufhängevorrichtung für Gardinen, bei der die Gardinenröllchen nicht zu sehen sind. Erfunden wurde das Kölner Brett 1932 von Hugo Bohn, einem Mitarbeiter der Kölner Entwicklerfirma Messing-Müller."
+  },
+  {
+    "question": "Was erfand eine britische Firma, um die Pausen von Angestellten zu verkürzen?",
+    "answer": "Da Angestellte zu viel Zeit auf den Toiletten verbrachten, designte ein britisches Start-up-Unternehmen eine Toilettenschüssel, die 13 Grad nach unten geneigt ist. Das Sitzen darauf wird nach kurzer Zeit zur Tortur, wodurch die Angestellten durchschnittlich 25 % weniger Zeit auf der Toilette verbrachten."
+  },
+  {
+    "question": "Mit welcher Aktion in München ist Ferdinand viral gegangen?",
+    "answer": "Ferdinand hatte ein Plakat bei einem Coldplay-Konzert in München hochgehalten mit der Aufschrift „Can i play everglow for you?“. Daraufhin holten sie ihn tatsächlich auf die Bühne, und er konnte das Lied auf dem Klavier spielen. Videos davon wurden 55 Millionen Mal geklickt."
+  },
+  {
+    "question": "Was ist eine Tastrosette?",
+    "answer": "Tastrosette war ein im 18. und 19. Jahrhundert gebrauchter Begriff für den Fingerabdruck. Er bezieht sich auf die ovalförmige Anordnung der Papillarleisten an den Fingerspitzen."
+  },
+  {
+    "question": "Wann wird man im polnischen Dorf Mistitz mit einem Straßennamen beschenkt?",
+    "answer": "Im polnischen Dorf Mistitz wurden bis September 2019 seit fast 10 Jahren keine Jungen, sondern nur Mädchen geboren. Der Bürgermeister belohnt ein männliches Baby mit einer nach ihm benannten Straße."
+  },
+  {
+    "question": "Wer geht in Deutschland in eine Mutantenklasse?",
+    "answer": "Mutantenklasse ist ein Begriff aus der Chor- und Gesangspädagogik. In Musikschulen im deutschsprachigen Raum befinden sich darin Jungen, die sich im Stimmbruch befinden (Stimmbruch ist eine Veränderung/Mutation). Sie werden dort speziell betreut, bis sie aus dem Stimmbruch heraus sind."
+  },
+  {
+    "question": "Warum gehen im chinesischen Wolong einige Staatsangestellte kostümiert zur Arbeit?",
+    "answer": "In einem Naturreservat in Wolong werden Pandas gehalten, mit dem Ziel, diese auszuwildern. Damit die Tiere sich nicht an das menschliche Aussehen gewöhnen und nach dem Auswildern zu den Siedlungen zurückkehren, tragen die Pfleger Ganzkörperanzüge, die wie Pandas aussehen."
+  },
+  {
+    "question": "Wie machte ein Mittagessen in der New Yorker Grand Central Station Rick Antosh um einige tausend Dollar reicher?",
+    "answer": "Rick Antosh hatte sechs Austern zum Mittagessen und fand eine Perle in einer Auster. Ein Experte schätzte den Wert der Perle auf 2000 bis 4000 Dollar."
+  },
+  {
+    "question": "Woher kommt die Redensart „jemanden vom Fleck weg heiraten“?",
+    "answer": "Im 19. Jahrhundert lernten viele Mädchen das Sticken, Nähen und Stopfen. Dazu verwendeten sie ein Stopfstück, einen sogenannten Flecken. Ihre Arbeiten mussten sie der künftigen Schwiegermutter zeigen. Wenn diese damit zufrieden und einverstanden war, konnte das Mädchen \"vom Fleck weg\" heiraten."
+  },
+  {
+    "question": "Was ist das Besondere an den Vorlesungen des mexikanischen Informatikprofessors Moises Vazquez?",
+    "answer": "Der Informatikprofessor Moises Vazquez hält seit über zwei Jahren seine Vorlesungen in einem Spiderman-Kostüm, um mehr Freude in seinen Seminarraum zu bringen, da Peter Parker (Spiderman) nebenberuflich Wissenschaftler war."
+  },
+  {
+    "question": "Was ist der Streisand-Effekt?",
+    "answer": "Der Streisand-Effekt ist ein Phänomen, bei dem der Versuch, Informationen aus der Öffentlichkeit herauszuhalten, genau zum Gegenteil führt. Der Name geht auf Barbara Streisand zurück, die 2003 erfolglos klagte, dass Luftaufnahmen ihres Hauses im Internet zu sehen waren, wodurch das Foto erst bekannt wurde."
+  },
+  {
+    "question": "Wieso kam es nach dem Museumsbesuch einer 90-Jährigen zu Ermittlungen der Nürnberger Justiz?",
+    "answer": "Die 90-Jährige war im Neuen Museum Nürnberg, wo der Künstler Arthur Köpcke in einem seiner Kunstwerke ein Kreuzworträtsel mit der Aufschrift \"insert words\" unterbrachte. Die Dame nahm dies wörtlich und trug Buchstaben in das Kreuzworträtsel ein. Das Verfahren gegen die Frau wurde eingestellt und das Kunstwerk gereinigt."
+  },
+  {
+    "question": "Welches Missverständnis sorgte bei einer Verkehrskontrolle in Lüdenscheid für große Verwunderung?",
+    "answer": "Es gab den Verdacht, dass ein Autofahrer unter Drogen stand. Die Polizei bat um eine Urinprobe. Der Autofahrer verstand die Polizei falsch und gab eine Spermaprobe ab. Nach einer negativ ausgefallenen Speichelprobe durfte er weiterfahren."
+  },
+  {
+    "question": "Was ist eine „Rüttelprobe“?",
+    "answer": "Die Rüttelprobe ist eine weitgehend überholte Methode, Grabsteine durch manuelles Rütteln auf ihre Standfestigkeit hin zu überprüfen, um die Sicherheit der Friedhofsbesucher zu gewährleisten."
+  },
+  {
+    "question": "Was ist das Wauwau-Schema?",
+    "answer": "Das Wauwau-Schema hat mit Wörtern zu tun, die Eltern vorsprechen und Kinder nachsprechen (z.B. Hund mit Wauwau oder Kuh mit Muhmuh). So lernen die Kinder verschiedene Lebewesen zu unterscheiden und geistig und sprachlich in Kategorien zu ordnen."
+  },
+  {
+    "question": "Warum wurde die deutsche Kindertagesstätte „Piraten-Nest“ 2017 von der New York Times zum coolsten Kindergarten der Welt gekürt?",
+    "answer": "Die Kindertagesstätte ist mitten im Stadion des FC St. Pauli zwischen der Süd- und Haupttribüne. Die rund 100 Kinder können dort die Spiele und Trainings kostenlos sehen, was die New York Times so begeisterte, dass sie die Kita als coolsten Kindergarten bezeichnete."
+  },
+  {
+    "question": "Welcher Teil des Reichstages wurde so selten benutzt, dass er 2012 umfunktioniert wurde?",
+    "answer": "Bis 2012 befand sich im Reichstag eine Sauna für Abgeordnete mit Platz für bis zu 20 Personen. Da sie so selten benutzt wurde, wurde sie zur Toilette umgebaut."
+  },
+  {
+    "question": "Was ist die „langweilige Milliarde“?",
+    "answer": "In der Erdgeschichte passierte im Zeitraum 1,8 Mrd. Jahre vor Christus und 800 Mio. Jahre vor Christus nicht wesentlich viel. Plattentektonik sowie Evolution schienen in diesem Zeitraum eine Pause einzulegen. Wissenschaftler sprechen in diesem Zusammenhang scherzhaft von der \"langweiligen Milliarde\"."
+  },
+  {
+    "question": "Warum variierte die Größe der Oscar-Statuen bei der Preis-Verleihung 1939?",
+    "answer": "1939 bekam der Film „Schneewittchen und die sieben Zwerge“ einen Ehrenoscar. Zu dem Oscar in normaler Größe gab es zusätzlich sieben kleine Oscars."
+  },
+  {
+    "question": "Was ist ein Aktendulli?",
+    "answer": "1938 wurde der Heftstreifen zum Patent angemeldet. Ihn nannte man früher auch Aktendulli. Im Gebiet der ehemaligen DDR ist diese Bezeichnung auch heute noch gebräuchlich."
+  },
+  {
+    "question": "Wo kommt die so genannte Penis-Polizei zum Einsatz?",
+    "answer": "Bei den Etappen der Tour de France malen Fans immer wieder Botschaften auf den Boden. Werden Penisse auf den Boden gemalt, werden diese von der \"Penis-Polizei\" mit kreativen Zeichnungen übermalt, sodass der Penis nicht mehr erkennbar ist."
+  },
+  {
+    "question": "Wer oder was sind Ball, Bell, Bone und Boot?",
+    "answer": "Unter diesen vier Begriffen werden die vier Formen von Chicken Nuggets einer großen Fast Food-Kette verstanden. Je nachdem, wie der Nugget aussieht, wird er so bezeichnet: Ball (wie ein Ball), Bell (wie eine Glocke), Bone (wie ein Knochen), Boot (wie ein Stiefel)."
+  },
+  {
+    "question": "Warum wurde dem Schweden Roger Tullgren im Jahr 2007 richterlich Arbeitsunfähigkeit attestiert?",
+    "answer": "Mehr als zehn Jahre lang versuchte der Schwede Roger Tullgren, seine Heavy Metal-Sucht gesetzlich anerkennen zu lassen. Er besuchte jährlich 300 Konzerte, und die Sucht verminderte sein Wohlbefinden. 2007 wurde ihm dies schließlich als Sucht attestiert und galt als Behinderung. Er bekam finanzielle Unterstützung des Staates und die Erlaubnis, sich entsprechend kleiden zu dürfen."
+  },
+  {
+    "question": "Woher stammt der Ausdruck „Jemanden am Schlafittchen packen“?",
+    "answer": "Das Sprichwort geht auf den Begriff „Schlagfittich“ zurück, der den Flügel eines Vogels bezeichnet. Beim Fangen von Gänsen packte man die Vögel am Flügel, damit sie nicht mehr davonkommen. Man packte sie also am Schlagfittich, wenn man sie sich vorknöpfen wollte, ohne zu entkommen."
+  },
+  {
+    "question": "Wer geht aus einem Turnier als „Bubble Boy“ hervor?",
+    "answer": "Bubble Boy ist ein Fachbegriff aus dem Poker. Wer als Letzter vor dem Preisgeld ausscheidet, wird als Bubble Boy bezeichnet, da seine Hoffnung auf das Preisgeld wie eine Blase kurz vor dem Ziel zerplatzt."
+  },
+  {
+    "question": "Warum freut sich ein Restaurant in Tokio trotz fehlerhaftem Service über 99 % Kundenzufriedenheit?",
+    "answer": "In diesem Restaurant kommt nachweislich jede dritte Bestellung falsch am Tisch an. Den Besuchern ist aber bereits im Vorhinein klar, dass sie nicht unbedingt bekommen, was sie bestellt haben, denn sämtliche Kellnerinnen und Kellner leiden an Demenz. Die Demenzpatienten sollen so in die Gesellschaft integriert werden."
+  },
+  {
+    "question": "Was ist die Kinn-Nase-Stirn-Methode?",
+    "answer": "Diese Methode kann man beim Steakbraten anwenden, um den Garstatus festzustellen. Man vergleicht die Beschaffenheit mit Kinn, Nase und Stirn: Weich wie das Kinn (roh/englisch), ähnlich der Nase (medium), hart wie die Stirn (durchgebraten)."
+  },
+  {
+    "question": "Woher kommt die Redewendung „jemandem den Rang ablaufen“?",
+    "answer": "Diese Redewendung stammt aus dem 16. Jahrhundert und geht auf das Wort „Rank“ zurück, was Biegung oder Krümmung bedeutet. Wenn man einen Weg abkürzt, sodass man schneller ans Ziel kommt, \"läuft man jemanden den Rang ab\" und ist nun vor ihm."
+  },
+  {
+    "question": "Was bezeichnet man als „Jesus Nut“?",
+    "answer": "Als Jesus Nut bezeichnet man die Mutter eines Hubschraubers, die die Rotorblätter festhält. Wenn diese Mutter versagt, kann nur noch Jesus helfen, heißt es."
+  },
+  {
+    "question": "Wo gilt in England ein Sicherheitsabstand von zwei Schwertlängen?",
+    "answer": "Im britischen Unterhaus muss traditionell zwischen den Bänken der Opposition und der Regierung ein Abstand von zwei Schwertlängen herrschen, da es in diesem Parlament gerne mal temperamentvoll zugeht."
+  },
+  {
+    "question": "Wie löste eine Werbeaktion der Serie „The Marvelous Mrs. Maisel“ am 15. August 2019 in Santa Monica ein Verkehrschaos aus?",
+    "answer": "Als Werbeaktion wurden alle Preise der Stadt Santa Monica auf das Jahr 1959 zurückversetzt (die Serie spielt 1959). So gab es zum Beispiel einen Haarschnitt für 3 Dollar und einen Liter Benzin für nur 30 Cent. Der hohe Ansturm an den Tankstellen führte zu einem Verkehrschaos, sodass die Polizei die Aktion abbrechen musste."
+  },
+  {
+    "question": "Was ist die „Shaggy Defense“?",
+    "answer": "Der jamaikanische Musiker Shaggy sang in seinem Song „it wasn´t me“ über einen Mann, der in flagranti von seiner Frau erwischt wurde und mit den Worten „it wasn´t me“ darauf reagierte. In Anlehnung daran nennt man eine Stellungnahme vor Gericht, bei der der Angeklagte trotz offensichtlichem Foto-, Video- oder Audiobeweis bestreitet, etwas getan zu haben."
+  },
+  {
+    "question": "Womit verringerte ein niederländischer Fahrradhersteller Versandbeschädigungen um rund 80 Prozent?",
+    "answer": "Es kam immer wieder zu Versandbeschädigungen bei Lieferungen in die USA. Daher ließ der Fahrradhersteller Fernseher auf die Versandkartons drucken, wodurch sich die Zahl der Reklamationen um 80 % reduzierte, da die Kartons mit mehr Vorsicht behandelt wurden."
+  },
+  {
+    "question": "Warum schnallte sich Lawrence Walters am 2. Juli 1982 mit Bier, Sandwiches und Luftgewehr an seinem Gartenstuhl fest?",
+    "answer": "Lawrence Walters hatte sich einen Kindheitstraum erfüllt. Er band 42 riesige Heliumballons an seinen Gartenstuhl. Sandwiches und Bier nahm er zur Verpflegung mit. Mit dem Luftgewehr wollte er die Ballons abschießen, um zu sinken. Er stieg allerdings auf 4900 m Höhe auf einem chaotischen Flug auf."
+  },
+  {
+    "question": "Wie helfen Esel im Frühjahr in der Lombardei anderen Tieren?",
+    "answer": "Wenn die Schafherde von den Hügeln in die Ebenen zum Grasen getrieben wird, können die kleinen Lämmchen nicht mithalten. Daher werden sie von den Eseln in deren Seitensatteln hinuntergetragen."
+  },
+  {
+    "question": "Warum bekam ein Jugendlicher am Tag der Führerscheinprüfung Ärger mit der Polizei?",
+    "answer": "Der Jugendliche sollte am 18.10.2018 seine Führerscheinprüfung ablegen. Er fuhr bereits mit dem Auto zur Prüfung. Das missfiel dem Prüfer und er rief die Polizei. Dem Jugendlichen drohte eine Geldstrafe und eine fünfjährige Prüfungssperre."
+  },
+  {
+    "question": "Was ist „Morbus Kobold“?",
+    "answer": "Der Vorwerk-Staubsauger namens Kobold hatte in der Bauart der 70er Jahre den Motor weit unten, wo sich ein 11 cm langer Ansaugstutzen befand. Michael Alschibaja Theimuras schrieb eine Dissertation über die schweren Verletzungen von Männern bei der Masturbation mit Staubsaugern. Auf diese Arbeit geht die Bezeichnung „Morbus Kobold“ für Penisverletzungen aufgrund von Masturbation mit Staubsaugern zurück."
+  },
+  {
+    "question": "Was versteht man in der Luftfahrt unter ESA?",
+    "answer": "ESA steht für Emotional Support Animal. Seit 2003 kann man in den USA beantragen, dass man während des Fluges ein Haustier (auch Schweine und Ponys) bei sich haben darf. Dies ist für Leute gedacht, die emotionale Unterstützung während des Fluges benötigen."
+  },
+  {
+    "question": "Woher kommt das Wort „splitterfasernackt“?",
+    "answer": "Die Herkunft des Wortes geht bis ins Mittelalter zurück und stammt aus dem Forstbereich. Um an das wertvolle Kernholz zu gelangen, musste das äußere Splitterholz (die Rinde) entfernt werden. Anschließend lag der Baum sozusagen \"splitterfasernackt\" vor einem."
+  },
+  {
+    "question": "Warum durfte die Britin Lamenda Kingdon während des Flugs ins karibische Grenada in die erste Klasse wechseln?",
+    "answer": "Die 62-jährige Britin realisierte während des Flugs, dass der Flug nicht nach Granada in Spanien ging, sondern nach Grenada in der Karibik. Sie hatte den Flug telefonisch gebucht und man hatte sie missverstanden. Als Entschädigung durfte sie in die erste Klasse."
+  },
+  {
+    "question": "Was versteht man in Kalifornien unter dem „Tom Cruise Gesetz“?",
+    "answer": "Während der Schwangerschaft von Katie Holmes wollte Tom Cruise täglich die Entwicklung des Babys beobachten. Dazu besorgte er sich ein Ultraschallgerät für den Hausgebrauch. Da die Verwendung eines solchen Geräts ohne entsprechende Ausbildung Risiken für das Ungeborene bergen kann, wurde 2006 ein Gesetz verabschiedet, das Nicht-Medizinern den Besitz eines solchen Geräts verbietet."
+  },
+  {
+    "question": "Warum enden viele Textnachrichten in Thailand mit 555?",
+    "answer": "In der Sprache Thai wird die 5 wie „ha“ gesprochen. 555 steht also für hahaha und soll Lachen darstellen."
+  },
+  {
+    "question": "Warum trugen britische Bauarbeiter im Jahr 2018 Röcke und Kleider auf der Baustelle?",
+    "answer": "Der Arbeitgeber dieser Bauarbeiter hatte ihnen verboten, kurze Hosen zu tragen. An einem sehr heißen Sommertag ließen sich die Bauarbeiter von weiblichen Kollegen inspirieren und trugen Röcke und Kleider, da diese in der Vorschrift nicht genannt wurden."
+  },
+  {
+    "question": "Was ist ein „Margarita Burn“?",
+    "answer": "Vom Margarita Burn können Barkeeper betroffen sein. Bei der Zubereitung eines Margaritas müssen Limetten gepresst werden. Der dabei ausgesonderte Saft wird von der menschlichen Haut aufgenommen und verzehnfacht die Wirkung von Sonnenstrahlen. Daher kann man so viel schneller einen Sonnenbrand (Burn) bekommen, was Margarita Burn genannt wird."
+  },
+  {
+    "question": "Warum puzzeln seit 2017 Angestellte des Weißen Hauses immer wieder während der Arbeitszeit?",
+    "answer": "Der amerikanische Präsident Donald Trump hatte die Angewohnheit, alle Akten, die für ihn erledigt waren, zu zerreißen. Da aber alle Unterlagen des Präsidenten dokumentiert werden müssen, waren Angestellte immer wieder damit beschäftigt, die zerrissenen Unterlagen zusammenzupuzzeln."
+  },
+  {
+    "question": "Warum wurde Georg Metzger am 24. August 1974 vom Platz gestellt, nachdem er selbst gefoult worden war?",
+    "answer": "Als Georg Metzger von einem Mainzer Gegenspieler heftig gefoult wurde, konnte er nicht verstehen, dass der Mainzer Spieler keine Karte dafür bekam. Daher fasste er selbst in die Tasche des Unparteiischen und holte die gelbe Karte heraus. Dies passte dem Schiedsrichter gar nicht und er stellte ihn vom Platz."
+  },
+  {
+    "question": "Von welchem Brauch leitet sich die Bezeichnung des Pantoffelhelds ab?",
+    "answer": "Bei neu geschlossenen Ehen gab es den Brauch, sich gegenseitig auf den Fuß zu treten, um herauszufinden, wer zu Hause das Sagen hat. Meist wurde der Brauch auch zu Hause durchgeführt, wo das Ehepaar Pantoffeln trug. Unterlag der Ehemann, wurde er der Pantoffelheld."
+  },
+  {
+    "question": "Weshalb ziert das Gebäude der Hamburger Reederei Laeiszhof ein Pudel?",
+    "answer": "Der Pudel ist zu Ehren der Gattin des Reedereiinhabers dort. Sie hatte meist hochgetürmtes Haar und ihr Spitzname war Pudel."
+  },
+  {
+    "question": "Was ist in England als Mull-of-Kintyre-Test bekannt?",
+    "answer": "Der Mull-of-Kintyre-Test ist eine inoffizielle Faustregel der britischen Filmzensur. Er besagt, dass in Szenen, in denen ein Penis zu sehen ist, dieser in keinem größeren Winkel abstehen darf als die Halbinsel Kintyre vom Festland absteht."
+  },
+  {
+    "question": "Welchen Fehler machte ein Bankräuber im Dezember 2019 in Bad Zwesten?",
+    "answer": "Der 68-jährige Bankräuber sagte beim Betreten der Bank: „Das ist ein Überfall!“ Ein Bankangestellter fragte ihn locker nach seinem Namen. Dieser gab daraufhin seinen vollständigen Namen bekannt. Zudem wurde ihm mitgeteilt, dass er kein Kunde dieser Bank sei und daher nichts ausbezahlt bekomme, und eine weitere Angestellte sagte, dass dies eine bargeldlose Bank sei. Der Bankräuber ging ohne Beute fort und konnte später festgenommen werden."
+  },
+  {
+    "question": "Wie merkte ein Neuseeländer 2014, wie sehr er sich bei einer Pokerrunde im Jahr 2009 verzockt hatte?",
+    "answer": "2009 pokerten stark angetrunkene Neuseeländer um den Einsatz, sich in \"Full Metal Havok More Sexy N Intelligent Than Spock And All The Superheroes Combined With Frostnova\" umzubenennen. Der 22-Jährige löste seine Schuld ein. Fünf Jahre später, als er einen neuen Pass beantragte, bemerkte er, dass seine Namensänderung tatsächlich genehmigt wurde (mit 99 Zeichen, was knapp unter der Ablehnungsgrenze von 100 Zeichen lag)."
+  },
+  {
+    "question": "Auf welche kuriose Art hat der Basketballer Donnell Cooper erfahren, dass er Vater wird?",
+    "answer": "Der amerikanische Basketballprofi Donnell Cooper musste einen routinemäßigen Dopingtest ablegen. Dabei wurde er des Betruges überführt, denn das Ergebnis des Tests war, dass er schwanger sei. Tatsächlich hatte er den Urin seiner Freundin abgegeben. So erfuhr er, dass er Vater wird, was er und seine Freundin bis dahin beide nicht wussten. Er wurde wegen des Betrugs für zwei Jahre gesperrt."
+  },
+  {
+    "question": "Warum gab es 2016 von der japanischen Polizei Rabattgutscheine für Nudelsuppen?",
+    "answer": "Mit der zunehmenden Überalterung der Bevölkerung nahm in Japan auch die Zahl der Unfälle mit älteren Mitbürgern zu. Daher gab es 2016 für alle Senioren, die ihren Führerschein bei der Polizei abgaben, einen 15 %-Rabatt für die Nudelsuppe einer beliebten Restaurantkette."
+  },
+  {
+    "question": "Was ist der Briefmarkentest?",
+    "answer": "Der Briefmarkentest ist ein Selbsttest auf Erektionsstörungen (Satirische Auszeichnung mit dem Ig-Nobelpreis). Er soll herausfinden, ob man während des Schlafs Erektionen hat. Man nimmt einen Streifen zusammenhängender Briefmarken, legt ihn um das männliche Glied und verklebt die Enden. Ist die Perforation gerissen, ist alles in Ordnung. Bleiben die Marken heil, liegt ein körperliches Problem vor."
+  },
+  {
+    "question": "Warum steigt ein Mann einmal im Jahr in ein Flugzeug und schüttet 70 Liter Wasser auf die russische Stadt Twer?",
+    "answer": "Russland ist für seinen weitverbreiteten Alkoholkonsum bekannt. Damit die Russen nüchtern werden und nicht mehr zum Alkohol greifen, steigt der Priester von Twer jährlich seit 2006 in ein Flugzeug und schüttet nach und nach 70 l Weihwasser aus einem goldenen Kelch aus dem Flugzeug."
+  },
+  {
+    "question": "Wieso binden sich in Mexiko die Huichol-Indianer zu bestimmten Zeiten ein Seil um ihre Hoden?",
+    "answer": "Diesen Brauch begehen die männlichen Huichol-Indianer, um ihre Frau bei der Geburt zu unterstützen. Sie halten sich dabei oberhalb der Frau auf (z.B. in einem Baum). Immer wenn die Frau Wehenschmerzen verspürt, kann sie an dem Seil ziehen, und der Mann leidet mit."
+  },
+  {
+    "question": "Was meint die australische Redewendung „doing a Bradbury“ oder „einen Bradbury machen“?",
+    "answer": "Der Eisschnellläufer Steven Bradbury gewann 2002 olympisches Gold, weil seine Gegner in den entscheidenden Läufen stürzten, obwohl er als Außenseiter galt. Wenn also jemand als krasser Außenseiter Erfolg hat, \"macht er einen Bradbury\"."
+  },
+  {
+    "question": "Was meinen Dänen und Ungarn, wenn sie von „Bundesliga“ sprechen, abgesehen von der deutschen Fußball-Liga?",
+    "answer": "Die Vokuhila-Frisuren der Bundesliga-Fußballer der 80er Jahre haben in anderen Ländern einen bleibenden Eindruck hinterlassen. In Dänemark und Ungarn bezeichnet man die Vokuhila-Frisur mit „Bundesliga“."
+  },
+  {
+    "question": "Was versteht man unter einem „Zufallsschweden“?",
+    "answer": "Für Touristen war ein Zufallsschwede 2016 für 79 Tage erreichbar. Unter einer Rufnummer war ein zufälliger schwedischer Staatsbürger erreichbar, der sich für diese Aktion registrieren ließ. Man konnte mit ihm über Schweden reden, um so mehr über das Land zu erfahren."
+  },
+  {
+    "question": "Warum wurde der Spieler Mohammed Salem Al Enazi 1999 beim FC Bayern von den Mitspielern „Horst“ genannt?",
+    "answer": "Laut einer Anekdote von Mehmet Scholl: Der damalige Co-Trainer Michael Henke (aus NRW) wurde von Karl Hopfner ein neuer Testspieler vorgestellt mit den Worten „Der hoast Mohammed.“ (hochdeutsch: \"Der heißt Mohammed\"). Henke verstand „Der Horst Mohammed“ und stellte ihn so seinen Mitspielern vor."
+  },
+  {
+    "question": "Woher kommt die Redewendung „eine Spritztour machen“?",
+    "answer": "Früher bedeutete in der Militärsprache „spritzen“ so viel wie „fliehen“. Wenn die Kavallerie durch eine Menschenmenge ritt, ergriffen die Menschen die Flucht und \"spritzten quasi auseinander\". Später übernahmen Studenten die Redewendung, um einen Ausflug zu machen."
+  },
+  {
+    "question": "Wie brachte eine Spende den obdachlosen Amerikaner Billy Harris in die Schlagzeilen?",
+    "answer": "Eine Passantin hatte dem Obdachlosen neben Kleingeld aus Versehen ihren Verlobungsring in den Becher geworfen. Billy Harris verkaufte ihn nicht, sondern wartete, ob sie das Missgeschick bemerkte. Am nächsten Tag kam sie wieder. Daraufhin startete sie eine Spendenaktion, bei der über 90.000 Dollar zustande kamen. Zudem fand Billy Harris seine Schwester wieder, die er seit vielen Jahren nicht mehr gesehen hatte."
+  },
+  {
+    "question": "Welches Kunstwerk ist in Orlando ein großer Besuchermagnet?",
+    "answer": "Das Museum Ripley´s Believe it or Not stellte ein Kunstwerk eines japanischen Künstlers aus. Dieser rekonstruierte mit 1476 Toastbroten die Mona Lisa."
+  },
+  {
+    "question": "Wer oder was ist „Tekamolo“?",
+    "answer": "Tekamolo ist eine Eselsbrücke, um sich die Reihenfolge von Satzergänzungen zu merken: Te = temporal, Ka = kausal, Mo = modal, Lo = lokal. (Beispielsatz: Ich fahre übermorgen (temporal) wegen Bares für Rares (kausal) so schnell wie möglich (modal) nach Köln (lokal).)"
+  },
+  {
+    "question": "Wer oder was wird in der Jugendsprache als „31er“ bezeichnet?",
+    "answer": "§ 31 des Betäubungsmittelgesetzes besagt, dass die Strafe gemildert werden kann, wenn der Angeklagte zur Aufklärung der Tat beiträgt. Dieser Paragraph wird daher auch Judas-Paragraph genannt. Über einen Liedtext im HipHop zog der Begriff \"31er\" auch in die Jugendsprache ein und steht dort für einen Verräter."
+  },
+  {
+    "question": "Was ist die sogenannte Tetris-Challenge?",
+    "answer": "Ausgangspunkt war eine Sprecherin der Züricher Kantonspolizei, die ein Foto postete, auf dem zwei Polizisten, umgeben von Inhalten ihres Streifenwagens, im Quadrat auf dem Boden lagen. Das Foto war von oben fotografiert und erinnerte an das Spiel Tetris. Damit war der Internethype \"Tetris-Challenge\" geboren, dem viele Feuerwehren und Rettungskräfte folgten."
+  },
+  {
+    "question": "Was ist ein Ameisentätowierer?",
+    "answer": "Als Ameisentätowierer wird ein Arbeitskollege bezeichnet, der Kleinigkeiten, und seien sie noch so unwichtig und unsichtbar, akribisch aufarbeitet. Ihm kann es nicht detailliert genug sein."
+  },
+  {
+    "question": "Welchen besonderen Service bot das „Holiday Inn London“ im Jahre 2010 seinen Gästen an?",
+    "answer": "Das Hotel bot den Service an, dass sich Hotelangestellte in einem einteiligen Schlafanzug in die Hotelbetten der Gäste legten. Mit dieser menschlichen Wärmflasche (das Bett wird warm) wurde das Bett so vorgewärmt. Dies sollte den Schlaf verbessern."
+  },
+  {
+    "question": "Was ist die „3-mal-90-Regel“?",
+    "answer": "Forscher der University of Virginia hatten sich mit Glück in der Beziehung beschäftigt. Laut der 3-mal-90-Regel reicht es, wenn man sich dreimal am Tag für 90 Sekunden voll und ganz auf seinen Partner konzentriert (Komplimente, Interesse, Umarmungen, etc.), um in einer glücklicheren Beziehung zu leben."
+  },
+  {
+    "question": "Warum muss man sich beim Baden im Fluss Erft besonders in Nordrhein-Westfalen in Acht nehmen?",
+    "answer": "Aufgrund des eingeleiteten Abwassers ist die Wassertemperatur dort selten unter 12 Grad. Daher können dort auch tropische Fische, unter anderem Piranhas, überleben, weswegen man beim Baden Acht geben sollte."
+  },
+  {
+    "question": "Welche Besonderheit hat sich ein Bootsverleih in Kopenhagen einfallen lassen?",
+    "answer": "Man kann mit einem besonderen Kajak kostenlos die Stadt Kopenhagen von der Wasserseite aus erkunden. Allerdings muss man während der Fahrt mit einem Haken Müll einsammeln."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Einen Bock schießen“?",
+    "answer": "Die Redewendung verwendet man, wenn jemand einen Fehler begeht. Sie geht zurück ins 15. Jahrhundert. Auf Schützenfesten bekam der schlechteste Schütze als Trostpreis einen Bock für sein Versagen."
+  },
+  {
+    "question": "Was ist die „Brötchentütennavigation“?",
+    "answer": "Der Begriff kommt vom Segeln. Wenn Segler in der dänischen Südsee unterwegs waren, ohne zu wissen, wo sie sich befinden, legten sie abends an einem beliebigen Hafen an. Wenn sie am nächsten Tag Brötchen kauften, sahen sie am Aufdruck auf der Brötchentüte, wo sie sich befanden."
+  },
+  {
+    "question": "Was ist das „Türkische Handtuch“?",
+    "answer": "Das Türkische Handtuch ist ein Tanzschritt, den man bei lateinamerikanischen Tänzen findet. Der Mann führt die Frau hinter dem Rücken herum. Seine Armbewegungen gleichen der Bewegung, als wenn er sich mit einem Handtuch den Rücken abtrocknet."
+  },
+  {
+    "question": "Warum musste im Dezember 1976 der Flughafen London Heathrow wegen eines Schweins kurzzeitig geschlossen werden?",
+    "answer": "Pink Floyd wollte in diesem Jahr für ihr Album Animals ein besonderes Plattencover. Zwischen den Schornsteinen eines Kraftwerks sollte ein aufblasbares Schwein in der Luft schweben. Allerdings rissen die Seile, und das Schwein trieb Richtung Flughafen. Aus Sicherheitsgründen mussten alle Starts und Landungen kurzzeitig abgesagt werden."
+  },
+  {
+    "question": "Woher stammt die Redewendung „Auf den Putz hauen“?",
+    "answer": "Die Redewendung stammt aus dem Mittelalter. Der Helmschmuck von Rittern wurde als Putz bezeichnet. Bei Turnieren galt es, dem Gegner \"auf den Putz zu hauen\" und so den Kopfschmuck zu zerstören."
+  },
+  {
+    "question": "Was ist der „2+4 Akt“?",
+    "answer": "Der Penis eines männlichen Ameisenigels hat am Ende vier Verzweigungen. Bei der Erektion schwellen zunächst alle vier an. Das Weibchen hat nur zwei Verzweigungen. Während des Geschlechtsakts werden daher zwei Verzweigungen des Männchens stillgelegt. Diesen Geschlechtsakt nennt man 2+4 Akt."
+  },
+  {
+    "question": "Welchen Trend löste Isolierband 2017 in Rio aus?",
+    "answer": "In Brasilien ist es ein Muss, nach dem Bräunen Bikinistreifen zu haben. Um diese perfekt hinzubekommen, wurde die Haut so mit Klebeband bedeckt (an Brüsten und im Intimbereich), sodass es nach perfekten Bikiniabdrücken aussah."
+  },
+  {
+    "question": "Was ist ein „Gurkenfahrstuhl“?",
+    "answer": "Der Gurkenfahrstuhl ist ein Zubehör, das besonders in französischen Gurkengläsern zu finden ist. Es handelt sich dabei um ein Sieb mit Stiel am Boden des Glases. Es dient dazu, die im Gegensatz zu den deutschen Spreewaldgurken sehr kleinen Cornichons aus dem Gurkenglas zu fischen."
+  },
+  {
+    "question": "Was versteht man unter dem sogenannten „Chaffeur-Wissen“?",
+    "answer": "Unter Chaffeur-Wissen versteht man zur Schau gestelltes Fachwissen, das lediglich durch Lesen und Zuhören erworben wurde. Es geht zurück auf den Chauffeur von Max Planck, der den Inhalt von Plancks Vorträgen irgendwann auswendig konnte und so die Rede selbst hielt."
+  },
+  {
+    "question": "Warum bekam der Kanadier Nick Burchill 2001 lebenslanges Hausverbot im Fairmont Empress-Hotel in Vancouver?",
+    "answer": "Nick Burchill wollte seine mitgebrachten Salamiwürste kühlen. Da er keinen Kühlschrank im Zimmer hatte, legte er die Salamiwürste auf die Fensterbank. Als er wiederkam, war sein Zimmer von 40 Möwen belagert. Das ganze Zimmer war voller Federn, Vogelkot und Salamiresten. Beim Versuch, seinen Schuh mit dem Föhn zu trocknen, fiel dieser ins Waschbecken und verursachte einen Stromausfall im gesamten Hotel."
+  },
+  {
+    "question": "Warum ist die PIN-Nummer an Bankautomaten vierstellig?",
+    "answer": "Die Frau des Erfinders des Geldautomaten sagte, dass sie sich nicht mehr als vier Ziffern merken kann. Daher ist die PIN-Nummer auch heute noch vierstellig."
+  },
+  {
+    "question": "Was ist das neue Montag- und Donnerstagabendritual der Einwohner von Bulawayo (Simbabwe)?",
+    "answer": "Die Einwohner von Bulawayo sind jeden Montag und Donnerstag angehalten, um 19:30 Uhr die Toilettenspülung zu betätigen. Dadurch soll genug Wasserdruck erzeugt werden, um den Inhalt der Abwasserleitungen und Verkrustungen zu lösen."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Wenn du deinen Teller leer isst, gibt es morgen gutes Wetter“?",
+    "answer": "Die Redewendung kommt aus dem Plattdeutschen: „Wenn du dien Teller leer ittst, dann gifft dat morgen goodes wedder.“ Das Wort „wedder“ wird heute fälschlicherweise als „Wetter“ verstanden. Eigentlich hatte es die Bedeutung „wieder“. Wenn man also seinen Teller leer isst, gibt es morgen \"wieder etwas Gutes\"."
+  },
+  {
+    "question": "Welcher besondere Service erwartet die Kunden im Hot Dog-Laden „Wiener´s Circle“ in Chicago?",
+    "answer": "In diesem Hot Dog-Laden herrscht ein strenger Umgangston. Man wird nur angebrüllt, zum Beispiel mit „was zur Hölle Du essen willst!“. Entstanden ist diese Idee, als ein Kunde dauernd nach Essen fragte, obwohl schon geschlossen war. Der Besitzer brüllte ihn daraufhin an: „Was willst Du verdammtes A…loch essen?“."
+  },
+  {
+    "question": "Warum wurde die Distel zur Nationalblume von Schottland und ist auch im Wappen zu finden?",
+    "answer": "Nach einer Legende schlichen sich nordische Krieger im 13. Jahrhundert an schlafende Schotten heran. Damit sie leise sind, zogen sie die Schuhe aus. Allerdings trat einer in eine Distel. Sein Schmerzschrei weckte die schlafenden Schotten, und so konnten diese die Angreifer besiegen. Daher gilt die Distel als Nationalblume."
+  },
+  {
+    "question": "Weswegen zeigte eine 80-jährige Inderin im August 2015 das Haustier ihres Stiefsohnes an?",
+    "answer": "Bei dem Tier handelte es sich um einen Papagei. Dieser beschimpfte die Frau zwei Jahre lang konstant. Sie glaubte, der Stiefsohn habe das mit Absicht gemacht und zeigte daher den Vogel an. Der Vogel wurde verhört, sagte nichts, wurde dann aber an das Forstamt übergeben."
+  },
+  {
+    "question": "Wofür ist die „3-7-14 Regel“?",
+    "answer": "Die „3-7-14 Regel“ ist ein Ratschlag für das Shoppen. Wenn man ein neues Kleidungsstück kauft und es nach 3 Tagen nicht getragen hat, wird man es eher nicht mehr tragen. Hat man es nach 7 Tagen immer noch nicht getragen, wird man es nie mehr tragen. Daher sollte man es innerhalb von 14 Tagen zum Umtauschen ins Geschäft bringen."
+  },
+  {
+    "question": "Was kann man in Japan für 80 Euro zu Werbezwecken mieten?",
+    "answer": "Man kann für 80 Euro Frauen mieten, die ein trägerloses Kleid tragen und sich an Halterungen im Bus festhalten. Dabei sieht man ihre Achselhöhlen, die mit der Werbebotschaft versehen sind. Man kann also die Achselhöhlen der Frauen mieten."
+  },
+  {
+    "question": "Was ist ein „Bockschein“?",
+    "answer": "Der Bockschein ist eine Bezeichnung für ein amtsärztliches Gesundheitszeugnis, das bestätigt, dass man keine ansteckende Geschlechtskrankheit hat. Der Name leitet sich vom gynäkologischen Untersuchungsstuhl, der auch Bock genannt wurde, ab."
+  },
+  {
+    "question": "Aufgrund welchen Fehlers wurde ein Einbrecher im Jahre 2010 in den USA gefasst?",
+    "answer": "Der Einbrecher brach in ein Haus in Oak Hill ein und versteckte sich im Obergeschoss, als die Hausbesitzer zurückkamen. Er wurde gefasst, weil er über einen Witz, den der Hausbesitzer im Wohnzimmer erzählte, herzhaft lachen musste."
+  },
+  {
+    "question": "Wie versetzte ein Golfer den kalifornischen „Shady Canyon Golfclub“ in Aufregung?",
+    "answer": "Der Golfer hat mit dem Eisen auf Steine gehauen, als er den Golfball schlagen wollte. Dabei entstanden Funken, die das ausgedörrte Gras in Brand setzten. Letztendlich brannten zehn Hektar des Golfplatzes, sodass sogar Löschhubschrauber eingesetzt werden mussten."
+  },
+  {
+    "question": "Warum stellte das deutsche Unternehmen Adidas 1974 für die holländische Nationalmannschaft Trikots mit nur zwei Streifen her?",
+    "answer": "Der holländische Fußballverband schloss mit dem Sportartikelhersteller Adidas einen Vertrag. Da einer der niederländischen Nationalspieler einen Vertrag mit Puma hatte, weigerte er sich, ein Trikot mit drei Streifen zu tragen, da diese für Adidas stehen. Daher hatte der Sportartikelhersteller Trikots mit nur zwei Streifen hergestellt."
+  },
+  {
+    "question": "Warum laufen in der italienischen Bank „Credito Emiliano“ Angestellte in weißen Schutzanzügen herum?",
+    "answer": "Diese Bank vergibt zinsgünstige Darlehen an Käseproduzenten. Als Sicherheit nimmt die Bank Parmesan in Verwahrung. In der Bank gibt es Regale, in denen die Käselaibe liegen und von den Angestellten in weißen Schutzanzügen regelmäßig gewendet und gebürstet werden. Wird ein Darlehen nicht getilgt, kann die Privatbank den Käse auf dem Markt verkaufen."
+  },
+  {
+    "question": "Welches Highlight neben der Ben & Jerry´s-Fabrik besuchen jährlich ca. 250.000 Menschen?",
+    "answer": "Neben dem Firmengebäude ist ein Friedhof, auf dem die Eissorten „beerdigt“ werden, deren Produktion eingestellt wurde. Dort steht jeweils ein Grabstein mit Gedicht und einem Portrait mit Engelsflügeln."
+  },
+  {
+    "question": "Was kann passieren, wenn man im Frankfurter Stadtwald am Jacobiweiher spazieren geht?",
+    "answer": "Zwischen einer Gaststätte und dem Jacobiweiher befinden sich Objekte der komischen Kunst. Unter anderem ein Baum, der so gestaltet wurde, dass er, wenn ihm Leute zu nahe kommen, mit Wasser spritzt. Auf dem Schild vor dem Baum steht: „Seit 300 Jahren pisst man mich an. Jetzt pisse ich zurück.“"
+  },
+  {
+    "question": "Was ist ein „Scheissdreckzüglein“?",
+    "answer": "In der traditionellen Fastnacht in Basel werden kleine Gruppen von Musikern umgangssprachlich als Scheissdreckzüglein bezeichnet. Im Gegensatz zu größeren Gruppen laufen die kleinen Gruppen nicht in einer Formation, sondern wie sie wollen."
+  },
+  {
+    "question": "Welchen Nutzen finden Poolnudeln auf Torontos Straßen?",
+    "answer": "Obwohl Toronto zu einer der sichersten Städte Nordamerikas zählt, vermehrten sich Unfälle zwischen Autos und Radfahrern. Um diese Unfälle zu reduzieren, klemmen sich die Radfahrer eine Poolnudel quer auf den Gepäckträger, sodass sie seitlich herausragt und Autofahrer gezwungen sind, genügend Sicherheitsabstand zu halten."
+  },
+  {
+    "question": "Woher kommt der Ausdruck „Ach du grüne Neune“?",
+    "answer": "Der Ausdruck stammt vom Kartenlegen auf Jahrmärkten. Die Pik Neun wurde auch Grüne Neun genannt. Beim Kartenlegen verhieß sie nichts Gutes, sondern stand für Sorgen und Traurigkeit."
+  },
+  {
+    "question": "Warum gab es 1987 in den USA plötzlich sieben Millionen Kinder als in den Jahren zuvor?",
+    "answer": "Ab dem 15. April 1987 bekam jedes Kind eine eigene Sozialversicherungsnummer. Durch diese Änderung fiel auf, dass viele Amerikaner vorher mehr Kinder angaben, als sie tatsächlich hatten, um Steuern zu sparen. Somit gab es plötzlich sieben Millionen Kinder weniger."
+  },
+  {
+    "question": "Warum musste ein Passagier von Thai Airways eine Zusatzgebühr von 79 Euro zahlen?",
+    "answer": "Der Nachname des Mannes war so lang, dass er bei der Onlinebuchung nicht komplett angegeben werden konnte. Da beim Check-in der Nachname somit nicht passte, musste er nachträglich abgeändert werden, wofür eine Zusatzgebühr von 79 Euro fällig wurde."
+  },
+  {
+    "question": "Welche spezielle Methode nutzte ein Filmteam des Discovery Channels, um einen weißen Hai anzulocken?",
+    "answer": "Das Filmteam nutzte eine von Australiern entdeckte Methode. Unter Wasser wird Death Metal Musik abgespielt. Die feinen Sensoren der Haie registrieren die Vibrationen unter Wasser und halten dies offenbar für im Todeskampf befindliche Fische. So kann man weiße Haie anlocken."
+  },
+  {
+    "question": "Was versteht man unter „Alexanders dunkles Band“?",
+    "answer": "Alexanders dunkles Band ist bei einem Doppelregenbogen zu beobachten. Zwischen den zwei Bögen entsteht ein Raum, der dunkler erscheint als der Rest des Himmels. Der Zwischenraum wird zu Ehren des griechischen Philosophen Alexander von Aphrodisias, der den Doppelbogen als Erster beschrieb, so bezeichnet."
+  },
+  {
+    "question": "Wer oder was ist der Schattenmann?",
+    "answer": "Den Schattenmann verwenden alleinlebende Japanerinnen. Wenn sie Angst vor Einbrechern haben, können sie den Schattenmann, eine App, verwenden, mit der eine Silhouette eines Mannes (der Gewichte stemmen, boxen oder bügeln kann) an eine Wand oder eine Gardine projiziert wird."
+  },
+  {
+    "question": "Was veranlasste einen Italiener nach seinem Oktoberfestbesuch noch 3x nach München zurückzukommen?",
+    "answer": "Der Italiener kam mit dem Auto zum Oktoberfest, parkte in einer Seitenstraße und fuhr mit der Tram zur Wiesn. Er hatte sich allerdings den Straßennamen nicht gemerkt und somit vergessen, wo er sein Auto abgestellt hatte. Er fand es erst nach einem Zeitungsbericht wieder."
+  },
+  {
+    "question": "Was ist die „21-Sekunden-Regel“?",
+    "answer": "Wissenschaftler haben beobachtet, dass alle Säugetiere 21 Sekunden lang brauchen, um ihre Blase zu entleeren. Die Harnblase eines Elefanten fasst 18 Liter, die einer Katze 5 Milliliter. Trotzdem brauchen sie gleich lang zum Wasserlassen."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Jemanden etwas in die Schuhe schieben“?",
+    "answer": "Früher gab es Schlafräume in Herbergen, in denen mehrere Personen schliefen. Gauner nutzten dies aus. Wenn sie etwas gestohlen hatten, steckten sie ihr Diebesgut in die Schuhe anderer Personen. Die betroffenen Personen wurden zu Unrecht beschuldigt, weil ihnen etwas in die Schuhe geschoben wurde."
+  },
+  {
+    "question": "Warum weist die Tourismusbehörde in Neapel Touristen darauf hin, trotz Helmpflicht ohne Helm zu fahren?",
+    "answer": "Viele der Kriminellen in Neapel sind mit Helmen unterwegs, damit sie nicht erkannt werden. Damit Touristen nicht zufällig in Verdacht geraten, rät die Tourismusbehörde, keinen Helm zu tragen."
+  },
+  {
+    "question": "Warum kleben in russischen Bussen und Bahnen „Hasenverbotsschilder“?",
+    "answer": "In Russland werden Schwarzfahrer als Hasen bezeichnet. Die Schilder mit einem durchgestrichenen Hasen stehen also für das Verbot des Schwarzfahrens."
+  },
+  {
+    "question": "Auf welche kuriose Art fand ein Mann aus Peru heraus, dass er von seiner Frau betrogen wurde?",
+    "answer": "Der Mann wollte bei Google Maps eine Route planen. Im Street View-Modus sah er eine Dame mit einem Mann auf einer Parkbank sitzen. Die Dame sah seiner Frau sehr ähnlich. Er konfrontierte sie damit, und so kam die Affäre ans Licht. Daraufhin ließ er sich scheiden."
+  },
+  {
+    "question": "Warum brachte der Versuch seine Kinder beim Angeln zu beeindrucken einen Familienvater vor Gericht?",
+    "answer": "2012 fuhr ein Mann aus Rosenheim mit seiner Familie zum Angelausflug nach Kufstein in Österreich. Er hatte zwei Tiefkühlforellen mitgenommen und in einem unbeobachteten Moment an der Angel angebracht, um seine Kinder zu beeindrucken. Ein Passant beobachtete den Mann und zeigte ihn wegen Schwarzangelei an, weswegen der Familienvater vor Gericht landete."
+  },
+  {
+    "question": "Warum durften einige deutsche Touristen am 08.10.2000 die Fähre zur Isle of Skye kostenlos benutzen?",
+    "answer": "Am 07.10.2000 fand das Qualifikationsspiel zur WM zwischen Deutschland und England statt. Deutschland hatte gewonnen. Da nicht alle Schotten Engländer mögen, durften Touristen mit deutschem Kennzeichen kostenlos auf der Fähre mitfahren."
+  },
+  {
+    "question": "Was ist die „Hochzeitsnacht-Theorie“?",
+    "answer": "Hochzeitsnacht-Theorie ist eine Eselsbrücke für Jurastudenten, um sich die Definition einer Verfügung zu merken. Eine Verfügung ist eine Aufhebung, Übertragung, Belastung oder inhaltliche Änderung. Die Theorie merkt sich dies: Der Bräutigam hebt die Braut auf (Aufhebung), trägt sie über die Schwelle (Übertragung) und legt sich auf das Bett, das belastet wird (Belastung), um sie schließlich in der Hochzeitsnacht „inhaltlich zu ändern“ (inhaltliche Änderung)."
+  },
+  {
+    "question": "Warum sah sich der Bürgermeister von Landévennec gezwungen, ein Badeverbot für die Gemeinde auszusprechen?",
+    "answer": "Am Meeresstrand bei Landévennec lebt ein drei Meter großer Delfin, der in der Paarungszeit Badegäste bedrängte, sich an ihnen rieb und seinen Penis zeigte. Daher hat der Bürgermeister ein Badeverbot erlassen."
+  },
+  {
+    "question": "Woher kommt die Redewendung „Verflucht und zugenäht“?",
+    "answer": "Die Redewendung geht auf ein Studentenlied zurück, in der eine Frau versehentlich geschwängert wurde. Es heißt dort: „Da hab' ich meinen Hosenlatz verflucht und zugenäht.“"
+  },
+  {
+    "question": "Warum zog die Polizei aus Wesel im Januar 2018 einen Rentner aus dem Verkehr?",
+    "answer": "Der Rentner hatte seinen elektrischen Rollstuhl \"getunt\". Statt der erlaubten 25 km/h konnte er 50 km/h fahren."
+  },
+  {
+    "question": "Wie half ein Löwenrudel im Jahr 2005 der äthiopischen Polizei?",
+    "answer": "2005 wurde ein 12-jähriges Mädchen aus Äthiopien entführt. Sie wehrte sich lautstark. Ein Löwenrudel hörte dies, kam zur Hilfe, vertrieb die Entführer und beschützte das Kind, bis die Polizei eintraf."
+  },
+  {
+    "question": "Was ist das Besondere am finnischen Reisepass?",
+    "answer": "Auf den Seiten des finnischen Reisepasses ist jeweils ein Elch abgebildet. Blättert man durch die Seiten wie bei einem Daumenkino, fängt der Elch an zu laufen."
+  },
+  {
+    "question": "Warum begeisterte ein Bugatti im Juni 2018 auf der VW-Teststrecke trotz geringer PS-Leistung?",
+    "answer": "Der Bugatti war aus über eine Million Legosteinen gebaut. Er hatte 5,3 PS und erreichte 20 km/h."
+  },
+  {
+    "question": "Was ist ein Bibelregal?",
+    "answer": "Ein Bibelregal ist eine Orgel, die bevorzugt im 16. und 17. Jahrhundert hergestellt wurde. Sie ist tragbar und kann, wie eine Bibel, zusammengefaltet werden."
+  },
+  {
+    "question": "Was ist das „Buch der 99 Narren“?",
+    "answer": "Das erste Telefonbuch gab es 1881. Es war ein Heft mit 28 Seiten und 99 Telefonnummerneinträgen. Diese Leute galten zu dieser Zeit als verrückte Exoten, da die Mehrheit sich nicht vorstellen konnte, dass sich das Telefon zum Massenmedium entwickelt. Daher bekam das erste Telefonbuch den Namen „Buch der 99 Narren“."
+  },
+  {
+    "question": "Warum setzte die Footballmannschaft der Dallas Texans 1952 den Oberkellner Willie Garcia als Balljungen ein?",
+    "answer": "Rund um das Trainingsgelände der Dallas Texans war hohes Präriegras mit vielen Klapperschlangen. Keiner wollte den Ball holen, wenn er ins Präriegras fiel. Willie Garcia wurde zum Ballholen geschickt, da er eine 50:50-Chance auf einen Schlangenbiss hatte, da dieser Oberkellner ein Holzbein hatte."
+  },
+  {
+    "question": "Woher stammt der Spruch „Toi Toi Toi“?",
+    "answer": "Früher spuckte man sich dreimal über die Schulter, um Glück zu wünschen. Im 18. Jahrhundert galt Spucken als unanständig. Daher sagte man dann „Toi Toi Toi“, da dies dem Spucken sehr ähnlich war."
+  },
+  {
+    "question": "Warum nennt man im nordischen Föhr einen Kakao mit Rum „Tote Tante“?",
+    "answer": "In den 40er-Jahren wanderte eine Föhrerin nach Amerika aus. Nach ihrem Ableben sollte sie wieder in Norddeutschland beerdigt werden. Da die Überführungskosten zu teuer waren, wurde die Asche der verstorbenen Tante in einer Kakaokiste überführt. An der Beerdigung gab es den Kakao mit Rum zu trinken, weshalb er nun den Namen Tote Tante trägt."
+  },
+  {
+    "question": "Warum muss Mario Mizael Matolias seine Unterkunft jeden Tag neu renovieren, damit sie nicht einstürzt?",
+    "answer": "Mario Mizael Matolias lebt in einem Schloss am Strand von Rio de Janeiro. Das Schloss ist allerdings aus Sand gebaut, weswegen er es täglich renovieren muss."
+  },
+  {
+    "question": "Wie können amerikanische Eltern, deren Kind am 9. September geboren ist, 11.000 Dollar reicher werden?",
+    "answer": "Am 9. September 1890 wurde Harland David Sanders geboren, der Gründer von Kentucky Fried Chicken. Wenn man sein am 9. September geborenes Kind Harland nennt, erhält man 11.000 Dollar von KFC. Das Unternehmen möchte damit erreichen, dass der Vorname Harland nicht ausstirbt."
+  },
+  {
+    "question": "Warum gibt es auf vielen Straßenkarten erfundene Straßennamen?",
+    "answer": "Die Hersteller von Straßenkarten drucken erfundene Straßennamen ab, um unerlaubte Kopien zu erkennen. Wenn zum Beispiel der nichtexistierende Hella von Sinnen-Ring auf einer Karte eines anderen Herstellers entdeckt wird, weiß man, dass dieser geklaut und das Urheberrecht verletzt hat."
+  },
+  {
+    "question": "Wieso wurden 2014 im US-Bundesstaat Oregon mehr als 140 Mio. Liter aus einem Trinkwasser-Reservoir gelassen?",
+    "answer": "Auf Überwachsungsbildern war zu sehen, dass ein 19-Jähriger durch den Zaun ins Becken gepinkelt hatte. Da die Bilder öffentlich bekannt wurden, wurden 140 Mio. Liter aus dem Trinkwasser-Reservoir gelassen."
+  },
+  {
+    "question": "Warum zahlte Pizza Hut im Jahr 2001 über 1 Mio. Dollar für die Zustellung einer einzelnen Pizza?",
+    "answer": "Diese Aktion war Teil eines Marketinggags. Pizza Hut zahlte 1 Mio. Dollar an die russische Weltraumbehörde, damit sie eine Pizza zur Raumstation ISS bringt. Die Firma Pizza Hut wollte sich \"erster Weltraumpizzalieferant\" nennen."
+  },
+  {
+    "question": "Was ist die lästige Z-Bewegung?",
+    "answer": "Viele Männerunterhosen haben einen Eingriff, in den man leicht mit der rechten Hand hineingreifen kann. Für Linkshänder ist dies problematisch. Das umständliche Eingreifen mit der linken Hand zum Eingriff der Unterhose wird lästige Z-Bewegung genannt."
+  },
+  {
+    "question": "Mit welcher Intention wurden Ende des 19. Jahrhunderts die Cornflakes eingeführt?",
+    "answer": "John Harvey Kellogg hatte die Vorstellung, dass sämtliche sexuelle Aktivitäten für den Körper ungesund sind. Fleisch und stark Gewürztes stärken diesen Trieb. Getreide hingegen soll ihn hemmen. Daher erfand er die Cornflakes, um bereits am Morgen das sexuelle Verlangen einzudämmen."
+  },
+  {
+    "question": "Warum hat St. Martin dem Bettler nur seinen halben Mantel gegeben?",
+    "answer": "Hätte St. Martin dem Bettler den ganzen Mantel verschenkt, wäre er ins Gefängnis gekommen. Denn die Hälfte des Mantels gehörte dem Kaiser, die er dann gestohlen hätte."
+  },
+  {
+    "question": "Woher stammt die Redewendung „Alles für die Katz“?",
+    "answer": "Die Redewendung stammt von einer Geschichte des Fabelerzählers Burkard Waldis aus dem 16. Jahrhundert. Ein Schmied verlangte kein Geld für seine Tätigkeiten, sondern ließ sich nur nach Zufriedenstellung bezahlen. Seine Kunden bezahlten meist nichts. Daher band er eine Katze an den Laden, die er nur fütterte, wenn er Lohn bekam. Die Katze starb, da sie nur von einem \"Danke\" nicht überleben konnte."
+  },
+  {
+    "question": "Warum liegen in japanischen Läden an den Kassen orangefarbene Bälle?",
+    "answer": "Wenn ein Ladendieb kommt, kann der Verkäufer an der Kasse die Bälle nehmen und auf den Dieb werfen. Denn die Bälle sind mit Farbe gefüllt und hinterlassen am Dieb einen farbigen Abdruck. Dieser kann dann leichter erkannt werden, wenn er auf der Flucht ist."
+  }]
