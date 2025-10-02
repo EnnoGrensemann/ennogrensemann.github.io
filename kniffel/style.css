@@ -89,14 +89,14 @@ body {
     height: 28px;
     fill: none; /* Standardmäßig keine Füllung für das ganze SVG */
     stroke: var(--text-color); /* Konturfarbe */
-    stroke-width: 2; /* Dickere Linie für Konturen */
+    stroke-width: 1; /* Dickere Linie für Konturen */
     vertical-align: middle;
 }
 
 .dice-face {
     fill: none; /* Die Würfelfläche selbst bleibt leer */
     stroke: var(--text-color);
-    stroke-width: 2.5; /* Noch etwas dickere Linie für den Würfelrand */
+    stroke-width: 1; /* Noch etwas dickere Linie für den Würfelrand */
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -201,3 +201,4 @@ body {
     }
 
 }
+
