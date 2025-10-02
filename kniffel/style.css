@@ -1,0 +1,193 @@
+/* CSS-Datei: style.css (V8) */
+
+:root {
+    --primary-color: #007DC4; /* Akzentfarbe: Helles, modernes Blau */
+    --primary-light: #e6f2ff; /* Sehr helles Blau für Hintergrundakzente */
+    --text-color: #212529;   /* Dunkler Text für gute Lesbarkeit */
+    --border-color: #e9ecef; /* Sehr helle, feine Linien */
+    --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 30px 15px;
+    background-color: #f8f9fa; 
+    color: var(--text-color);
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* LOGO BEREICH */
+.logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.game-logo {
+    max-width: 400px;
+    height: auto;
+}
+
+/* SPIELBLOCK CONTAINER (MODERNE KARTE) */
+.spielblock-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    border: none;
+    box-shadow: var(--shadow-light); 
+    border-radius: 16px; 
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+/* TABELLEN STYLING */
+.spielblock {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em; 
+}
+
+.spielblock th, .spielblock td {
+    border: 1px solid var(--border-color);
+    padding: 0; /* Wichtig: Padding der Zelle entfernen, damit das Input/Select das Padding übernimmt */
+    text-align: center;
+    height: 30px; /* Einheitliche Höhe für Touch-Ziele */
+}
+
+.spielblock thead th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 12px 6px;
+    border-color: var(--primary-color);
+    /* Namenfeld ist weg, erste Spalte ist nun Kategorie/Icon */
+    border-right: 1px solid white; 
+}
+
+.spielblock th {
+    background-color: #fcfcfc;
+    font-weight: 400;
+    text-align: left;
+    padding: 0 10px; /* Padding für THs außerhalb der Eingabefelder */
+}
+/* Erste Spalte (Würfel-Icons) */
+.spielblock th:first-child {
+    width: 10%; /* Schmal halten */
+    padding: 4px;
+    text-align: center;
+}
+
+/* NEU: Zweite Spalte (Kategorie-Text) schmaler machen */
+.spielblock tbody tr th:nth-child(2) {
+    width: 16%; /* HIER ANPASSEN: Beispiel für eine schmalere Breite */
+    padding: 0 5px; /* Optional: Das horizontale Padding reduzieren, um Platz zu sparen */
+}
+
+/* WÜRFEL ICONS (SVG) */
+.dice-svg {
+    width: 30px;
+    height: 30px;
+    fill: none;
+    stroke: var(--text-color);
+    stroke-width: 2.5;
+    vertical-align: middle;
+}
+.spielblock tr:nth-child(-n+6) .dice-svg {
+    fill: var(--text-color); /* Würfelpunkte füllen */
+    stroke: none;
+}
+
+/* EINGABEFELDER AUF VOLLE GRÖSSE DER ZELLE */
+.spielblock input[type="number"], 
+.spielblock select {
+    /* Alle Ränder entfernt, um die Zelle zur Eingabe zu machen */
+    width: 100%;
+    height: 100%; /* Wichtig: Füllt die Zellenhöhe aus */
+    box-sizing: border-box; 
+    border: none !important; 
+    box-shadow: none !important;
+    padding: 5px 2px; /* Padding hier hinzufügen, um den Inhalt mittig zu halten */
+    margin: 0;
+    font-size: 1em;
+    line-height: normal;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+/* AKZENT- UND TRENNLINIEN */
+.oberer-teil {
+    border-top: none; 
+}
+.unterer-teil {
+    border-top: 3px solid #aaa; 
+    margin-top: 10px;
+}
+.spielblock tbody tr:nth-child(2) th, .spielblock tbody tr:nth-child(2) td {
+    border-top: 1px solid var(--border-color);
+}
+
+/* ERGEBNIS-HIGHLIGHTS */
+.sum-row th, .sum-row td,
+.bonus-row th, .bonus-row td,
+.total-row th, .total-row td {
+    padding: 5px 2px; /* Padding zurück auf Ergebnisse */
+}
+
+.sum-row th, .sum-row td {
+    background-color: var(--primary-light); 
+    font-weight: 600;
+}
+.bonus-row th, .bonus-row td {
+    background-color: #ffffff; 
+    height: 20px;
+}
+.total-row th, .total-row td {
+    background-color: var(--primary-color); 
+    color: white;
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary-color);
+}
+.final-sum th, .final-sum td {
+    background-color: #fff !important; 
+    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.2em;
+    border-top: 2px solid var(--primary-color) !important;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    font-size: 0.75em;
+    color: #6c757d;
+    padding: 10px 0;
+}
+
+/* BUTTONS */
+.controls {
+    padding: 20px;
+    text-align: center;
+}
+
+#reset-button {
+    padding: 12px 25px;
+    font-size: 1em;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    transition: background-color 0.2s;
+}
+
+#reset-button:hover {
+    background-color: #c82333;
+}
+
+/* MEDIA QUERY FÜR GRÖSSERE BILDSCHIRME */
+@media (min-width: 600px) {
+    .spielblock {
+        font-size: 0.8em; /* <--- HIER ANPASSEN, wenn das Gerät breiter als 600px ist */
+    }
+}

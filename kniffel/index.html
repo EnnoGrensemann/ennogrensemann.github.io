@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kniffel Extreme Block</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div class="logo-container">
+    <img src="logo.png" alt="Kniffel Extreme Logo" class="game-logo">
+</div>
+
+<div class="spielblock-container">
+    <table class="spielblock">
+        <thead>
+            <tr>
+                <th colspan="2">Kategorie</th>
+                <th>1. SPIEL</th>
+                <th>2. SPIEL</th>
+                <th>3. SPIEL</th>
+                <th>4. SPIEL</th>
+                <th>5. SPIEL</th>
+                <th>6. SPIEL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="oberer-teil"><th><svg viewBox="0 0 24 24" class="dice-svg"><circle cx="12" cy="12" r="3.5"/></svg></th><th style="text-align: left;">nur Einer zählen</th><td id="einer-1"></td><td id="einer-2"></td><td id="einer-3"></td><td id="einer-4"></td><td id="einer-5"></td><td id="einer-6"></td></tr>
+            <tr><th><svg viewBox="0 0 24 24" class="dice-svg"><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg></th><th style="text-align: left;">nur Zweier zählen</th><td id="zweier-1"></td><td id="zweier-2"></td><td id="zweier-3"></td><td id="zweier-4"></td><td id="zweier-5"></td><td id="zweier-6"></td></tr>
+            <tr><th><svg viewBox="0 0 24 24" class="dice-svg"><circle cx="5" cy="5" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="19" r="2"/></svg></th><th style="text-align: left;">nur Dreier zählen</th><td id="dreier-1"></td><td id="dreier-2"></td><td id="dreier-3"></td><td id="dreier-4"></td><td id="dreier-5"></td><td id="dreier-6"></td></tr>
+            <tr><th><svg viewBox="0 0 24 24" class="dice-svg"><circle cx="7" cy="7" r="2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="7" r="2"/><circle cx="17" cy="17" r="2"/></svg></th><th style="text-align: left;">nur Vierer zählen</th><td id="vierer-1"></td><td id="vierer-2"></td><td id="vierer-3"></td><td id="vierer-4"></td><td id="vierer-5"></td><td id="vierer-6"></td></tr>
+            <tr><th><svg viewBox="0 0 24 24" class="dice-svg"><circle cx="7" cy="7" r="1.5"/><circle cx="7" cy="17" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="17" cy="7" r="1.5"/><circle cx="17" cy="17" r="1.5"/></svg></th><th style="text-align: left;">nur Fünfer zählen</th><td id="fuenfer-1"></td><td id="fuenfer-2"></td><td id="fuenfer-3"></td><td id="fuenfer-4"></td><td id="fuenfer-5"></td><td id="fuenfer-6"></td></tr>
+            <tr><th><svg viewBox="0 0 24 24" class="dice-svg"><circle cx="7" cy="4" r="1.5"/><circle cx="7" cy="12" r="1.5"/><circle cx="7" cy="20" r="1.5"/><circle cx="17" cy="4" r="1.5"/><circle cx="17" cy="12" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg></th><th style="text-align: left;">nur Sechser zählen</th><td id="sechser-1"></td><td id="sechser-2"></td><td id="sechser-3"></td><td id="sechser-4"></td><td id="sechser-5"></td><td id="sechser-6"></td></tr>
+
+            <tr class="ergebnis-zeile sum-row"><th colspan="2" style="text-align: left;">gesamt</th><td id="gesamt-1"></td><td id="gesamt-2"></td><td id="gesamt-3"></td><td id="gesamt-4"></td><td id="gesamt-5"></td><td id="gesamt-6"></td></tr>
+            <tr class="feste-punkte bonus-row"><th style="text-align: left;">Bonus</th><th>plus 45</th><td id="bonus-1"></td><td id="bonus-2"></td><td id="bonus-3"></td><td id="bonus-4"></td><td id="bonus-5"></td><td id="bonus-6"></td></tr>
+            <tr class="ergebnis-zeile total-row"><th colspan="2" style="text-align: left;">gesamt oberer Teil</th><td id="gesamt-oberer-teil-1"></td><td id="gesamt-oberer-teil-2"></td><td id="gesamt-oberer-teil-3"></td><td id="gesamt-oberer-teil-4"></td><td id="gesamt-oberer-teil-5"></td><td id="gesamt-oberer-teil-6"></td></tr>
+            
+            <tr class="unterer-teil pasch-row">
+                <th colspan="1" style="text-align: left;">Dreierpasch</th><th>alle Augen zählen</th>
+                <td><input type="number" min="0" max="30" data-row="dreierpasch" data-col="1" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="dreierpasch" data-col="2" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="dreierpasch" data-col="3" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="dreierpasch" data-col="4" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="dreierpasch" data-col="5" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="dreierpasch" data-col="6" onchange="calculate(this)"></td>
+            </tr>
+            <tr class="pasch-row">
+                <th colspan="1" style="text-align: left;">Viererpasch</th><th>alle Augen zählen</th>
+                <td><input type="number" min="0" max="30" data-row="viererpasch" data-col="1" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="viererpasch" data-col="2" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="viererpasch" data-col="3" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="viererpasch" data-col="4" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="viererpasch" data-col="5" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="viererpasch" data-col="6" onchange="calculate(this)"></td>
+            </tr>
+            <tr class="pasch-row">
+                <th colspan="1" style="text-align: left;">Zwei Paare</th><th>alle Augen zählen</th>
+                <td><input type="number" min="0" max="30" data-row="zwei-paare" data-col="1" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="zwei-paare" data-col="2" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="zwei-paare" data-col="3" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="zwei-paare" data-col="4" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="zwei-paare" data-col="5" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="zwei-paare" data-col="6" onchange="calculate(this)"></td>
+            </tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Drei Paare</th><th>35 Punkte</th><td id="drei-paare-1"></td><td id="drei-paare-2"></td><td id="drei-paare-3"></td><td id="drei-paare-4"></td><td id="drei-paare-5"></td><td id="drei-paare-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Zwei Dreier</th><th>45 Punkte</th><td id="zwei-dreier-1"></td><td id="zwei-dreier-2"></td><td id="zwei-dreier-3"></td><td id="zwei-dreier-4"></td><td id="zwei-dreier-5"></td><td id="zwei-dreier-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Full-House</th><th>25 Punkte</th><td id="full-house-1"></td><td id="full-house-2"></td><td id="full-house-3"></td><td id="full-house-4"></td><td id="full-house-5"></td><td id="full-house-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Großes Full-House</th><th>45 Punkte</th><td id="grosses-full-house-1"></td><td id="grosses-full-house-2"></td><td id="grosses-full-house-3"></td><td id="grosses-full-house-4"></td><td id="grosses-full-house-5"></td><td id="grosses-full-house-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Kleine Straße</th><th>30 Punkte</th><td id="kleine-strasse-1"></td><td id="kleine-strasse-2"></td><td id="kleine-strasse-3"></td><td id="kleine-strasse-4"></td><td id="kleine-strasse-5"></td><td id="kleine-strasse-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Große Straße</th><th>40 Punkte</th><td id="grosse-strasse-1"></td><td id="grosse-strasse-2"></td><td id="grosse-strasse-3"></td><td id="grosse-strasse-4"></td><td id="grosse-strasse-5"></td><td id="grosse-strasse-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Highway</th><th>50 Punkte</th><td id="highway-1"></td><td id="highway-2"></td><td id="highway-3"></td><td id="highway-4"></td><td id="highway-5"></td><td id="highway-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Kniffel</th><th>50 Punkte</th><td id="kniffel-1"></td><td id="kniffel-2"></td><td id="kniffel-3"></td><td id="kniffel-4"></td><td id="kniffel-5"></td><td id="kniffel-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">Kniffel Extreme</th><th>75 Punkte</th><td id="kniffel-extreme-1"></td><td id="kniffel-extreme-2"></td><td id="kniffel-extreme-3"></td><td id="kniffel-extreme-4"></td><td id="kniffel-extreme-5"></td><td id="kniffel-extreme-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">10 oder weniger</th><th>40 Punkte</th><td id="zehn-oder-weniger-1"></td><td id="zehn-oder-weniger-2"></td><td id="zehn-oder-weniger-3"></td><td id="zehn-oder-weniger-4"></td><td id="zehn-oder-weniger-5"></td><td id="zehn-oder-weniger-6"></td></tr>
+            <tr class="fixed-point-row"><th colspan="1" style="text-align: left;">33 oder mehr</th><th>40 Punkte</th><td id="dreiunddreissig-oder-mehr-1"></td><td id="dreiunddreissig-oder-mehr-2"></td><td id="dreiunddreissig-oder-mehr-3"></td><td id="dreiunddreissig-oder-mehr-4"></td><td id="dreiunddreissig-oder-mehr-5"></td><td id="dreiunddreissig-oder-mehr-6"></td></tr>
+
+            <tr class="pasch-row">
+                <th colspan="1" style="text-align: left;">Super Chance</th><th>alle Augen zählen</th>
+                <td><input type="number" min="0" max="30" data-row="super-chance" data-col="1" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="super-chance" data-col="2" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="super-chance" data-col="3" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="super-chance" data-col="4" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="super-chance" data-col="5" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="30" data-row="super-chance" data-col="6" onchange="calculate(this)"></td>
+            </tr>
+            <tr class="pasch-row">
+                <th colspan="1" style="text-align: left;">Chance</th><th>alle Augen zählen x2</th>
+                <td><input type="number" min="0" max="60" data-row="chance" data-col="1" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="60" data-row="chance" data-col="2" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="60" data-row="chance" data-col="3" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="60" data-row="chance" data-col="4" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="60" data-row="chance" data-col="5" onchange="calculate(this)"></td>
+                <td><input type="number" min="0" max="60" data-row="chance" data-col="6" onchange="calculate(this)"></td>
+            </tr>
+
+            <tr class="ergebnis-zeile sum-row"><th colspan="2" style="text-align: left;">gesamt unterer Teil</th><td id="gesamt-unterer-teil-1"></td><td id="gesamt-unterer-teil-2"></td><td id="gesamt-unterer-teil-3"></td><td id="gesamt-unterer-teil-4"></td><td id="gesamt-unterer-teil-5"></td><td id="gesamt-unterer-teil-6"></td></tr>
+            <tr class="ergebnis-zeile sum-row"><th colspan="2" style="text-align: left;">gesamt oberer Teil</th><td id="gesamt-oberer-teil-unten-1"></td><td id="gesamt-oberer-teil-unten-2"></td><td id="gesamt-oberer-teil-unten-3"></td><td id="gesamt-oberer-teil-unten-4"></td><td id="gesamt-oberer-teil-unten-5"></td><td id="gesamt-oberer-teil-unten-6"></td></tr>
+            <tr class="ergebnis-zeile final-sum"><th colspan="2" style="text-align: left;">Endsumme</th><td id="endsumme-1"></td><td id="endsumme-2"></td><td id="endsumme-3"></td><td id="endsumme-4"></td><td id="endsumme-5"></td><td id="endsumme-6"></td></tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="controls">
+    <button id="reset-button">Spielblock zurücksetzen</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
