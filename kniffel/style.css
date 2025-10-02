@@ -83,18 +83,27 @@ body {
     padding: 0 5px; /* Optional: Das horizontale Padding reduzieren, um Platz zu sparen */
 }
 
-/* WÜRFEL ICONS (SVG) */
+/* WÜRFEL ICONS (SVG) - Angepasst an das Beispielbild */
 .dice-svg {
-    width: 30px;
-    height: 30px;
-    fill: none;
-    stroke: var(--text-color);
-    stroke-width: 2.5;
+    width: 28px; /* Etwas größer für bessere Sichtbarkeit */
+    height: 28px;
+    fill: none; /* Standardmäßig keine Füllung für das ganze SVG */
+    stroke: var(--text-color); /* Konturfarbe */
+    stroke-width: 2; /* Dickere Linie für Konturen */
     vertical-align: middle;
 }
-.spielblock tr:nth-child(-n+6) .dice-svg {
-    fill: var(--text-color); /* Würfelpunkte füllen */
-    stroke: none;
+
+.dice-face {
+    fill: none; /* Die Würfelfläche selbst bleibt leer */
+    stroke: var(--text-color);
+    stroke-width: 2.5; /* Noch etwas dickere Linie für den Würfelrand */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.dice-dot {
+    fill: var(--text-color); /* Die Punkte füllen wir aus */
+    stroke: none; /* Punkte haben keine eigene Kontur */
 }
 
 /* EINGABEFELDER AUF VOLLE GRÖSSE DER ZELLE */
@@ -190,4 +199,5 @@ body {
     .spielblock {
         font-size: 0.8em; /* <--- HIER ANPASSEN, wenn das Gerät breiter als 600px ist */
     }
+
 }
