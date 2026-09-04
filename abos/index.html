@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abo-Übersicht</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    :root {
+      --md-sys-color-primary: #0061a4;
+      --md-sys-color-on-primary: #ffffff;
+      --md-sys-color-primary-container: #d1e4ff;
+      --md-sys-color-on-primary-container: #001d36;
+      --md-sys-color-surface: #fdfcff;
+      --md-sys-color-surface-container: #f0f4f9;
+      --md-sys-color-surface-container-high: #e9eef6;
+      --md-sys-color-surface-container-highest: #e0e2ec;
+      --md-sys-color-on-surface: #1a1c1e;
+      --md-sys-color-on-surface-variant: #43474e;
+      --md-sys-color-outline: #73777f;
+      --md-sys-color-outline-variant: #c3c7d0;
+      --md-sys-color-error: #ba1a1a;
+      --md-sys-color-error-container: #ffdad6;
+      --md-sys-color-on-error-container: #410002;
+      --md-sys-color-tertiary-container: #c4eed0;
+      --md-sys-color-on-tertiary-container: #072711;
+      --md-sys-color-success: #198754;
+      --md-shape-corner-large: 28px;
+      --md-shape-corner-medium: 16px;
+      --md-shape-corner-full: 9999px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Google Sans', 'Roboto', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background: #0e141b;
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .app-container {
+      width: 100%;
+      max-width: 480px;
+      background: var(--md-sys-color-surface);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 24px 20px 12px;
+      background: var(--md-sys-color-surface);
+    }
+
+    .top-app-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .top-app-bar h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--md-sys-color-on-surface);
+      letter-spacing: -0.2px;
+    }
+
+    .icon-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--md-shape-corner-full);
+      color: var(--md-sys-color-on-surface);
+      transition: background 0.2s;
+    }
+
+    .icon-btn:hover {
+      background: var(--md-sys-color-surface-container-highest);
+    }
+
+    .content-area {
+      flex: 1;
+      padding: 12px 16px 96px;
+    }
+
+    .card {
+      background: var(--md-sys-color-surface-container);
+      border-radius: var(--md-shape-corner-large);
+      padding: 20px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.15s ease, background 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .card:active {
+      transform: scale(0.985);
+      background: var(--md-sys-color-surface-container-high);
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .card-meta-text {
+      font-size: 0.95rem;
+      color: var(--md-sys-color-on-surface-variant);
+      font-weight: 400;
+    }
+
+    .card-meta-text strong {
+      color: var(--md-sys-color-on-surface);
+      font-weight: 600;
+    }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 12px;
+      border-radius: var(--md-shape-corner-full);
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .badge-unpaid {
+      background: var(--md-sys-color-error-container);
+      color: var(--md-sys-color-on-error-container);
+    }
+
+    .badge-paid {
+      background: var(--md-sys-color-tertiary-container);
+      color: var(--md-sys-color-on-tertiary-container);
+    }
+
+    .detail-hero {
+      background: var(--md-sys-color-surface-container-high);
+      border-radius: var(--md-shape-corner-large);
+      padding: 22px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .detail-hero-title {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--md-sys-color-outline);
+    }
+
+    .detail-hero-val {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .detail-hero-sub {
+      font-size: 0.95rem;
+      color: var(--md-sys-color-on-surface-variant);
+    }
+
+    .member-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      padding: 0 4px;
+    }
+
+    .member-section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .member-card {
+      background: var(--md-sys-color-surface-container);
+      border-radius: var(--md-shape-corner-medium);
+      padding: 14px 16px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .member-card:hover {
+      background: var(--md-sys-color-surface-container-high);
+    }
+
+    .member-info {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--md-shape-corner-full);
+      background: var(--md-sys-color-primary-container);
+      color: var(--md-sys-color-on-primary-container);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .avatar.dummy {
+      background: var(--md-sys-color-surface-container-highest);
+      color: var(--md-sys-color-outline);
+    }
+
+    .member-texts h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .member-texts span {
+      font-size: 0.8rem;
+      color: var(--md-sys-color-on-surface-variant);
+    }
+
+    .member-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .member-amount {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .chip-dummy {
+      background: var(--md-sys-color-surface-container-highest);
+      color: var(--md-sys-color-on-surface-variant);
+      padding: 4px 10px;
+      border-radius: var(--md-shape-corner-medium);
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .check-btn-m3 {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--md-shape-corner-full);
+      border: 2px solid var(--md-sys-color-outline);
+      background: transparent;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+      color: transparent;
+    }
+
+    .check-btn-m3.checked {
+      background: var(--md-sys-color-primary);
+      border-color: var(--md-sys-color-primary);
+      color: var(--md-sys-color-on-primary);
+    }
+
+    .month-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .month-card {
+      background: var(--md-sys-color-surface-container);
+      border-radius: var(--md-shape-corner-medium);
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .month-card.paid {
+      background: var(--md-sys-color-tertiary-container);
+      color: var(--md-sys-color-on-tertiary-container);
+    }
+
+    .month-card.unpaid {
+      border-color: var(--md-sys-color-outline-variant);
+    }
+
+    .month-card.overdue {
+      border-color: var(--md-sys-color-error);
+      background: var(--md-sys-color-error-container);
+      color: var(--md-sys-color-on-error-container);
+    }
+
+    .month-name {
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .month-status {
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    .footer-actions {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .m3-btn-tonal {
+      background: var(--md-sys-color-surface-container-high);
+      color: var(--md-sys-color-primary);
+      border: none;
+      border-radius: var(--md-shape-corner-full);
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .m3-btn-tonal:hover {
+      background: var(--md-sys-color-surface-container-highest);
+    }
+
+    .m3-btn-danger {
+      background: transparent;
+      color: var(--md-sys-color-error);
+      border: 1px solid var(--md-sys-color-error-container);
+      border-radius: var(--md-shape-corner-full);
+      padding: 14px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .fab {
+      position: fixed;
+      bottom: 24px;
+      margin-left: 360px;
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--md-sys-color-primary-container);
+      color: var(--md-sys-color-on-primary-container);
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    @media (max-width: 480px) {
+      .fab {
+        right: 20px;
+        margin-left: 0;
+      }
+    }
+
+    .fab:active {
+      transform: scale(0.95);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(2px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 100;
+    }
+
+    .modal-sheet {
+      background: var(--md-sys-color-surface-container-high);
+      border-radius: var(--md-shape-corner-large);
+      padding: 24px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .modal-sheet h3 {
+      font-size: 1.3rem;
+      color: var(--md-sys-color-on-surface);
+    }
+
+    .m3-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .m3-field label {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--md-sys-color-on-surface-variant);
+      margin-left: 4px;
+    }
+
+    .m3-field input, .m3-field select {
+      background: var(--md-sys-color-surface);
+      border: 1px solid var(--md-sys-color-outline-variant);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 1rem;
+      color: var(--md-sys-color-on-surface);
+      outline: none;
+    }
+
+    .m3-field input:focus, .m3-field select:focus {
+      border-color: var(--md-sys-color-primary);
+      border-width: 2px;
+      padding: 13px 15px;
+    }
+
+    .modal-buttons {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 8px;
+    }
+
+    .btn-text {
+      background: transparent;
+      border: none;
+      color: var(--md-sys-color-primary);
+      padding: 10px 16px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: var(--md-shape-corner-full);
+      cursor: pointer;
+    }
+
+    .btn-filled {
+      background: var(--md-sys-color-primary);
+      color: var(--md-sys-color-on-primary);
+      border: none;
+      padding: 10px 20px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: var(--md-shape-corner-full);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="app-container">
+  <header>
+    <div class="top-app-bar" id="appBar">
+      <h1 id="appBarTitle">Abo-Übersicht</h1>
+    </div>
+  </header>
+
+  <div class="content-area" id="viewDashboard">
+    <div id="subsList"></div>
+  </div>
+
+  <div class="content-area hidden" id="viewDetail">
+    <div class="detail-hero" id="detailHero"></div>
+    <div class="member-section-header">
+      <span class="member-section-title">Mitglieder</span>
+    </div>
+    <div id="membersList"></div>
+    <div class="footer-actions">
+      <button class="m3-btn-tonal" onclick="openAddMemberModal()">
+        <span class="material-symbols-outlined">person_add</span> Person hinzufügen
+      </button>
+      <button class="m3-btn-danger" onclick="deleteCurrentSubscription()">
+        <span class="material-symbols-outlined">delete</span> Abo löschen
+      </button>
+    </div>
+  </div>
+
+  <div class="content-area hidden" id="viewMemberDetail">
+    <div class="detail-hero" id="memberHero"></div>
+    <div class="member-section-header">
+      <span class="member-section-title" id="yearSectionTitle">Monatsübersicht 2026</span>
+    </div>
+    <div class="month-grid" id="monthGrid"></div>
+    <div class="footer-actions">
+      <button class="m3-btn-danger" onclick="deleteCurrentMember()">
+        <span class="material-symbols-outlined">person_remove</span> Person aus Abo entfernen
+      </button>
+    </div>
+  </div>
+
+  <button class="fab" id="fabBtn" onclick="openAddSubModal()">
+    <span class="material-symbols-outlined">add</span>
+  </button>
+</div>
+
+<div class="modal-backdrop hidden" id="subModal">
+  <div class="modal-sheet">
+    <h3>Neues Abo</h3>
+    <div class="m3-field">
+      <label>Name des Dienstes</label>
+      <input type="text" id="subName" placeholder="z. B. Disney+">
+    </div>
+    <div class="m3-field">
+      <label>Gesamtbetrag (€)</label>
+      <input type="number" id="subCost" step="0.01" placeholder="14.99">
+    </div>
+    <div class="m3-field">
+      <label>Abrechnungsintervall</label>
+      <select id="subInterval">
+        <option value="monthly">Monatlich</option>
+        <option value="yearly">Jährlich</option>
+      </select>
+    </div>
+    <div class="modal-buttons">
+      <button class="btn-text" onclick="closeModals()">Abbrechen</button>
+      <button class="btn-filled" onclick="saveSubscription()">Speichern</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-backdrop hidden" id="memberModal">
+  <div class="modal-sheet">
+    <h3>Person hinzufügen</h3>
+    <div class="m3-field">
+      <label>Name</label>
+      <input type="text" id="memberName" placeholder="z. B. Alex">
+    </div>
+    <div class="m3-field">
+      <label>Zahlungsintervall der Person</label>
+      <select id="memberInterval">
+        <option value="monthly">Monatlich</option>
+        <option value="yearly">Jährlich</option>
+      </select>
+    </div>
+    <div class="m3-field">
+      <label>Rolle</label>
+      <select id="memberType">
+        <option value="member">Zahlendes Mitglied</option>
+        <option value="dummy">Dummy (Profil ohne Zahlung)</option>
+      </select>
+    </div>
+    <div class="modal-buttons">
+      <button class="btn-text" onclick="closeModals()">Abbrechen</button>
+      <button class="btn-filled" onclick="saveMember()">Hinzufügen</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  const CURRENT_YEAR = 2026;
+  const CURRENT_MONTH = new Date().getMonth() + 1;
+  const MONTH_NAMES = [
+    "Januar", "Februar", "März", "April", "Mai", "Juni", 
+    "Juli", "August", "September", "Oktober", "November", "Dezember"
+  ];
+
+  let state = {
+    activeSubId: null,
+    activeMemberId: null,
+    subscriptions: []
+  };
+
+  const defaultData = [
+    {
+      id: "sub-1",
+      name: "Spotify",
+      cost: 21.99,
+      interval: "monthly",
+      members: [
+        { id: "m1", name: "Mama", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7] },
+        { id: "m2", name: "Folker", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8] },
+        { id: "m3", name: "Tomke", interval: "monthly", isDummy: true, paidMonths: [] },
+        { id: "m4", name: "Enno", interval: "monthly", isDummy: true, paidMonths: [] }
+      ]
+    },
+    {
+      id: "sub-2",
+      name: "Netflix",
+      cost: 14.99,
+      interval: "monthly",
+      members: [
+        { id: "m5", name: "Person 1", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8] },
+        { id: "m6", name: "Person 2", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8] }
+      ]
+    },
+    {
+      id: "sub-3",
+      name: "F1TV",
+      cost: 69.99,
+      interval: "yearly",
+      members: [
+        { id: "m7", name: "User 1", interval: "yearly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
+        { id: "m8", name: "User 2", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8] }
+      ]
+    }
+  ];
+
+  function init() {
+    const saved = localStorage.getItem("sub_manager_data_m3_v3");
+    if (saved) {
+      state.subscriptions = JSON.parse(saved);
+      normalizeData();
+    } else {
+      state.subscriptions = defaultData;
+      saveToStorage();
+    }
+    renderDashboard();
+  }
+
+  function normalizeData() {
+    state.subscriptions.forEach(sub => {
+      sub.members.forEach(m => {
+        if (!Array.isArray(m.paidMonths)) {
+          m.paidMonths = m.paid ? [1, 2, 3, 4, 5, 6, 7, 8] : [];
+          delete m.paid;
+        }
+      });
+    });
+  }
+
+  function saveToStorage() {
+    localStorage.setItem("sub_manager_data_m3_v3", JSON.stringify(state.subscriptions));
+  }
+
+  function getMonthlyCost(cost, interval) {
+    return interval === "yearly" ? cost / 12 : cost;
+  }
+
+  function getMemberShare(sub, memberInterval) {
+    const count = sub.members.length || 1;
+    const monthlyTotal = getMonthlyCost(sub.cost, sub.interval);
+    const monthlyShare = monthlyTotal / count;
+    return memberInterval === "yearly" ? monthlyShare * 12 : monthlyShare;
+  }
+
+  function getRelevantDueMonth() {
+    return CURRENT_MONTH - 1;
+  }
+
+  function isMemberCurrentMonthPaid(member) {
+    if (member.isDummy) return true;
+    if (member.interval === "yearly") {
+      return member.paidMonths && member.paidMonths.length === 12;
+    }
+    const dueMonth = getRelevantDueMonth();
+    if (dueMonth === 0) return true;
+    return member.paidMonths && member.paidMonths.includes(dueMonth);
+  }
+
+  function getMemberUnpaidMonthsCount(member) {
+    if (member.isDummy) return 0;
+    let unpaid = 0;
+    const dueMonth = getRelevantDueMonth();
+    for (let m = 1; m <= dueMonth; m++) {
+      if (!member.paidMonths.includes(m)) unpaid++;
+    }
+    return unpaid;
+  }
+
+  function renderDashboard() {
+    const list = document.getElementById("subsList");
+    list.innerHTML = "";
+
+    state.subscriptions.forEach(sub => {
+      const payingMembers = sub.members.filter(m => !m.isDummy);
+      const paidMembers = payingMembers.filter(m => isMemberCurrentMonthPaid(m));
+      const isComplete = payingMembers.length > 0 && payingMembers.length === paidMembers.length;
+      const unpaidCount = payingMembers.length - paidMembers.length;
+
+      const totalCostStr = sub.cost.toFixed(2).replace(".", ",");
+      const intervalLabel = sub.interval === "yearly" ? "Jahr" : "Monat";
+
+      const card = document.createElement("div");
+      card.className = "card";
+      card.onclick = () => openSubscription(sub.id);
+
+      card.innerHTML = `
+        <div class="card-top">
+          <h3>${escapeHtml(sub.name)}</h3>
+          ${isComplete 
+            ? `<span class="badge-status badge-paid"><span class="material-symbols-outlined" style="font-size:16px;">done_all</span> Alles bezahlt</span>`
+            : `<span class="badge-status badge-unpaid">${unpaidCount} offen</span>`
+          }
+        </div>
+        <div class="card-meta">
+          <span class="card-meta-text"><strong>${totalCostStr} €</strong> / ${intervalLabel}</span>
+        </div>
+        <div class="card-meta">
+          <span class="card-meta-text">Status: <strong>${paidMembers.length}/${payingMembers.length}</strong> gezahlt</span>
+        </div>
+      `;
+      list.appendChild(card);
+    });
+  }
+
+  function openSubscription(subId) {
+    state.activeSubId = subId;
+    state.activeMemberId = null;
+    const sub = state.subscriptions.find(s => s.id === subId);
+    if (!sub) return;
+
+    document.getElementById("viewDashboard").classList.add("hidden");
+    document.getElementById("viewMemberDetail").classList.add("hidden");
+    document.getElementById("viewDetail").classList.remove("hidden");
+    document.getElementById("fabBtn").classList.add("hidden");
+
+    const appBar = document.getElementById("appBar");
+    appBar.innerHTML = `
+      <button class="icon-btn" onclick="showDashboard()">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </button>
+      <h1>${escapeHtml(sub.name)}</h1>
+    `;
+
+    const count = sub.members.length || 1;
+    const intervalLabel = sub.interval === "yearly" ? "jährlich" : "monatlich";
+    const totalCostStr = sub.cost.toFixed(2).replace(".", ",");
+    const baseShare = (sub.cost / count).toFixed(2).replace(".", ",");
+
+    document.getElementById("detailHero").innerHTML = `
+      <span class="detail-hero-title">Gesamtkosten</span>
+      <div class="detail-hero-val">${totalCostStr} € <span style="font-size:1.1rem;font-weight:400;color:var(--md-sys-color-on-surface-variant)">/ ${intervalLabel}</span></div>
+      <div class="detail-hero-sub">Entspricht <strong>${baseShare} €</strong> pro Person bei gerader Verteilung (${count} Plätze).</div>
+    `;
+
+    renderMembers(sub);
+  }
+
+  function renderMembers(sub) {
+    const membersList = document.getElementById("membersList");
+    membersList.innerHTML = "";
+
+    sub.members.forEach(member => {
+      const item = document.createElement("div");
+      item.className = "member-card";
+      item.onclick = () => openMemberDetail(member.id);
+
+      const memberIntervalLabel = member.interval === "yearly" ? "Zahlt jährlich" : "Zahlt monatlich";
+      const initial = member.name.charAt(0).toUpperCase();
+
+      let actionArea = "";
+      if (member.isDummy) {
+        actionArea = `<span class="chip-dummy">Dummy</span>`;
+      } else {
+        const share = getMemberShare(sub, member.interval);
+        const shareStr = share.toFixed(2).replace(".", ",");
+        const intervalSuffix = member.interval === "yearly" ? "/ Jahr" : "/ Mon.";
+        const isPaid = isMemberCurrentMonthPaid(member);
+        const checkedClass = isPaid ? "checked" : "";
+        const unpaidCount = getMemberUnpaidMonthsCount(member);
+
+        actionArea = `
+          <div style="text-align:right;">
+            <div class="member-amount">${shareStr} €</div>
+            <div style="font-size:0.75rem; color:${unpaidCount > 0 ? 'var(--md-sys-color-error)' : 'var(--md-sys-color-on-surface-variant)'}">
+              ${unpaidCount > 0 ? `${unpaidCount} Mon. im Rückstand` : intervalSuffix}
+            </div>
+          </div>
+          <button class="check-btn-m3 ${checkedClass}" onclick="event.stopPropagation(); toggleTargetMonthPaid('${member.id}')">
+            <span class="material-symbols-outlined" style="font-size:20px;">check</span>
+          </button>
+        `;
+      }
+
+      item.innerHTML = `
+        <div class="member-info">
+          <div class="avatar ${member.isDummy ? 'dummy' : ''}">${initial}</div>
+          <div class="member-texts">
+            <h4>${escapeHtml(member.name)}</h4>
+            <span>${member.isDummy ? 'Keine Kostenbeteiligung' : memberIntervalLabel}</span>
+          </div>
+        </div>
+        <div class="member-actions">
+          ${actionArea}
+        </div>
+      `;
+      membersList.appendChild(item);
+    });
+  }
+
+  function toggleTargetMonthPaid(memberId) {
+    const sub = state.subscriptions.find(s => s.id === state.activeSubId);
+    if (!sub) return;
+
+    const member = sub.members.find(m => m.id === memberId);
+    if (!member || member.isDummy) return;
+
+    const dueMonth = getRelevantDueMonth() || CURRENT_MONTH;
+
+    if (member.interval === "yearly") {
+      if (member.paidMonths.length === 12) {
+        member.paidMonths = [];
+      } else {
+        member.paidMonths = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+      }
+    } else {
+      if (member.paidMonths.includes(dueMonth)) {
+        member.paidMonths = member.paidMonths.filter(m => m !== dueMonth);
+      } else {
+        member.paidMonths.push(dueMonth);
+      }
+    }
+
+    saveToStorage();
+    renderMembers(sub);
+  }
+
+  function openMemberDetail(memberId) {
+    state.activeMemberId = memberId;
+    const sub = state.subscriptions.find(s => s.id === state.activeSubId);
+    const member = sub.members.find(m => m.id === memberId);
+    if (!member) return;
+
+    document.getElementById("viewDetail").classList.add("hidden");
+    document.getElementById("viewMemberDetail").classList.remove("hidden");
+
+    const appBar = document.getElementById("appBar");
+    appBar.innerHTML = `
+      <button class="icon-btn" onclick="openSubscription('${sub.id}')">
+        <span class="material-symbols-outlined">arrow_back</span>
+      </button>
+      <h1>${escapeHtml(member.name)}</h1>
+    `;
+
+    document.getElementById("yearSectionTitle").innerText = `Monatsübersicht ${CURRENT_YEAR}`;
+
+    const share = getMemberShare(sub, member.interval);
+    const shareStr = share.toFixed(2).replace(".", ",");
+    const intervalSuffix = member.interval === "yearly" ? "jährlich" : "monatlich";
+    const unpaidCount = getMemberUnpaidMonthsCount(member);
+
+    document.getElementById("memberHero").innerHTML = `
+      <span class="detail-hero-title">${member.isDummy ? 'Profil' : 'Kostenanteil'}</span>
+      <div class="detail-hero-val">${member.isDummy ? '0,00 €' : `${shareStr} €`} <span style="font-size:1.1rem;font-weight:400;color:var(--md-sys-color-on-surface-variant)">(${intervalSuffix})</span></div>
+      <div class="detail-hero-sub">${member.isDummy ? 'Dieser Nutzer ist als Dummy hinterlegt.' : `${unpaidCount} überfällige(r) Monat(e) aus der Vergangenheit.`}</div>
+    `;
+
+    renderMonthGrid(member);
+  }
+
+  function renderMonthGrid(member) {
+    const grid = document.getElementById("monthGrid");
+    grid.innerHTML = "";
+
+    if (member.isDummy) {
+      grid.innerHTML = `<div style="grid-column: 1 / -1; padding: 16px; text-align: center; color: var(--md-sys-color-outline);">Keine Monatsabrechnung für Dummy-Profile nötig.</div>`;
+      return;
+    }
+
+    const dueMonth = getRelevantDueMonth();
+
+    MONTH_NAMES.forEach((name, index) => {
+      const monthNum = index + 1;
+      const isPaid = member.paidMonths.includes(monthNum);
+      const isPast = monthNum <= dueMonth;
+      const isCurrent = monthNum === CURRENT_MONTH;
+
+      let cardClass = 'unpaid';
+      let statusText = 'Geplant';
+      let icon = 'schedule';
+
+      if (isPaid) {
+        cardClass = 'paid';
+        statusText = 'Bezahlt';
+        icon = 'check_circle';
+      } else if (isPast) {
+        cardClass = 'overdue';
+        statusText = 'Rückstand';
+        icon = 'error';
+      } else if (isCurrent) {
+        cardClass = 'unpaid';
+        statusText = 'Laufend';
+        icon = 'pending';
+      }
+
+      const card = document.createElement("div");
+      card.className = `month-card ${cardClass}`;
+      card.onclick = () => toggleMonthPaid(member.id, monthNum);
+
+      card.innerHTML = `
+        <span class="material-symbols-outlined" style="font-size: 20px;">${icon}</span>
+        <div class="month-name">${name.slice(0, 3)}</div>
+        <div class="month-status">${statusText}</div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+
+  function toggleMonthPaid(memberId, monthNum) {
+    const sub = state.subscriptions.find(s => s.id === state.activeSubId);
+    const member = sub.members.find(m => m.id === memberId);
+    if (!member) return;
+
+    if (member.paidMonths.includes(monthNum)) {
+      member.paidMonths = member.paidMonths.filter(m => m !== monthNum);
+    } else {
+      member.paidMonths.push(monthNum);
+    }
+
+    saveToStorage();
+    openMemberDetail(member.id);
+  }
+
+  function deleteCurrentMember() {
+    if (!confirm("Möchtest du diese Person wirklich aus dem Abo entfernen?")) return;
+    const sub = state.subscriptions.find(s => s.id === state.activeSubId);
+    if (!sub) return;
+
+    sub.members = sub.members.filter(m => m.id !== state.activeMemberId);
+    saveToStorage();
+    openSubscription(sub.id);
+  }
+
+  function showDashboard() {
+    state.activeSubId = null;
+    state.activeMemberId = null;
+    document.getElementById("viewDashboard").classList.remove("hidden");
+    document.getElementById("viewDetail").classList.add("hidden");
+    document.getElementById("viewMemberDetail").classList.add("hidden");
+    document.getElementById("fabBtn").classList.remove("hidden");
+
+    const appBar = document.getElementById("appBar");
+    appBar.innerHTML = `<h1>Abo-Übersicht</h1>`;
+
+    renderDashboard();
+  }
+
+  function openAddSubModal() {
+    document.getElementById("subName").value = "";
+    document.getElementById("subCost").value = "";
+    document.getElementById("subInterval").value = "monthly";
+    document.getElementById("subModal").classList.remove("hidden");
+  }
+
+  function openAddMemberModal() {
+    document.getElementById("memberName").value = "";
+    document.getElementById("memberInterval").value = "monthly";
+    document.getElementById("memberType").value = "member";
+    document.getElementById("memberModal").classList.remove("hidden");
+  }
+
+  function closeModals() {
+    document.getElementById("subModal").classList.add("hidden");
+    document.getElementById("memberModal").classList.add("hidden");
+  }
+
+  function saveSubscription() {
+    const name = document.getElementById("subName").value.trim();
+    const cost = parseFloat(document.getElementById("subCost").value);
+    const interval = document.getElementById("subInterval").value;
+    if (!name || isNaN(cost)) return;
+
+    const newSub = {
+      id: "sub-" + Date.now(),
+      name: name,
+      cost: cost,
+      interval: interval,
+      members: []
+    };
+
+    state.subscriptions.push(newSub);
+    saveToStorage();
+    closeModals();
+    renderDashboard();
+  }
+
+  function saveMember() {
+    const name = document.getElementById("memberName").value.trim();
+    const interval = document.getElementById("memberInterval").value;
+    const isDummy = document.getElementById("memberType").value === "dummy";
+    if (!name) return;
+
+    const sub = state.subscriptions.find(s => s.id === state.activeSubId);
+    if (!sub) return;
+
+    sub.members.push({
+      id: "m-" + Date.now(),
+      name: name,
+      interval: interval,
+      isDummy: isDummy,
+      paidMonths: isDummy ? [] : []
+    });
+
+    saveToStorage();
+    closeModals();
+    openSubscription(sub.id);
+  }
+
+  function deleteCurrentSubscription() {
+    if (!confirm("Möchtest du dieses Abo wirklich löschen?")) return;
+    state.subscriptions = state.subscriptions.filter(s => s.id !== state.activeSubId);
+    saveToStorage();
+    showDashboard();
+  }
+
+  function escapeHtml(text) {
+    const div = document.createElement("div");
+    div.innerText = text;
+    return div.innerHTML;
+  }
+
+  window.onload = init;
+</script>
+</body>
+</html>
