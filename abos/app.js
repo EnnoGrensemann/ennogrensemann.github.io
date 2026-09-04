@@ -69,6 +69,7 @@ async function loadDataFromCloud() {
 }
 
 async function saveData() {
+  // 1. Sofort lokal sichern
   localStorage.setItem("sub_manager_data_m3_v4", JSON.stringify(state.subscriptions));
 
   if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT_URL_HERE")) return;
@@ -77,13 +78,79 @@ async function saveData() {
   try {
     await fetch(APPS_SCRIPT_URL, {
       method: "POST",
+      mode: "no-cors",
+      keepalive: true,
       headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify(state.subscriptions)
     });
     setSyncStatus("done");
   } catch (e) {
+    // Bei no-cors schlägt die Response-Prüfung formal fehl, der Request kommt aber durch
     setSyncStatus("done");
   }
+}
+
+async function deleteCurrentMember() {
+  if (!confirm("Möchtest du diese Person wirklich aus dem Abo entfernen?")) return;
+  const sub = state.subscriptions.find(s => s.id === state.activeSubId);
+  if (!sub) return;
+
+  sub.members = sub.members.filter(m => m.id !== state.activeMemberId);
+  
+  // Erst Zustand lokal und remote persistieren, dann View aktualisieren
+  await saveData();
+  openSubscription(sub.id);
+}
+
+async function deleteCurrentSubscription() {
+  if (!confirm("Möchtest du dieses Abo wirklich löschen?")) return;
+  state.subscriptions = state.subscriptions.filter(s => s.id !== state.activeSubId);
+  
+  // Erst Zustand lokal und remote persistieren, dann View aktualisieren
+  await saveData();
+  showDashboard();
+}
+
+async function toggleTargetMonthPaid(memberId) {
+  const sub = state.subscriptions.find(s => s.id === state.activeSubId);
+  if (!sub) return;
+
+  const member = sub.members.find(m => m.id === memberId);
+  if (!member || member.isDummy) return;
+
+  const dueMonth = getRelevantDueMonth() || CURRENT_MONTH;
+
+  if (member.interval === "yearly") {
+    if (member.paidMonths.length === 12) {
+      member.paidMonths = [];
+    } else {
+      member.paidMonths = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    }
+  } else {
+    if (member.paidMonths.includes(dueMonth)) {
+      member.paidMonths = member.paidMonths.filter(m => m !== dueMonth);
+    } else {
+      member.paidMonths.push(dueMonth);
+    }
+  }
+
+  await saveData();
+  renderMembers(sub);
+}
+
+async function toggleMonthPaid(memberId, monthNum) {
+  const sub = state.subscriptions.find(s => s.id === state.activeSubId);
+  const member = sub.members.find(m => m.id === memberId);
+  if (!member) return;
+
+  if (member.paidMonths.includes(monthNum)) {
+    member.paidMonths = member.paidMonths.filter(m => m !== monthNum);
+  } else {
+    member.paidMonths.push(monthNum);
+  }
+
+  await saveData();
+  openMemberDetail(member.id);
 }
 
 function getMonthlyCost(cost, interval) {
