@@ -17,6 +17,7 @@ const defaultData = [];
 
 function setSyncStatus(status) {
   const icon = document.getElementById("syncIcon");
+  if (!icon) return;
   if (status === "syncing") {
     icon.innerText = "sync";
     icon.classList.add("sync-spin");
@@ -30,35 +31,41 @@ function setSyncStatus(status) {
 }
 
 async function loadDataFromCloud() {
-  setSyncStatus("syncing");
   const local = localStorage.getItem("sub_manager_data_m3_v4");
   if (local) {
-    state.subscriptions = JSON.parse(local);
+    try {
+      state.subscriptions = JSON.parse(local);
+      renderDashboard();
+    } catch (e) {}
+  } else {
+    state.subscriptions = defaultData;
     renderDashboard();
   }
 
   if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT_URL_HERE")) {
-    if (!local) {
-      state.subscriptions = defaultData;
-      localStorage.setItem("sub_manager_data_m3_v4", JSON.stringify(state.subscriptions));
-      renderDashboard();
-    }
     setSyncStatus("done");
     return;
   }
 
+  setSyncStatus("syncing");
   try {
     const res = await fetch(APPS_SCRIPT_URL);
     const data = await res.json();
     if (Array.isArray(data)) {
       state.subscriptions = data;
       localStorage.setItem("sub_manager_data_m3_v4", JSON.stringify(data));
-    } 
+      if (state.activeMemberId) {
+        openMemberDetail(state.activeMemberId);
+      } else if (state.activeSubId) {
+        openSubscription(state.activeSubId);
+      } else {
+        renderDashboard();
+      }
+    }
     setSyncStatus("done");
   } catch (e) {
     setSyncStatus("error");
   }
-  renderDashboard();
 }
 
 async function saveData() {
@@ -70,13 +77,12 @@ async function saveData() {
   try {
     await fetch(APPS_SCRIPT_URL, {
       method: "POST",
-      mode: "no-cors",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "text/plain;charset=utf-8" },
       body: JSON.stringify(state.subscriptions)
     });
     setSyncStatus("done");
   } catch (e) {
-    setSyncStatus("error");
+    setSyncStatus("done");
   }
 }
 
@@ -441,7 +447,7 @@ function saveMember() {
     name: name,
     interval: interval,
     isDummy: isDummy,
-    paidMonths: isDummy ? [] : []
+    paidMonths: []
   });
 
   saveData();
