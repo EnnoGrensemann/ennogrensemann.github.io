@@ -13,40 +13,7 @@ let state = {
   subscriptions: []
 };
 
-const defaultData = [
-  {
-    id: "sub-1",
-    name: "Spotify",
-    cost: 21.99,
-    interval: "monthly",
-    members: [
-      { id: "m1", name: "Mama", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7] },
-      { id: "m2", name: "Folker", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8] },
-      { id: "m3", name: "Tomke", interval: "monthly", isDummy: true, paidMonths: [] },
-      { id: "m4", name: "Enno", interval: "monthly", isDummy: true, paidMonths: [] }
-    ]
-  },
-  {
-    id: "sub-2",
-    name: "Netflix",
-    cost: 14.99,
-    interval: "monthly",
-    members: [
-      { id: "m5", name: "Person 1", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8] },
-      { id: "m6", name: "Person 2", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8] }
-    ]
-  },
-  {
-    id: "sub-3",
-    name: "F1TV",
-    cost: 69.99,
-    interval: "yearly",
-    members: [
-      { id: "m7", name: "User 1", interval: "yearly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] },
-      { id: "m8", name: "User 2", interval: "monthly", isDummy: false, paidMonths: [1, 2, 3, 4, 5, 6, 7, 8] }
-    ]
-  }
-];
+const defaultData = [];
 
 function setSyncStatus(status) {
   const icon = document.getElementById("syncIcon");
@@ -83,13 +50,10 @@ async function loadDataFromCloud() {
   try {
     const res = await fetch(APPS_SCRIPT_URL);
     const data = await res.json();
-    if (Array.isArray(data) && data.length > 0) {
+    if (Array.isArray(data)) {
       state.subscriptions = data;
       localStorage.setItem("sub_manager_data_m3_v4", JSON.stringify(data));
-    } else if (!local) {
-      state.subscriptions = defaultData;
-      saveData();
-    }
+    } 
     setSyncStatus("done");
   } catch (e) {
     setSyncStatus("error");
