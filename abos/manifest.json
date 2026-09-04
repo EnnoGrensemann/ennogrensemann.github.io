@@ -1,0 +1,15 @@
+{
+  "name": "Abo-Übersicht",
+  "short_name": "Abos",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fdfcff",
+  "theme_color": "#fdfcff",
+  "icons": [
+    {
+      "src": "https://fonts.gstatic.com/s/i/short-term/release/materialsymbolsoutlined/credit_card/default/48px.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml"
+    }
+  ]
+}
