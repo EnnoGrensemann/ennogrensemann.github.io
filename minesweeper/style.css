@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #cccccc;
+    padding: 0px;
+    margin: 0px;
+}
+
+p {
+    color: #454545;
+}
+
+.header {
+    padding: 32px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 16px  rgba(0, 0,0, 0.25);
+}
+
+.logocontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 64px;
+    width: 64px;
+    border-radius: 10px;
+}
