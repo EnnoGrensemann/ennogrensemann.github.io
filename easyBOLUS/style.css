@@ -1,0 +1,522 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+/*VAR
+---------------------------------------------*/
+:root {
+    --main-background-color: #ffffff;
+    --element-background-color: #FFFFFF;
+    --input-background-color: #eeeeee;
+    --accent-color: #235eac;
+    --accent-color-aktiv: #124280;
+    --bright-font-color: #ffffff;
+    --dark-font-color: #202020;
+    --main-font: 'Poppins', 'sans-serif';
+    --header-height: 48px;
+    --footer-height: 64px;
+    --add-button-height: 64px;
+  }
+
+/*Base
+---------------------------------------------*/
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-background-color);
+    font-family: var(--main-font);
+    user-select: none;
+}
+
+
+/*Header
+---------------------------------------------*/
+.header {
+    background-color: var(--main-background-color);
+    color: var(--bright-font-color);
+    height: var(--header-height);
+    margin: 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+.menuButtonHome {
+    display: flex;
+    height: var(--header-height);
+    width: var(--header-height);
+    justify-content: center;
+    align-items: center;
+}
+
+.menuButtonHome:active {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#menuButtonSettings {
+    display: flex;
+    height: var(--header-height);
+    width: var(--header-height);
+    justify-content: center;
+    align-items: center;
+}
+
+#menuButtonSettings:active {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+#menu-button-image {
+    height: 60%;
+    width: 60%;
+}
+
+#searchBarContainer {
+    width: calc(100% - var(--header-height));
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0px 48px 0px 16px;
+    align-items: center;
+    display: none;
+}
+
+.searchBarImage {
+    position: absolute;
+    left: calc(var(--header-height) + 24px);
+    height: calc(var(--header-height) - 28px);
+    opacity: 0.7;
+}
+
+#searchInput {
+    background-color: var(--input-background-color);
+    height: calc(var(--header-height) - 12px);
+    padding: 0px 32px;
+    border: none;
+    outline: none;
+    border-radius: calc((var(--header-height) - 12px)/2);
+    width: 100%;
+    font-size: 15px;
+}
+
+#searchBarClose {
+    background-color: transparent;
+    position: absolute;
+    right: 48px;
+    border: none;
+    height: calc(var(--header-height) - 12px);
+    border-radius: calc((var(--header-height) - 12px)/2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#searchBarClose img {
+    opacity: 0.7;
+}
+
+#searchBarClose:active {
+    background-color: #eb2e2e8a;
+}
+
+
+/*Content
+---------------------------------------------*/
+#contentContainer {
+    overflow-y: scroll;
+    margin: 0;
+    margin-top: 48px;
+    box-sizing: border-box;
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+}
+
+.product-panel {
+    background-color: var(--element-background-color);
+    /* background-color: #f0f0f0; */
+    width: 100%;
+    height: 64px;
+    box-sizing: border-box;
+    display: flex;
+    padding: 16px;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.dot {
+    height: 16px;
+    width: 16px;
+    background-color: #4dffe1;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+.product-panel:active, .product-panel:hover {
+    background-color: #0000000a;
+}
+
+h1 {
+    font-size: 15px;
+    margin: 0;
+}
+
+p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.panel-header {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.small-img {
+    height: 24px;
+    opacity: 1;
+}
+
+
+/*Popups
+---------------------------------------------*/
+#popup_background {
+    background-color: #00000040;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: 100%;
+    z-index: 1;
+    display: none;
+}
+
+#popup_item {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(50vh - 200px);
+    left: 50%;
+    margin-left: -45%;
+    background-color: var(--element-background-color);
+    height: 400px;
+    width: 90%;
+    border-radius: 24px ;
+    box-sizing: border-box;
+    box-shadow:  0px 0px 2px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.popup-item-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    justify-content: end;
+}
+
+.popup-item-title-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+}
+
+#popup-item-content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 64px - 20%);
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.popup-item-infotext {
+    color: #00000085;
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 16px;
+}
+
+.popup-item-infotext1 {
+    color: #000000b2;
+    width: 80%;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+.popup-item-infotext2 {
+    width: 80%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 16px;
+}
+
+#delete-item-button {
+    background-color: var(--element-background-color);
+    border: none;
+    height: 64px;
+    width: 64px;
+    border-radius: 0px 24px 0px 0px;
+}
+
+#delete-item-button-img {
+    width: 24px;
+}
+
+#delete-item-button:active {
+    background-color: #eb2e2e8a;
+}
+
+.popup-buttons {
+    position: absolute;
+    bottom: 24px;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4%;
+}
+
+#popup_add {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--element-background-color);
+    height: 400px;
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+    box-sizing: border-box;
+    box-shadow:  0px 0px 2px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+.popup-add-content {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 4%;
+}
+
+.popup-add-table{
+    width: 100%;
+    margin-top: 16px;
+}
+.popup-add-td1 {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    box-sizing: border-box;
+    padding: 8px;
+}
+.popup-add-td2 {
+    height: auto;
+    box-sizing: border-box;
+    padding: 8px;
+}
+
+.popup-add-inputbox {
+    background-color: var(--input-background-color);
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    text-align: right;
+}
+
+.popup-add-select {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 54px;
+    font-size: 16px;
+    text-align: center;
+}
+
+
+
+#abort-add-button, #abort-item-button {
+    background-color: #00000020;
+    color: var(--dark-font-color);
+    height: 48px;
+    width: 42%;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#confirm-add-button {
+    background-color: var(--accent-color);
+    color: var(--bright-font-color);
+    height: 48px;
+    width: 42%;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#confirm-add-button:active {
+    background-color: var(--accent-color-aktiv);
+}
+
+#abort-add-button:active {
+    background-color: #eb2e2e8a;
+}
+
+#abort-item-button:active {
+    background-color: #eb2e2e8a;
+}
+
+/*Footer
+---------------------------------------------*/
+.footer {
+    background-color: var(--main-background-color);
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    height: var(--footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    box-shadow:  0px 0px 2px rgba(0, 0, 0, 0.3);
+}
+
+.footer-buttons {
+    background-color: transparent;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+}
+
+.footer-buttons:active {
+    background-color: #00000020;
+}
+
+.footer-buttons-image {
+    height: 50%;
+}
+
+#calcbutton {
+    background-color: var(--accent-color);
+    position: fixed;
+    bottom: calc(var(--footer-height)/2);
+    left: calc(50% - var(--add-button-height) /2);
+    width: var(--add-button-height);
+    height: var(--add-button-height);
+    border: none;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--bright-font-color);
+    z-index: 1;
+}
+
+#calcbutton:hover {
+    background-color: var(--accent-color-aktiv);
+}
+
+#calcbutton:active {
+    box-shadow:  0px 0px 0px rgba(0, 0, 0, 0.8);
+}
+
+#calcbutton_image {
+    height: 32px;
+    filter: invert(100%)
+}
+
+/* Settings */
+/* ============================================================================================================================ */
+
+.contentContainerSettings {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    margin: 0;
+    margin-top: 48px;
+    box-sizing: border-box;
+    height: calc(100vh - var(--header-height));
+}
+
+.settingsContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+}
+
+.settingsRow {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 16px;
+    height: 48px;
+    align-items: center;
+    box-sizing: border-box;
+    gap: 16px;
+    padding: 4px 16px 4px 16px;
+}
+
+.settingsinputbox {
+    background-color: var(--input-background-color);
+    width: 65%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+}
+
+.settingsInputboxLabel {
+    width: 35%;
+    text-align: end;
+    text-justify: center;
+}
+
+.settingsButtonsContainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+    padding: 8px 0px 32px 0px;
+}
+
+#confirm-settings-button {
+    background-color: var(--accent-color);
+    color: var(--bright-font-color);
+    height: 48px;
+    width: 42%;
+    border: 0px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#confirm-settings-button:active {
+    background-color: var(--accent-color-aktiv);
+}
