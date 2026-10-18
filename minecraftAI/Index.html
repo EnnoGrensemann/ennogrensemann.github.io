@@ -8,21 +8,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-dark: #1b120c;
-      --mc-green: #5b8731;
-      --mc-dirt: #866043;
-      --mc-stone: #686868;
-      --mc-deepslate: #37373f;
-      --mc-border-light: #525252;
-      --mc-border-dark: #1e1e1e;
-      --lava: #d34e12;
-      --water: #2e6cdf;
+      --bg-dark: #121212;
+      --mc-gui: #c6c6c6;
     }
 
     * {
       box-sizing: border-box;
       user-select: none;
       -webkit-user-select: none;
+      -webkit-touch-callout: none;
       touch-action: manipulation;
       margin: 0;
       padding: 0;
@@ -36,31 +30,26 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 12px 8px;
+      padding: 10px 6px;
     }
 
-    header {
-      text-align: center;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-size: 14px;
-      color: #e0e0e0;
+    header h1 {
+      font-size: 13px;
+      color: #ddd;
       text-shadow: 2px 2px #000;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .stats-card {
-      background: #2b2b2b;
+      background: #212121;
       border: 3px solid #000;
-      box-shadow: inset 2px 2px #555, inset -2px -2px #111;
-      padding: 8px 12px;
+      box-shadow: inset 2px 2px #444, inset -2px -2px #111;
+      padding: 8px 10px;
       display: flex;
       justify-content: space-between;
-      gap: 12px;
-      font-size: 9px;
-      margin-bottom: 10px;
+      gap: 8px;
+      font-size: 8px;
+      margin-bottom: 8px;
       width: 100%;
       max-width: 380px;
     }
@@ -71,8 +60,8 @@
 
     .controls-panel {
       display: flex;
-      gap: 8px;
-      margin-bottom: 10px;
+      gap: 6px;
+      margin-bottom: 8px;
       width: 100%;
       max-width: 380px;
     }
@@ -83,24 +72,29 @@
       box-shadow: inset 2px 2px #aaa, inset -2px -2px #333;
       color: #fff;
       font-family: inherit;
-      font-size: 9px;
-      padding: 8px 6px;
+      font-size: 8px;
+      padding: 8px 4px;
       cursor: pointer;
       text-align: center;
       flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
     }
 
     .mc-btn:active, .mc-btn.active {
-      box-shadow: inset -2px -2px #aaa, inset 2px 2px #333;
-      background: #505050;
+      box-shadow: inset -2px -2px #aaa, inset 2px 2px #222;
+      background: #4a4a4a;
+      color: #55ff55;
     }
 
     .mc-select {
-      background: #404040;
+      background: #333;
       color: #fff;
       border: 3px solid #000;
       font-family: inherit;
-      font-size: 9px;
+      font-size: 8px;
       padding: 6px;
     }
 
@@ -110,63 +104,54 @@
       overflow: auto;
       display: flex;
       justify-content: center;
-      padding: 4px;
+      padding: 2px;
     }
 
     #board {
       display: grid;
-      gap: 2px;
-      background: #000;
-      padding: 4px;
+      gap: 1px;
+      background: #111;
+      padding: 3px;
       border: 4px solid #3c3c3c;
     }
 
     .cell {
-      width: 34px;
-      height: 34px;
+      position: relative;
+      background-size: cover;
+      background-repeat: no-repeat;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 11px;
       font-weight: bold;
-      border: 2px solid;
+      text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
       cursor: pointer;
     }
 
-    .cell.hidden {
-      box-shadow: inset 2px 2px rgba(255,255,255,0.25), inset -2px -2px rgba(0,0,0,0.5);
-    }
-
     .cell.revealed {
-      box-shadow: inset 1px 1px #000;
-      border-color: #222 !important;
+      filter: brightness(0.72) contrast(1.1);
     }
 
-    .layer-grass { background-color: var(--mc-green); border-color: #3f5e22; }
-    .layer-dirt { background-color: var(--mc-dirt); border-color: #573d2a; }
-    .layer-stone { background-color: var(--mc-stone); border-color: #434343; }
-    .layer-deepslate { background-color: var(--mc-deepslate); border-color: #202025; }
-    .layer-bedrock { background-color: #1a1a1a; border-color: #0d0d0d; }
-
-    .revealed-grass { background-color: #3b2a1d; }
-    .revealed-dirt { background-color: #4a3424; }
-    .revealed-stone { background-color: #3f3f3f; }
-    .revealed-deepslate { background-color: #242429; }
-    .revealed-bedrock { background-color: #111111; }
+    .cell.flagged::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.18.2/assets/minecraft/textures/item/water_bucket.png');
+      background-size: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      image-rendering: pixelated;
+      pointer-events: none;
+    }
 
     .cell.lava {
-      background-color: var(--lava) !important;
-      animation: pulse 1s infinite alternate;
-    }
-
-    .cell.flagged {
-      background-color: var(--water) !important;
-      border-color: #1b4291 !important;
-    }
-
-    @keyframes pulse {
-      from { filter: brightness(1); }
-      to { filter: brightness(1.3); }
+      background-image: url('https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.18.2/assets/minecraft/textures/block/lava_still.png') !important;
+      background-size: cover !important;
+      filter: none !important;
     }
 
     .num-1 { color: #55ff55; }
@@ -176,7 +161,7 @@
     .num-5 { color: #aa00aa; }
     .num-6 { color: #00aaaa; }
     .num-7 { color: #ffffff; }
-    .num-8 { color: #555555; }
+    .num-8 { color: #777777; }
 
     #modal {
       display: none;
@@ -185,7 +170,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0,0,0,0.8);
+      background: rgba(0,0,0,0.85);
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -202,15 +187,15 @@
     }
 
     #modal-box h2 {
-      font-size: 13px;
+      font-size: 11px;
       margin-bottom: 12px;
       line-height: 1.4;
     }
 
     #modal-box p {
-      font-size: 9px;
+      font-size: 8px;
       margin-bottom: 14px;
-      color: #aaa;
+      color: #bbb;
       line-height: 1.5;
     }
   </style>
@@ -218,12 +203,12 @@
 <body>
 
   <header>
-    <h1>MINE-SWEEPER</h1>
+    <h1>MINECRAFT MINESWEEPER</h1>
   </header>
 
   <div class="stats-card">
-    <div>TIEFE: <span id="depth-display" class="stat-val">Y: 64</span></div>
-    <div>SCHICHT: <span id="layer-name" class="stat-val">GRAS</span></div>
+    <div>Y: <span id="depth-display" class="stat-val">64</span></div>
+    <div>ORT: <span id="layer-name" class="stat-val">GRAS</span></div>
     <div>LAVA: <span id="lava-left" class="stat-val">0</span></div>
   </div>
 
@@ -233,7 +218,7 @@
       <option value="16">16x16</option>
       <option value="32">32x32</option>
     </select>
-    <button id="mode-btn" class="mc-btn">SPITZHACKE ⛏️</button>
+    <button id="mode-btn" class="mc-btn">MODUS: ⛏️ ABBAUEN</button>
     <button id="reset-btn" class="mc-btn">NEUSTART</button>
   </div>
 
@@ -250,12 +235,14 @@
   </div>
 
   <script>
+    const ASSET_BASE = "https://raw.githubusercontent.com/InventivetalentDev/minecraft-assets/1.18.2/assets/minecraft/textures/block/";
+
     const LAYERS = [
-      { maxDepth: 63, name: "GRAS", classPrefix: "grass", icon: "🌱" },
-      { maxDepth: 55, name: "ERDE", classPrefix: "dirt", icon: "🟫" },
-      { maxDepth: 0,  name: "STEIN", classPrefix: "stone", icon: "🪨" },
-      { maxDepth: -58, name: "TIEFSCHIEFER", classPrefix: "deepslate", icon: "⬛" },
-      { maxDepth: -Infinity, name: "GRUNDGESTEIN", classPrefix: "bedrock", icon: "🛑" }
+      { maxDepth: 63, name: "GRAS", texture: ASSET_BASE + "grass_block_top.png" },
+      { maxDepth: 55, name: "ERDE", texture: ASSET_BASE + "dirt.png" },
+      { maxDepth: 0,  name: "STEIN", texture: ASSET_BASE + "stone.png" },
+      { maxDepth: -58, name: "TIEFSCHIEFER", texture: ASSET_BASE + "deepslate.png" },
+      { maxDepth: -Infinity, name: "BEDROCK", texture: ASSET_BASE + "bedrock.png" }
     ];
 
     let currentY = 64;
@@ -266,8 +253,7 @@
     let flagsPlaced = 0;
     let firstClick = true;
     let gameOver = false;
-    let currentMode = "dig";
-    let holdTimeout = null;
+    let isFlagMode = false;
 
     const boardEl = document.getElementById("board");
     const depthDisplay = document.getElementById("depth-display");
@@ -294,8 +280,8 @@
       return Math.max(1, Math.floor(totalCells * density));
     }
 
-    function initGame(newDepth = true) {
-      if (newDepth) {
+    function initGame(resetToTop = true) {
+      if (resetToTop) {
         currentY = 64;
       }
       gridSize = parseInt(sizeSelector.value, 10);
@@ -308,12 +294,12 @@
       modal.style.display = "none";
 
       const layer = getCurrentLayer();
-      depthDisplay.textContent = `Y: ${currentY}`;
+      depthDisplay.textContent = currentY;
       layerName.textContent = layer.name;
       lavaLeft.textContent = totalBombs;
 
-      const cellSize = gridSize === 32 ? 22 : gridSize === 16 ? 28 : 36;
-      const fontSize = gridSize === 32 ? 8 : gridSize === 16 ? 9 : 11;
+      const cellSize = gridSize === 32 ? 22 : gridSize === 16 ? 28 : 38;
+      const fontSize = gridSize === 32 ? 7 : gridSize === 16 ? 9 : 11;
 
       boardEl.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
       boardEl.innerHTML = "";
@@ -321,69 +307,99 @@
       for (let r = 0; r < gridSize; r++) {
         board[r] = [];
         for (let c = 0; c < gridSize; c++) {
-          const cellData = {
+          board[r][c] = {
             r, c,
             isBomb: false,
             revealed: false,
             flagged: false,
             adjacentBombs: 0
           };
-          board[r][c] = cellData;
 
           const cell = document.createElement("div");
-          cell.className = `cell hidden layer-${layer.classPrefix}`;
+          cell.className = "cell";
           cell.style.width = `${cellSize}px`;
           cell.style.height = `${cellSize}px`;
           cell.style.fontSize = `${fontSize}px`;
+          cell.style.backgroundImage = `url('${layer.texture}')`;
           cell.dataset.r = r;
           cell.dataset.c = c;
 
-          bindEvents(cell, r, c);
+          attachCellEvents(cell, r, c);
           boardEl.appendChild(cell);
         }
       }
     }
 
-    function bindEvents(el, r, c) {
-      el.addEventListener("contextmenu", (e) => {
-        e.preventDefault();
-        toggleFlag(r, c);
-      });
+    function attachCellEvents(el, r, c) {
+      let touchStartTime = 0;
+      let longPressFired = false;
+      let longPressTimer = null;
 
       el.addEventListener("touchstart", (e) => {
-        holdTimeout = setTimeout(() => {
+        touchStartTime = Date.now();
+        longPressFired = false;
+        longPressTimer = setTimeout(() => {
+          longPressFired = true;
           toggleFlag(r, c);
-          holdTimeout = null;
-        }, 380);
+        }, 320);
       }, { passive: true });
 
-      el.addEventListener("touchend", (e) => {
-        if (holdTimeout) {
-          clearTimeout(holdTimeout);
-          holdTimeout = null;
-          handleClick(r, c);
+      el.addEventListener("touchmove", () => {
+        if (longPressTimer) {
+          clearTimeout(longPressTimer);
+          longPressTimer = null;
         }
       });
 
-      el.addEventListener("touchmove", () => {
-        if (holdTimeout) {
-          clearTimeout(holdTimeout);
-          holdTimeout = null;
+      el.addEventListener("touchend", (e) => {
+        if (longPressTimer) {
+          clearTimeout(longPressTimer);
+          longPressTimer = null;
+        }
+        if (!longPressFired && (Date.now() - touchStartTime < 320)) {
+          e.preventDefault();
+          executeAction(r, c);
         }
       });
 
       el.addEventListener("click", () => {
-        handleClick(r, c);
+        if (!longPressFired) {
+          executeAction(r, c);
+        }
+      });
+
+      el.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        toggleFlag(r, c);
       });
     }
 
-    function handleClick(r, c) {
+    function executeAction(r, c) {
       if (gameOver) return;
-      if (currentMode === "flag") {
+      if (isFlagMode) {
         toggleFlag(r, c);
       } else {
         revealCell(r, c);
       }
+    }
+
+    function toggleFlag(r, c) {
+      if (gameOver) return;
+      const data = board[r][c];
+      if (data.revealed) return;
+
+      const el = getCellElement(r, c);
+      data.flagged = !data.flagged;
+
+      if (data.flagged) {
+        flagsPlaced++;
+        el.classList.add("flagged");
+      } else {
+        flagsPlaced--;
+        el.classList.remove("flagged");
+      }
+
+      lavaLeft.textContent = totalBombs - flagsPlaced;
     }
 
     function placeBombs(excludeR, excludeC) {
@@ -428,7 +444,6 @@
       }
 
       const el = getCellElement(r, c);
-      const layer = getCurrentLayer();
 
       if (data.isBomb) {
         triggerGameOver();
@@ -437,8 +452,7 @@
 
       data.revealed = true;
       revealedCount++;
-      el.classList.remove("hidden", `layer-${layer.classPrefix}`);
-      el.classList.add("revealed", `revealed-${layer.classPrefix}`);
+      el.classList.add("revealed");
 
       if (data.adjacentBombs > 0) {
         el.textContent = data.adjacentBombs;
@@ -459,26 +473,6 @@
       checkLevelComplete();
     }
 
-    function toggleFlag(r, c) {
-      const data = board[r][c];
-      if (data.revealed || gameOver) return;
-
-      const el = getCellElement(r, c);
-      data.flagged = !data.flagged;
-
-      if (data.flagged) {
-        flagsPlaced++;
-        el.classList.add("flagged");
-        el.textContent = "💧";
-      } else {
-        flagsPlaced--;
-        el.classList.remove("flagged");
-        el.textContent = "";
-      }
-
-      lavaLeft.textContent = totalBombs - flagsPlaced;
-    }
-
     function checkLevelComplete() {
       const targetReveals = (gridSize * gridSize) - totalBombs;
       if (revealedCount >= targetReveals) {
@@ -486,7 +480,7 @@
         currentY--;
         showModal(
           "EBENE GESCHAFFT!",
-          `Du hast Schicht Y: ${currentY + 1} abgebaut.<br>Grabe tiefer nach Y: ${currentY}!`,
+          `Schicht Y: ${currentY + 1} abgebaut.<br>Grabe weiter nach Y: ${currentY}!`,
           "TIEFER GRABEN ⛏️",
           () => initGame(false)
         );
@@ -495,18 +489,15 @@
 
     function triggerGameOver() {
       gameOver = true;
-      const layer = getCurrentLayer();
-
       for (let r = 0; r < gridSize; r++) {
         for (let c = 0; c < gridSize; c++) {
           const data = board[r][c];
           const el = getCellElement(r, c);
 
           if (data.isBomb) {
-            el.classList.remove("hidden", `layer-${layer.classPrefix}`);
             el.classList.add("lava");
-            el.textContent = "🔥";
           } else if (data.flagged) {
+            el.classList.remove("flagged");
             el.textContent = "❌";
           }
         }
@@ -514,7 +505,7 @@
 
       showModal(
         "IN LAVA GEFALLEN!",
-        `Deine Reise endet bei Tiefe Y: ${currentY}.`,
+        `Deine Reise endete bei Tiefe Y: ${currentY}.`,
         "NEUER VERSUCH",
         () => initGame(true)
       );
@@ -533,13 +524,12 @@
     }
 
     modeBtn.addEventListener("click", () => {
-      if (currentMode === "dig") {
-        currentMode = "flag";
-        modeBtn.textContent = "EIMER 🪣";
+      isFlagMode = !isFlagMode;
+      if (isFlagMode) {
+        modeBtn.textContent = "MODUS: 🪣 WASSER";
         modeBtn.classList.add("active");
       } else {
-        currentMode = "dig";
-        modeBtn.textContent = "SPITZHACKE ⛏️";
+        modeBtn.textContent = "MODUS: ⛏️ ABBAUEN";
         modeBtn.classList.remove("active");
       }
     });
