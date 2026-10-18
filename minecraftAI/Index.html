@@ -322,6 +322,7 @@
     let firstClick = true;
     let gameOver = false;
     let isFlagMode = false;
+    let maxAllowedOpening = 0;
 
     const boardEl = document.getElementById("board");
     const depthDisplay = document.getElementById("depth-display");
@@ -557,35 +558,65 @@
       if (firstClick) {
         firstClick = false;
         placeBombs(r, c);
+        const totalCells = gridSize * gridSize;
+        const minCells = Math.max(3, Math.floor(totalCells * 0.05));
+        const maxCells = Math.max(minCells, Math.floor(totalCells * 0.20));
+        maxAllowedOpening = Math.floor(Math.random() * (maxCells - minCells + 1)) + minCells;
       }
-
-      const el = getCellElement(r, c);
 
       if (data.isBomb) {
         triggerGameOver();
         return;
       }
 
+      const queue = [{ r, c }];
       data.revealed = true;
       revealedCount++;
-      el.classList.add("revealed");
+      let currentOpeningCount = 1;
 
+      const firstEl = getCellElement(r, c);
+      firstEl.classList.add("revealed");
       if (data.adjacentBombs > 0) {
-        el.textContent = data.adjacentBombs;
-        el.classList.add(`num-${data.adjacentBombs}`);
-      } else {
-        el.textContent = "";
-        for (let dr = -1; dr <= 1; dr++) {
-          for (let dc = -1; dc <= 1; dc++) {
-            const nr = r + dr;
-            const nc = c + dc;
-            if (nr >= 0 && nr < gridSize && nc >= 0 && nc < gridSize) {
-              revealCell(nr, nc);
+        firstEl.textContent = data.adjacentBombs;
+        firstEl.classList.add(`num-${data.adjacentBombs}`);
+      }
+
+      while (queue.length > 0) {
+        const curr = queue.shift();
+        const currData = board[curr.r][curr.c];
+
+        if (currData.adjacentBombs === 0) {
+          for (let dr = -1; dr <= 1; dr++) {
+            for (let dc = -1; dc <= 1; dc++) {
+              const nr = curr.r + dr;
+              const nc = curr.c + dc;
+
+              if (nr >= 0 && nr < gridSize && nc >= 0 && nc < gridSize) {
+                const neighbor = board[nr][nc];
+                if (!neighbor.revealed && !neighbor.flagged && !neighbor.isBomb) {
+                  if (maxAllowedOpening > 0 && currentOpeningCount >= maxAllowedOpening) {
+                    continue;
+                  }
+                  neighbor.revealed = true;
+                  revealedCount++;
+                  currentOpeningCount++;
+
+                  const nEl = getCellElement(nr, nc);
+                  nEl.classList.add("revealed");
+                  if (neighbor.adjacentBombs > 0) {
+                    nEl.textContent = neighbor.adjacentBombs;
+                    nEl.classList.add(`num-${neighbor.adjacentBombs}`);
+                  } else {
+                    queue.push({ r: nr, c: nc });
+                  }
+                }
+              }
             }
           }
         }
       }
 
+      maxAllowedOpening = 0;
       checkLevelComplete();
     }
 
