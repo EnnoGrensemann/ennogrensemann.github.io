@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Minecraft Minesweeper</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #1b120c;
+      --mc-green: #5b8731;
+      --mc-dirt: #866043;
+      --mc-stone: #686868;
+      --mc-deepslate: #37373f;
+      --mc-border-light: #525252;
+      --mc-border-dark: #1e1e1e;
+      --lava: #d34e12;
+      --water: #2e6cdf;
+    }
+
+    * {
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      font-family: 'Press Start 2P', monospace;
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 12px 8px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 14px;
+      color: #e0e0e0;
+      text-shadow: 2px 2px #000;
+      margin-bottom: 6px;
+    }
+
+    .stats-card {
+      background: #2b2b2b;
+      border: 3px solid #000;
+      box-shadow: inset 2px 2px #555, inset -2px -2px #111;
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 9px;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .stat-val {
+      color: #ffaa00;
+    }
+
+    .controls-panel {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .mc-btn {
+      background: #727272;
+      border: 3px solid #000;
+      box-shadow: inset 2px 2px #aaa, inset -2px -2px #333;
+      color: #fff;
+      font-family: inherit;
+      font-size: 9px;
+      padding: 8px 6px;
+      cursor: pointer;
+      text-align: center;
+      flex: 1;
+    }
+
+    .mc-btn:active, .mc-btn.active {
+      box-shadow: inset -2px -2px #aaa, inset 2px 2px #333;
+      background: #505050;
+    }
+
+    .mc-select {
+      background: #404040;
+      color: #fff;
+      border: 3px solid #000;
+      font-family: inherit;
+      font-size: 9px;
+      padding: 6px;
+    }
+
+    #board-wrapper {
+      width: 100%;
+      max-width: 100vw;
+      overflow: auto;
+      display: flex;
+      justify-content: center;
+      padding: 4px;
+    }
+
+    #board {
+      display: grid;
+      gap: 2px;
+      background: #000;
+      padding: 4px;
+      border: 4px solid #3c3c3c;
+    }
+
+    .cell {
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: bold;
+      border: 2px solid;
+      cursor: pointer;
+    }
+
+    .cell.hidden {
+      box-shadow: inset 2px 2px rgba(255,255,255,0.25), inset -2px -2px rgba(0,0,0,0.5);
+    }
+
+    .cell.revealed {
+      box-shadow: inset 1px 1px #000;
+      border-color: #222 !important;
+    }
+
+    .layer-grass { background-color: var(--mc-green); border-color: #3f5e22; }
+    .layer-dirt { background-color: var(--mc-dirt); border-color: #573d2a; }
+    .layer-stone { background-color: var(--mc-stone); border-color: #434343; }
+    .layer-deepslate { background-color: var(--mc-deepslate); border-color: #202025; }
+    .layer-bedrock { background-color: #1a1a1a; border-color: #0d0d0d; }
+
+    .revealed-grass { background-color: #3b2a1d; }
+    .revealed-dirt { background-color: #4a3424; }
+    .revealed-stone { background-color: #3f3f3f; }
+    .revealed-deepslate { background-color: #242429; }
+    .revealed-bedrock { background-color: #111111; }
+
+    .cell.lava {
+      background-color: var(--lava) !important;
+      animation: pulse 1s infinite alternate;
+    }
+
+    .cell.flagged {
+      background-color: var(--water) !important;
+      border-color: #1b4291 !important;
+    }
+
+    @keyframes pulse {
+      from { filter: brightness(1); }
+      to { filter: brightness(1.3); }
+    }
+
+    .num-1 { color: #55ff55; }
+    .num-2 { color: #ffff55; }
+    .num-3 { color: #ffaa00; }
+    .num-4 { color: #ff5555; }
+    .num-5 { color: #aa00aa; }
+    .num-6 { color: #00aaaa; }
+    .num-7 { color: #ffffff; }
+    .num-8 { color: #555555; }
+
+    #modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.8);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 100;
+      padding: 16px;
+    }
+
+    #modal-box {
+      background: #2b2b2b;
+      border: 4px solid #000;
+      padding: 16px;
+      text-align: center;
+      max-width: 320px;
+    }
+
+    #modal-box h2 {
+      font-size: 13px;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    #modal-box p {
+      font-size: 9px;
+      margin-bottom: 14px;
+      color: #aaa;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>MINE-SWEEPER</h1>
+  </header>
+
+  <div class="stats-card">
+    <div>TIEFE: <span id="depth-display" class="stat-val">Y: 64</span></div>
+    <div>SCHICHT: <span id="layer-name" class="stat-val">GRAS</span></div>
+    <div>LAVA: <span id="lava-left" class="stat-val">0</span></div>
+  </div>
+
+  <div class="controls-panel">
+    <select id="size-selector" class="mc-select">
+      <option value="8" selected>8x8</option>
+      <option value="16">16x16</option>
+      <option value="32">32x32</option>
+    </select>
+    <button id="mode-btn" class="mc-btn">SPITZHACKE ⛏️</button>
+    <button id="reset-btn" class="mc-btn">NEUSTART</button>
+  </div>
+
+  <div id="board-wrapper">
+    <div id="board"></div>
+  </div>
+
+  <div id="modal">
+    <div id="modal-box">
+      <h2 id="modal-title"></h2>
+      <p id="modal-msg"></p>
+      <button id="modal-action-btn" class="mc-btn">WEITER</button>
+    </div>
+  </div>
+
+  <script>
+    const LAYERS = [
+      { maxDepth: 63, name: "GRAS", classPrefix: "grass", icon: "🌱" },
+      { maxDepth: 55, name: "ERDE", classPrefix: "dirt", icon: "🟫" },
+      { maxDepth: 0,  name: "STEIN", classPrefix: "stone", icon: "🪨" },
+      { maxDepth: -58, name: "TIEFSCHIEFER", classPrefix: "deepslate", icon: "⬛" },
+      { maxDepth: -Infinity, name: "GRUNDGESTEIN", classPrefix: "bedrock", icon: "🛑" }
+    ];
+
+    let currentY = 64;
+    let gridSize = 8;
+    let totalBombs = 0;
+    let board = [];
+    let revealedCount = 0;
+    let flagsPlaced = 0;
+    let firstClick = true;
+    let gameOver = false;
+    let currentMode = "dig";
+    let holdTimeout = null;
+
+    const boardEl = document.getElementById("board");
+    const depthDisplay = document.getElementById("depth-display");
+    const layerName = document.getElementById("layer-name");
+    const lavaLeft = document.getElementById("lava-left");
+    const modeBtn = document.getElementById("mode-btn");
+    const resetBtn = document.getElementById("reset-btn");
+    const sizeSelector = document.getElementById("size-selector");
+    const modal = document.getElementById("modal");
+    const modalTitle = document.getElementById("modal-title");
+    const modalMsg = document.getElementById("modal-msg");
+    const modalActionBtn = document.getElementById("modal-action-btn");
+
+    function getCurrentLayer() {
+      return LAYERS.find(l => currentY >= l.maxDepth) || LAYERS[LAYERS.length - 1];
+    }
+
+    function calculateBombCount() {
+      const totalCells = gridSize * gridSize;
+      let density = 0.12;
+      if (currentY < 55) density = 0.15;
+      if (currentY < 0)  density = 0.18;
+      if (currentY < -40) density = 0.22;
+      return Math.max(1, Math.floor(totalCells * density));
+    }
+
+    function initGame(newDepth = true) {
+      if (newDepth) {
+        currentY = 64;
+      }
+      gridSize = parseInt(sizeSelector.value, 10);
+      totalBombs = calculateBombCount();
+      board = [];
+      revealedCount = 0;
+      flagsPlaced = 0;
+      firstClick = true;
+      gameOver = false;
+      modal.style.display = "none";
+
+      const layer = getCurrentLayer();
+      depthDisplay.textContent = `Y: ${currentY}`;
+      layerName.textContent = layer.name;
+      lavaLeft.textContent = totalBombs;
+
+      const cellSize = gridSize === 32 ? 22 : gridSize === 16 ? 28 : 36;
+      const fontSize = gridSize === 32 ? 8 : gridSize === 16 ? 9 : 11;
+
+      boardEl.style.gridTemplateColumns = `repeat(${gridSize}, ${cellSize}px)`;
+      boardEl.innerHTML = "";
+
+      for (let r = 0; r < gridSize; r++) {
+        board[r] = [];
+        for (let c = 0; c < gridSize; c++) {
+          const cellData = {
+            r, c,
+            isBomb: false,
+            revealed: false,
+            flagged: false,
+            adjacentBombs: 0
+          };
+          board[r][c] = cellData;
+
+          const cell = document.createElement("div");
+          cell.className = `cell hidden layer-${layer.classPrefix}`;
+          cell.style.width = `${cellSize}px`;
+          cell.style.height = `${cellSize}px`;
+          cell.style.fontSize = `${fontSize}px`;
+          cell.dataset.r = r;
+          cell.dataset.c = c;
+
+          bindEvents(cell, r, c);
+          boardEl.appendChild(cell);
+        }
+      }
+    }
+
+    function bindEvents(el, r, c) {
+      el.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        toggleFlag(r, c);
+      });
+
+      el.addEventListener("touchstart", (e) => {
+        holdTimeout = setTimeout(() => {
+          toggleFlag(r, c);
+          holdTimeout = null;
+        }, 380);
+      }, { passive: true });
+
+      el.addEventListener("touchend", (e) => {
+        if (holdTimeout) {
+          clearTimeout(holdTimeout);
+          holdTimeout = null;
+          handleClick(r, c);
+        }
+      });
+
+      el.addEventListener("touchmove", () => {
+        if (holdTimeout) {
+          clearTimeout(holdTimeout);
+          holdTimeout = null;
+        }
+      });
+
+      el.addEventListener("click", () => {
+        handleClick(r, c);
+      });
+    }
+
+    function handleClick(r, c) {
+      if (gameOver) return;
+      if (currentMode === "flag") {
+        toggleFlag(r, c);
+      } else {
+        revealCell(r, c);
+      }
+    }
+
+    function placeBombs(excludeR, excludeC) {
+      let placed = 0;
+      while (placed < totalBombs) {
+        const rr = Math.floor(Math.random() * gridSize);
+        const cc = Math.floor(Math.random() * gridSize);
+        const isNeighbor = Math.abs(rr - excludeR) <= 1 && Math.abs(cc - excludeC) <= 1;
+
+        if (!board[rr][cc].isBomb && !isNeighbor) {
+          board[rr][cc].isBomb = true;
+          placed++;
+        }
+      }
+
+      for (let r = 0; r < gridSize; r++) {
+        for (let c = 0; c < gridSize; c++) {
+          if (!board[r][c].isBomb) {
+            let count = 0;
+            for (let dr = -1; dr <= 1; dr++) {
+              for (let dc = -1; dc <= 1; dc++) {
+                const nr = r + dr;
+                const nc = c + dc;
+                if (nr >= 0 && nr < gridSize && nc >= 0 && nc < gridSize && board[nr][nc].isBomb) {
+                  count++;
+                }
+              }
+            }
+            board[r][c].adjacentBombs = count;
+          }
+        }
+      }
+    }
+
+    function revealCell(r, c) {
+      const data = board[r][c];
+      if (data.revealed || data.flagged || gameOver) return;
+
+      if (firstClick) {
+        firstClick = false;
+        placeBombs(r, c);
+      }
+
+      const el = getCellElement(r, c);
+      const layer = getCurrentLayer();
+
+      if (data.isBomb) {
+        triggerGameOver();
+        return;
+      }
+
+      data.revealed = true;
+      revealedCount++;
+      el.classList.remove("hidden", `layer-${layer.classPrefix}`);
+      el.classList.add("revealed", `revealed-${layer.classPrefix}`);
+
+      if (data.adjacentBombs > 0) {
+        el.textContent = data.adjacentBombs;
+        el.classList.add(`num-${data.adjacentBombs}`);
+      } else {
+        el.textContent = "";
+        for (let dr = -1; dr <= 1; dr++) {
+          for (let dc = -1; dc <= 1; dc++) {
+            const nr = r + dr;
+            const nc = c + dc;
+            if (nr >= 0 && nr < gridSize && nc >= 0 && nc < gridSize) {
+              revealCell(nr, nc);
+            }
+          }
+        }
+      }
+
+      checkLevelComplete();
+    }
+
+    function toggleFlag(r, c) {
+      const data = board[r][c];
+      if (data.revealed || gameOver) return;
+
+      const el = getCellElement(r, c);
+      data.flagged = !data.flagged;
+
+      if (data.flagged) {
+        flagsPlaced++;
+        el.classList.add("flagged");
+        el.textContent = "💧";
+      } else {
+        flagsPlaced--;
+        el.classList.remove("flagged");
+        el.textContent = "";
+      }
+
+      lavaLeft.textContent = totalBombs - flagsPlaced;
+    }
+
+    function checkLevelComplete() {
+      const targetReveals = (gridSize * gridSize) - totalBombs;
+      if (revealedCount >= targetReveals) {
+        gameOver = true;
+        currentY--;
+        showModal(
+          "EBENE GESCHAFFT!",
+          `Du hast Schicht Y: ${currentY + 1} abgebaut.<br>Grabe tiefer nach Y: ${currentY}!`,
+          "TIEFER GRABEN ⛏️",
+          () => initGame(false)
+        );
+      }
+    }
+
+    function triggerGameOver() {
+      gameOver = true;
+      const layer = getCurrentLayer();
+
+      for (let r = 0; r < gridSize; r++) {
+        for (let c = 0; c < gridSize; c++) {
+          const data = board[r][c];
+          const el = getCellElement(r, c);
+
+          if (data.isBomb) {
+            el.classList.remove("hidden", `layer-${layer.classPrefix}`);
+            el.classList.add("lava");
+            el.textContent = "🔥";
+          } else if (data.flagged) {
+            el.textContent = "❌";
+          }
+        }
+      }
+
+      showModal(
+        "IN LAVA GEFALLEN!",
+        `Deine Reise endet bei Tiefe Y: ${currentY}.`,
+        "NEUER VERSUCH",
+        () => initGame(true)
+      );
+    }
+
+    function showModal(title, msg, btnText, action) {
+      modalTitle.innerHTML = title;
+      modalMsg.innerHTML = msg;
+      modalActionBtn.textContent = btnText;
+      modal.style.display = "flex";
+      modalActionBtn.onclick = action;
+    }
+
+    function getCellElement(r, c) {
+      return boardEl.children[r * gridSize + c];
+    }
+
+    modeBtn.addEventListener("click", () => {
+      if (currentMode === "dig") {
+        currentMode = "flag";
+        modeBtn.textContent = "EIMER 🪣";
+        modeBtn.classList.add("active");
+      } else {
+        currentMode = "dig";
+        modeBtn.textContent = "SPITZHACKE ⛏️";
+        modeBtn.classList.remove("active");
+      }
+    });
+
+    resetBtn.addEventListener("click", () => initGame(true));
+    sizeSelector.addEventListener("change", () => initGame(true));
+
+    initGame(true);
+  </script>
+</body>
+</html>
