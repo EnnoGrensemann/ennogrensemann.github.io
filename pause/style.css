@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #0e64d4;
+    --primary-light: #e6f2ff;
+    --text-color: #1b1b1b;
+    --div-debut-color: #00000000; /*komplett transparent*/ /*alternativ: #0000002f;*/
+    --shadow-light: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+div {
+    background-color: var(--div-debut-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: var(--shadow-light);
+}
+
+.title-container {
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: white;
+}
+
+.menu-btn-toggle {
+    background: none;
+    border: none;
+    height: 48px;
+    width: 48px;
+    margin: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn-toggle svg {
+    fill: #ffffff;
+    transition: fill 0.2s ease;
+}
+
+.menu-btn-toggle:hover svg,
+.menu-btn-toggle:focus-visible svg {
+    fill: #ffffffdd;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-left {
+    font-weight: 500;
+    font-size: 128px;
+    color: var(--text-color);
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 64px;
+}
