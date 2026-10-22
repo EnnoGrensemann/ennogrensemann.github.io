@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <button type="button" class="menu-btn-toggle">
+        <button type="button" class="btn-menu-toggle">
             <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 32 32">
                 <rect x="0" y="2" width="32" height="6" rx="2"/>
                 <rect x="0" y="13" width="32" height="6" rx="2"/>
@@ -27,9 +27,18 @@
         <span class="time-left">15:00</span>
     </div>
 
-
     <footer>
-        <p style="color: white">FOOTER</p>
+        <div class="btn-container">
+            <div class="row-btn-container">
+                <button class="btn-start-stop btn"><img src="bin/sleep.png" alt="Start/Stop"><span>Start/Stop</span></button>
+                <button class="btn-reset btn"><img src="bin/rollback.png" alt="Reset"><span>Reset</span></button>
+            </div>
+            <div class="row-btn-container">
+                <button class="btn-first-time btn"><span>15 min</span></button>
+                <button class="btn-second-time btn"><span>30 min</span></button>
+            </div>
+        </div>
+        
     </footer>
 
     <!--Scripte-->

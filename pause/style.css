@@ -1,9 +1,13 @@
 :root {
     --primary-color: #0e64d4;
-    --primary-light: #e6f2ff;
+    --primary-light: #f0f0f0;
     --text-color: #1b1b1b;
+    --text-color-light: #ffffff;
+    --btn-start-color: #01aa55;
+    --btn-reset-color: #4d4d4d;
     --div-debut-color: #00000000; /*komplett transparent*/ /*alternativ: #0000002f;*/
     --shadow-light: 0 4px 16px rgba(0, 0, 0, 0.2);
+    --shadow-btn: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 html, body {
@@ -25,7 +29,6 @@ div {
 
 header {
     background-color: var(--primary-color);
-    padding: 10px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -43,7 +46,7 @@ h1 {
     color: white;
 }
 
-.menu-btn-toggle {
+.btn-menu-toggle {
     background: none;
     border: none;
     height: 48px;
@@ -55,17 +58,18 @@ h1 {
     justify-content: center;
 }
 
-.menu-btn-toggle svg {
+.btn-menu-toggle svg {
     fill: #ffffff;
     transition: fill 0.2s ease;
 }
 
-.menu-btn-toggle:hover svg,
-.menu-btn-toggle:focus-visible svg {
+.btn-menu-toggle:hover svg,
+.btn-menu-toggle:focus-visible svg {
     fill: #ffffffdd;
 }
 
 .main-content {
+    background-color: var(--primary-light);
     flex: 1;
     display: flex;
     align-items: center;
@@ -80,8 +84,74 @@ h1 {
 
 footer {
     display: flex;
-    align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: white;
+    box-shadow: var(--shadow-light);
+}
+
+.btn-container {
+    width: 250px;
+    gap: 10px;
+    margin: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row-btn-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn {
+    background-color: var(--primary-light);
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    box-shadow: var(--shadow-btn);
+}
+
+
+.btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.btn-start-stop {
+    background-color: var(--btn-start-color);
     height: 64px;
+    width: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-start-stop span {
+    color: var(--text-color-light);
+}
+
+.btn-reset {
+    background-color: var(--btn-reset-color);
+    color: var(--text-color-light);
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-first-time {
+    height: 32px;
+    width: 120px;
+}
+
+.btn-second-time {
+    height: 32px;
+    width: 120px;
 }
