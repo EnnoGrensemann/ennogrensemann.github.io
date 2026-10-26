@@ -84,12 +84,6 @@ h1 {
     color: var(--text-color);
 }
 
-.endcard {
-    background-color: white;
-    height: 300px;
-    width: 400px;
-}
-
 footer {
     display: flex;
     justify-content: center;

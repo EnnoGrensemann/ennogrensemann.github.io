@@ -3,6 +3,9 @@ let time_long = 30; //Lange Pause in Minuten
 let time_set = 15; //Eingestellte Zeit in Minuten
 let time_left = 15*60; //Zeit in sekunden
 
+let timer_started = null;
+let intervall;
+
 let countdown = null;
 
 const timerElement = document.getElementById('time-left'); //Timer Text
@@ -30,6 +33,24 @@ function updateButtonDisplay(start) {
     }
 }
 
+function startIntervall() {
+    timer_started = Math.round(new Date().getTime() / 1000);
+    if (!intervall){
+        intervall = setInterval(countdownTimer, 1000);
+    }
+}
+
+function stoppIntervall() {
+    clearInterval(intervall);
+    intervall = null;
+}
+
+function countdownTimer(){
+    let time_in_sec = 0;
+    time_in_sec = Math.round(new Date().getTime() / 1000) - timer_started;
+    console.log(time_in_sec + "s");
+}
+
 function startTimer() {
     if (countdown) clearInterval(countdown); 
     countdown = setInterval(function() {
@@ -55,8 +76,10 @@ function stopTimer() {
 btnStartStop.addEventListener('click', function() {
     if (countdown === null) {
         startTimer();
+        startIntervall();
     } else {
         stopTimer();
+        stoppIntervall();
     }
 });
 
