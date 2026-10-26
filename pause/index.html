@@ -23,32 +23,35 @@
         </div>
     </header>
 
+        <!--<button popovertarget="endcard">Endcard Öffnen</button>-->
     <div class="main-content">
-        <span class="time-left">15:00</span>
+        <span class="time-left" id="time-left">15:00</span>
+        <div class="endcard" id="endcard" popover>
+            <h2>Pause ist zu ende</h2>
+        </div>
     </div>
 
     <footer>
         <div class="btn-container">
             <div class="row-btn-container">
-                <button class="btn-start-stop btn">
+                <button class="btn-start-stop btn" id="btn-start-stop">
                     <img src="bin/sleep.png" alt="Start/Stop">
-                    <span>Start/Stop</span>
+                    <span id="btn-start-stop-text">Start</span>
                 </button>
-                <button class="btn-reset btn">
+                <button class="btn-reset btn" id="btn-reset">
                     <img src="bin/rollback.png" alt="Reset">
                     <span>Reset</span>
                 </button>
             </div>
             <div class="row-btn-container">
-                <button class="btn-first-time btn">
+                <button class="btn-short-time btn" id="btn-short-time">
                     <span>15 min</span>
                 </button>
-                <button class="btn-second-time btn">
+                <button class="btn-long-time btn" id="btn-long-time">
                     <span>30 min</span>
                 </button>
             </div>
         </div>
-        
     </footer>
 
     <!--Scripte-->
