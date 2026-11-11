@@ -1,8 +1,64 @@
-body {
-    
+:root {
+    /*COLORS*/
+    --header-color: #1835d4;
+    --dark-text-color:  #222222;
+    --light-text-color:  #ffffff;
+
+    /*SHADOWS*/
+    --main-box-shadow: 0px 0px 10px  #00000081;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    height: auto;
+    padding: 10px;
+    background-color: var(--header-color);
+    color: var(--light-text-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--main-box-shadow);
 }
 
 h1 {
-    font-size: 32pt;
-    font-weight: 800;
+    margin: 0px;
+}
+
+.app-content {
+    flex: 1;
+}
+
+footer {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    box-shadow: var(--main-box-shadow);
+}
+
+.btn-tab {
+    color: var(--dark-text-color);
+    height: 5vh;
+    width: 100%;
+    border: none;
+    background-color: transparent;
 }
